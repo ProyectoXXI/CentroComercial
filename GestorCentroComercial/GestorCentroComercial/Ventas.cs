@@ -8,6 +8,7 @@ namespace Centro_Comercial_APP
 {
     class Ventas
     {
+
         #region DECLARACION DE VARIABLES
         private DateTime fecha_venta;
         private String codigo_centro;

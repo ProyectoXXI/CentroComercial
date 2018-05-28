@@ -8,6 +8,7 @@ namespace Centro_Comercial_APP
 {
     class Empleado
     {
+
         #region DECLARACION DE VARIABLES
         private String rol;
         private String dni;

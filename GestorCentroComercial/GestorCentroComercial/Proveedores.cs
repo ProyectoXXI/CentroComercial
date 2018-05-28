@@ -8,6 +8,7 @@ namespace Centro_Comercial_APP
 {
     class Proveedores
     {
+
         #region DECLARACION DE VARIABLES
         private String cif;
         private String nombre_proveedor;
