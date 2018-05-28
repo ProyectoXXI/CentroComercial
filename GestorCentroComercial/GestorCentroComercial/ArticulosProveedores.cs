@@ -8,7 +8,6 @@ namespace Centro_Comercial_APP
 {
     class ArticulosProveedores
     {
-
         #region DECLARACION DE VARIABLES
         #region INFORMACION GENERAL
         private DateTime fecha_pedido;
