@@ -8,7 +8,6 @@ namespace Centro_Comercial_APP
 {
     class ArticulosCentroComercial
     {
-
         #region DECLARACION DE VARIABLES
         private String codigo_centro;
         private String codigo_articulo;

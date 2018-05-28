@@ -8,7 +8,6 @@ namespace Centro_Comercial_APP
 {
     class Nominas
     {
-
         #region DECLARACION DE VARIABLES
         private float periodoNominaMeses;
         private DateTime fechaNomina;

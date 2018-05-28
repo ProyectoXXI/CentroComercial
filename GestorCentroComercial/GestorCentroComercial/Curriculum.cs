@@ -8,7 +8,6 @@ namespace Centro_Comercial_APP
 {
     class Curriculum
     {
-
         #region DECLARACION DE VARIABLES
         private String titulacion;
         private String centro;
