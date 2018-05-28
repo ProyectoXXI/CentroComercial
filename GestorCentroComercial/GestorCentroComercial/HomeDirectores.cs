@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestorCentroComercial
 {
-    public partial class login : Form
+    public partial class HomeDirectores : Form
     {
-        public login()
+        public HomeDirectores()
         {
             InitializeComponent();
         }
