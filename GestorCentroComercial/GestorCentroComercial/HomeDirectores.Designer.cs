@@ -28,101 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mostrarVentas = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnmostrarVentas = new System.Windows.Forms.Button();
+            this.btnmostrarNominas = new System.Windows.Forms.Button();
+            this.btnmostrarProveedores = new System.Windows.Forms.Button();
+            this.btnmostrarArtiucloscentro = new System.Windows.Forms.Button();
+            this.btnMostrarPedidos = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // mostrarVentas
+            // btnmostrarVentas
             // 
-            this.mostrarVentas.Location = new System.Drawing.Point(24, 46);
-            this.mostrarVentas.Name = "mostrarVentas";
-            this.mostrarVentas.Size = new System.Drawing.Size(138, 35);
-            this.mostrarVentas.TabIndex = 0;
-            this.mostrarVentas.Text = "Mostar ventas";
-            this.mostrarVentas.UseVisualStyleBackColor = true;
+            this.btnmostrarVentas.Location = new System.Drawing.Point(32, 57);
+            this.btnmostrarVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarVentas.Name = "btnmostrarVentas";
+            this.btnmostrarVentas.Size = new System.Drawing.Size(184, 43);
+            this.btnmostrarVentas.TabIndex = 0;
+            this.btnmostrarVentas.Text = "Mostar ventas";
+            this.btnmostrarVentas.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnmostrarNominas
             // 
-            this.button2.Location = new System.Drawing.Point(261, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnmostrarNominas.Location = new System.Drawing.Point(348, 57);
+            this.btnmostrarNominas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarNominas.Name = "btnmostrarNominas";
+            this.btnmostrarNominas.Size = new System.Drawing.Size(184, 43);
+            this.btnmostrarNominas.TabIndex = 1;
+            this.btnmostrarNominas.Text = "Mostrar Nominas";
+            this.btnmostrarNominas.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnmostrarProveedores
             // 
-            this.button3.Location = new System.Drawing.Point(24, 100);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 35);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnmostrarProveedores.Location = new System.Drawing.Point(32, 123);
+            this.btnmostrarProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarProveedores.Name = "btnmostrarProveedores";
+            this.btnmostrarProveedores.Size = new System.Drawing.Size(184, 43);
+            this.btnmostrarProveedores.TabIndex = 2;
+            this.btnmostrarProveedores.Text = "Mostrar Proveedores";
+            this.btnmostrarProveedores.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnmostrarArtiucloscentro
             // 
-            this.button4.Location = new System.Drawing.Point(261, 100);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 35);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnmostrarArtiucloscentro.Location = new System.Drawing.Point(348, 123);
+            this.btnmostrarArtiucloscentro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarArtiucloscentro.Name = "btnmostrarArtiucloscentro";
+            this.btnmostrarArtiucloscentro.Size = new System.Drawing.Size(184, 43);
+            this.btnmostrarArtiucloscentro.TabIndex = 3;
+            this.btnmostrarArtiucloscentro.Text = "Mostrar Artiuclos del centro";
+            this.btnmostrarArtiucloscentro.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnMostrarPedidos
             // 
-            this.button5.Location = new System.Drawing.Point(24, 150);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(138, 35);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMostrarPedidos.Location = new System.Drawing.Point(32, 185);
+            this.btnMostrarPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrarPedidos.Name = "btnMostrarPedidos";
+            this.btnMostrarPedidos.Size = new System.Drawing.Size(184, 43);
+            this.btnMostrarPedidos.TabIndex = 4;
+            this.btnMostrarPedidos.Text = "Mostar Pedidos";
+            this.btnMostrarPedidos.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnSalir
             // 
-            this.button6.Location = new System.Drawing.Point(261, 150);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 35);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(24, 200);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(138, 35);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(261, 200);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(138, 35);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(348, 185);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(184, 43);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // HomeDirectores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 417);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.mostrarVentas);
+            this.ClientSize = new System.Drawing.Size(580, 294);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnMostrarPedidos);
+            this.Controls.Add(this.btnmostrarArtiucloscentro);
+            this.Controls.Add(this.btnmostrarProveedores);
+            this.Controls.Add(this.btnmostrarNominas);
+            this.Controls.Add(this.btnmostrarVentas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeDirectores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeDirectores";
@@ -132,13 +117,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button mostrarVentas;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnmostrarVentas;
+        private System.Windows.Forms.Button btnmostrarNominas;
+        private System.Windows.Forms.Button btnmostrarProveedores;
+        private System.Windows.Forms.Button btnmostrarArtiucloscentro;
+        private System.Windows.Forms.Button btnMostrarPedidos;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
