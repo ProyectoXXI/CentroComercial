@@ -9,12 +9,13 @@ namespace Centro_Comercial_APP
     class Empleado
     {
         #region DECLARACION DE VARIABLES
+        private String codgioEmpleado;
         private String rol;
         private String dni;
         private String nombre;
         private String apellidos;
         private String direccion;
-        private int telefono;
+        private String telefono;
         private String email;
         private DateTime ingreso;
         private DateTime nacimiento;
@@ -25,8 +26,9 @@ namespace Centro_Comercial_APP
         private int precio_hora;
         #endregion
         #region DECLARACION DE CONSTRUCTORES
-        public Empleado(string rol, string dni, string nombre, string apellidos, string direccion, int telefono, string email, DateTime ingreso, DateTime nacimiento, string departamento, string centro, Curriculum curriculum, string tipo_contrato, int precio_hora)
+        public Empleado(string codgioEmpleado,string rol, string dni, string nombre, string apellidos, string direccion, String telefono, string email, DateTime ingreso, DateTime nacimiento, string departamento, string centro, Curriculum curriculum, string tipo_contrato, int precio_hora)
         {
+            this.codgioEmpleado = codgioEmpleado;
             this.rol = rol;
             this.dni = dni;
             this.nombre = nombre;
@@ -44,6 +46,13 @@ namespace Centro_Comercial_APP
         }
         #endregion
         #region DECLARACION GETTERS
+        public string getcodgioEmpleado
+        {
+            get
+            {
+                return codgioEmpleado;
+            }
+        }
         public string getRol {
             get {
                 return rol;
@@ -69,7 +78,7 @@ namespace Centro_Comercial_APP
                 return direccion;
             }
         }
-        public int getTelefono
+        public String getTelefono
         {
             get {
                 return telefono;

@@ -19,10 +19,12 @@ namespace Centro_Comercial_APP
         private String nombre_representante;
         private String email_representante;
         private int telefono_representante;
+        private int codigoProveedor;
         #endregion
         #region DECLARACION DE CONSTRUCTOR
-        public Proveedores(string cif, string nombre_proveedor, string direccion, int codigo_postal, int telefono, string email, string web, string nombre_representante, string email_representante, int telefono_representante)
+        public Proveedores(int codigoProveedor,string cif, string nombre_proveedor, string direccion, int codigo_postal, int telefono, string email, string web, string nombre_representante, string email_representante, int telefono_representante)
         {
+            this.codigoProveedor = codigoProveedor;
             this.cif = cif;
             this.nombre_proveedor = nombre_proveedor;
             this.direccion = direccion;
@@ -36,6 +38,10 @@ namespace Centro_Comercial_APP
         }
         #endregion
         #region DECLARACION DE GETTERS
+        public int getcodigoProveedor
+        {
+            get { return codigoProveedor; }
+        }
         public String getcif
         {
             get { return cif; }
