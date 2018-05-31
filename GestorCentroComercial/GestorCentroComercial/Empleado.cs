@@ -9,7 +9,7 @@ namespace Centro_Comercial_APP
     class Empleado
     {
         #region DECLARACION DE VARIABLES
-        private String codgioEmpleado;
+        private int codgioEmpleado;
         private String rol;
         private String dni;
         private String nombre;
@@ -26,7 +26,7 @@ namespace Centro_Comercial_APP
         private int precio_hora;
         #endregion
         #region DECLARACION DE CONSTRUCTORES
-        public Empleado(string codgioEmpleado,string rol, string dni, string nombre, string apellidos, string direccion, String telefono, string email, DateTime ingreso, DateTime nacimiento, string departamento, string centro, Curriculum curriculum, string tipo_contrato, int precio_hora)
+        public Empleado(int codgioEmpleado,string rol, string dni, string nombre, string apellidos, string direccion, String telefono, string email, DateTime ingreso, DateTime nacimiento, string departamento, string centro, Curriculum curriculum, string tipo_contrato, int precio_hora)
         {
             this.codgioEmpleado = codgioEmpleado;
             this.rol = rol;
@@ -46,7 +46,7 @@ namespace Centro_Comercial_APP
         }
         #endregion
         #region DECLARACION GETTERS
-        public string getcodgioEmpleado
+        public int getcodgioEmpleado
         {
             get
             {

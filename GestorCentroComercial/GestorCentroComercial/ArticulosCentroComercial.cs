@@ -9,8 +9,8 @@ namespace Centro_Comercial_APP
     class ArticulosCentroComercial
     {
         #region DECLARACION DE VARIABLES
-        private String codigo_centro;
-        private String codigo_articulo;
+        private int codigo_centro;
+        private int codigo_articulo;
         private DateTime fecha_entrada;
         private String nombre_articulo;
         private String modelo;
@@ -20,7 +20,7 @@ namespace Centro_Comercial_APP
         private int beneficios;
         #endregion
         #region DECLARACION DE CONSTRUCTOR
-        public ArticulosCentroComercial(string codigo_centro, string codigo_articulo, DateTime fecha_entrada, string nombre_articulo, string modelo, string caracteristicas, int unidades_stock, int precio_coste, int beneficios)
+        public ArticulosCentroComercial(int codigo_centro, int codigo_articulo, DateTime fecha_entrada, string nombre_articulo, string modelo, string caracteristicas, int unidades_stock, int precio_coste, int beneficios)
         {
             this.codigo_centro = codigo_centro;
             this.codigo_articulo = codigo_articulo;
@@ -34,11 +34,11 @@ namespace Centro_Comercial_APP
         }
         #endregion
         #region DECLARACION DE GETTERS
-        public String getCodigo_centro
+        public int getCodigo_centro
         {
             get { return codigo_centro; }
         }
-        public String getcodigo_articulo
+        public int getcodigo_articulo
         {
             get { return codigo_articulo; }
         }

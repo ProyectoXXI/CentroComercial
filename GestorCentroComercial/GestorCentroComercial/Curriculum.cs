@@ -33,11 +33,6 @@ namespace Centro_Comercial_APP
         {
             get { return fecha_titulo; }
         }
-        public static void insertar(string name)
-        {
-            DataSet1TableAdapters.TableTableAdapter datos = new DataSet1TableAdapters.TableTableAdapter();
-            datos.InsertarNombre(name);
-        }
         #endregion
     }
 }
