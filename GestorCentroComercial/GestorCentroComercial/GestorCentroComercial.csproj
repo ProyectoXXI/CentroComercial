@@ -92,6 +92,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedores.cs" />
+    <Compile Include="ReferenciasBBDD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReferenciasBBDD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ventas.cs" />
     <EmbeddedResource Include="HomeDependientes.resx">
       <DependentUpon>HomeDependientes.cs</DependentUpon>
@@ -123,6 +128,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReferenciasBBDD.xsc">
+      <DependentUpon>ReferenciasBBDD.xsd</DependentUpon>
+    </None>
+    <None Include="ReferenciasBBDD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReferenciasBBDD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReferenciasBBDD.xss">
+      <DependentUpon>ReferenciasBBDD.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
