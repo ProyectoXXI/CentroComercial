@@ -38,76 +38,77 @@
             // 
             // btnMostrarVentas
             // 
-            this.btnMostrarVentas.Location = new System.Drawing.Point(35, 32);
-            this.btnMostrarVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrarVentas.Location = new System.Drawing.Point(47, 39);
+            this.btnMostrarVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMostrarVentas.Name = "btnMostrarVentas";
-            this.btnMostrarVentas.Size = new System.Drawing.Size(128, 35);
+            this.btnMostrarVentas.Size = new System.Drawing.Size(171, 43);
             this.btnMostrarVentas.TabIndex = 0;
             this.btnMostrarVentas.Text = "Mostrar Ventas";
             this.btnMostrarVentas.UseVisualStyleBackColor = true;
             // 
             // btnmostrarPedidos
             // 
-            this.btnmostrarPedidos.Location = new System.Drawing.Point(35, 138);
-            this.btnmostrarPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmostrarPedidos.Location = new System.Drawing.Point(47, 170);
+            this.btnmostrarPedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmostrarPedidos.Name = "btnmostrarPedidos";
-            this.btnmostrarPedidos.Size = new System.Drawing.Size(128, 35);
+            this.btnmostrarPedidos.Size = new System.Drawing.Size(171, 43);
             this.btnmostrarPedidos.TabIndex = 1;
             this.btnmostrarPedidos.Text = "Mostrar Pedidos de Proveedores";
             this.btnmostrarPedidos.UseVisualStyleBackColor = true;
             // 
             // btnmostrarArticulos
             // 
-            this.btnmostrarArticulos.Location = new System.Drawing.Point(274, 84);
-            this.btnmostrarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmostrarArticulos.Location = new System.Drawing.Point(365, 103);
+            this.btnmostrarArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmostrarArticulos.Name = "btnmostrarArticulos";
-            this.btnmostrarArticulos.Size = new System.Drawing.Size(128, 35);
+            this.btnmostrarArticulos.Size = new System.Drawing.Size(171, 43);
             this.btnmostrarArticulos.TabIndex = 2;
             this.btnmostrarArticulos.Text = "Mostrar Articulos de centro";
             this.btnmostrarArticulos.UseVisualStyleBackColor = true;
             // 
             // btnmostrarProveedores
             // 
-            this.btnmostrarProveedores.Location = new System.Drawing.Point(35, 84);
-            this.btnmostrarProveedores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmostrarProveedores.Location = new System.Drawing.Point(47, 103);
+            this.btnmostrarProveedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmostrarProveedores.Name = "btnmostrarProveedores";
-            this.btnmostrarProveedores.Size = new System.Drawing.Size(128, 35);
+            this.btnmostrarProveedores.Size = new System.Drawing.Size(171, 43);
             this.btnmostrarProveedores.TabIndex = 3;
             this.btnmostrarProveedores.Text = "Mostrar Proveedores";
             this.btnmostrarProveedores.UseVisualStyleBackColor = true;
             // 
             // btnmostrarNominas
             // 
-            this.btnmostrarNominas.Location = new System.Drawing.Point(274, 32);
-            this.btnmostrarNominas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmostrarNominas.Location = new System.Drawing.Point(365, 39);
+            this.btnmostrarNominas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnmostrarNominas.Name = "btnmostrarNominas";
-            this.btnmostrarNominas.Size = new System.Drawing.Size(128, 35);
+            this.btnmostrarNominas.Size = new System.Drawing.Size(171, 43);
             this.btnmostrarNominas.TabIndex = 4;
             this.btnmostrarNominas.Text = "Mostrar Nominas";
             this.btnmostrarNominas.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(274, 138);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Location = new System.Drawing.Point(365, 170);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(128, 35);
+            this.btnSalir.Size = new System.Drawing.Size(171, 43);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // HomeTecnicos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 239);
+            this.ClientSize = new System.Drawing.Size(580, 294);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnmostrarNominas);
             this.Controls.Add(this.btnmostrarProveedores);
             this.Controls.Add(this.btnmostrarArticulos);
             this.Controls.Add(this.btnmostrarPedidos);
             this.Controls.Add(this.btnMostrarVentas);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomeTecnicos";
             this.Text = "HomeTecnicos";
             this.ResumeLayout(false);
