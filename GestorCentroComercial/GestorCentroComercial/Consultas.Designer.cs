@@ -36,7 +36,7 @@ namespace GestorCentroComercial {
         
         private VentasDataTable tableVentas;
         
-        private Nominas1DataTable tableNominas1;
+        private NominasDataTable tableNominas;
         
         private global::System.Data.DataRelation relationFK_ArticulosProveedores_codigoArticulo;
         
@@ -96,8 +96,8 @@ namespace GestorCentroComercial {
                 if ((ds.Tables["Ventas"] != null)) {
                     base.Tables.Add(new VentasDataTable(ds.Tables["Ventas"]));
                 }
-                if ((ds.Tables["Nominas1"] != null)) {
-                    base.Tables.Add(new Nominas1DataTable(ds.Tables["Nominas1"]));
+                if ((ds.Tables["Nominas"] != null)) {
+                    base.Tables.Add(new NominasDataTable(ds.Tables["Nominas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -181,9 +181,9 @@ namespace GestorCentroComercial {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Nominas1DataTable Nominas1 {
+        public NominasDataTable Nominas {
             get {
-                return this.tableNominas1;
+                return this.tableNominas;
             }
         }
         
@@ -272,8 +272,8 @@ namespace GestorCentroComercial {
                 if ((ds.Tables["Ventas"] != null)) {
                     base.Tables.Add(new VentasDataTable(ds.Tables["Ventas"]));
                 }
-                if ((ds.Tables["Nominas1"] != null)) {
-                    base.Tables.Add(new Nominas1DataTable(ds.Tables["Nominas1"]));
+                if ((ds.Tables["Nominas"] != null)) {
+                    base.Tables.Add(new NominasDataTable(ds.Tables["Nominas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -344,10 +344,10 @@ namespace GestorCentroComercial {
                     this.tableVentas.InitVars();
                 }
             }
-            this.tableNominas1 = ((Nominas1DataTable)(base.Tables["Nominas1"]));
+            this.tableNominas = ((NominasDataTable)(base.Tables["Nominas"]));
             if ((initTable == true)) {
-                if ((this.tableNominas1 != null)) {
-                    this.tableNominas1.InitVars();
+                if ((this.tableNominas != null)) {
+                    this.tableNominas.InitVars();
                 }
             }
             this.relationFK_ArticulosProveedores_codigoArticulo = this.Relations["FK_ArticulosProveedores_codigoArticulo"];
@@ -378,8 +378,8 @@ namespace GestorCentroComercial {
             base.Tables.Add(this.tableProveedores);
             this.tableVentas = new VentasDataTable();
             base.Tables.Add(this.tableVentas);
-            this.tableNominas1 = new Nominas1DataTable();
-            base.Tables.Add(this.tableNominas1);
+            this.tableNominas = new NominasDataTable();
+            base.Tables.Add(this.tableNominas);
             this.relationFK_ArticulosProveedores_codigoArticulo = new global::System.Data.DataRelation("FK_ArticulosProveedores_codigoArticulo", new global::System.Data.DataColumn[] {
                         this.tableArticulosCentroComercial.CodigoArticuloColumn}, new global::System.Data.DataColumn[] {
                         this.tableArticulosProveedores.CodigoArticuloColumn}, false);
@@ -402,7 +402,7 @@ namespace GestorCentroComercial {
             this.Relations.Add(this.relationFK_Ventas_dependiente);
             this.relationFK_Nominas_ToTable1 = new global::System.Data.DataRelation("FK_Nominas_ToTable1", new global::System.Data.DataColumn[] {
                         this.tableEmpleado.CodigoEmpleadoColumn}, new global::System.Data.DataColumn[] {
-                        this.tableNominas1.CodigoEmpleadoColumn}, false);
+                        this.tableNominas.CodigoEmpleadoColumn}, false);
             this.Relations.Add(this.relationFK_Nominas_ToTable1);
         }
         
@@ -444,7 +444,7 @@ namespace GestorCentroComercial {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeNominas1() {
+        private bool ShouldSerializeNominas() {
             return false;
         }
         
@@ -522,7 +522,7 @@ namespace GestorCentroComercial {
         public delegate void VentasRowChangeEventHandler(object sender, VentasRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void Nominas1RowChangeEventHandler(object sender, Nominas1RowChangeEvent e);
+        public delegate void NominasRowChangeEventHandler(object sender, NominasRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2821,7 +2821,7 @@ namespace GestorCentroComercial {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Nominas1DataTable : global::System.Data.TypedTableBase<Nominas1Row> {
+        public partial class NominasDataTable : global::System.Data.TypedTableBase<NominasRow> {
             
             private global::System.Data.DataColumn columnDniEmpleado;
             
@@ -2853,8 +2853,8 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1DataTable() {
-                this.TableName = "Nominas1";
+            public NominasDataTable() {
+                this.TableName = "Nominas";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2862,7 +2862,7 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Nominas1DataTable(global::System.Data.DataTable table) {
+            internal NominasDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2879,7 +2879,7 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected Nominas1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected NominasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -3007,34 +3007,34 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1Row this[int index] {
+            public NominasRow this[int index] {
                 get {
-                    return ((Nominas1Row)(this.Rows[index]));
+                    return ((NominasRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Nominas1RowChangeEventHandler Nominas1RowChanging;
+            public event NominasRowChangeEventHandler NominasRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Nominas1RowChangeEventHandler Nominas1RowChanged;
+            public event NominasRowChangeEventHandler NominasRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Nominas1RowChangeEventHandler Nominas1RowDeleting;
+            public event NominasRowChangeEventHandler NominasRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Nominas1RowChangeEventHandler Nominas1RowDeleted;
+            public event NominasRowChangeEventHandler NominasRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddNominas1Row(Nominas1Row row) {
+            public void AddNominasRow(NominasRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1Row AddNominas1Row(int DniEmpleado, string Nombre, string apellidos, double sueldoBruto, double descuentoSeguridad, double totalDinero, double descuentoIRPF, double plustrienios, double plusproductividad, int horasTrabajadas, int horasMes, System.DateTime fechaNomina, double periodoNominaMeses, EmpleadoRow parentEmpleadoRowByFK_Nominas_ToTable1) {
-                Nominas1Row rowNominas1Row = ((Nominas1Row)(this.NewRow()));
+            public NominasRow AddNominasRow(int DniEmpleado, string Nombre, string apellidos, double sueldoBruto, double descuentoSeguridad, double totalDinero, double descuentoIRPF, double plustrienios, double plusproductividad, int horasTrabajadas, int horasMes, System.DateTime fechaNomina, double periodoNominaMeses, EmpleadoRow parentEmpleadoRowByFK_Nominas_ToTable1) {
+                NominasRow rowNominasRow = ((NominasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DniEmpleado,
                         Nombre,
@@ -3053,22 +3053,22 @@ namespace GestorCentroComercial {
                 if ((parentEmpleadoRowByFK_Nominas_ToTable1 != null)) {
                     columnValuesArray[13] = parentEmpleadoRowByFK_Nominas_ToTable1[0];
                 }
-                rowNominas1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowNominas1Row);
-                return rowNominas1Row;
+                rowNominasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowNominasRow);
+                return rowNominasRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1Row FindByDniEmpleado(int DniEmpleado) {
-                return ((Nominas1Row)(this.Rows.Find(new object[] {
+            public NominasRow FindByDniEmpleado(int DniEmpleado) {
+                return ((NominasRow)(this.Rows.Find(new object[] {
                             DniEmpleado})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Nominas1DataTable cln = ((Nominas1DataTable)(base.Clone()));
+                NominasDataTable cln = ((NominasDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3076,7 +3076,7 @@ namespace GestorCentroComercial {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Nominas1DataTable();
+                return new NominasDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3149,28 +3149,28 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1Row NewNominas1Row() {
-                return ((Nominas1Row)(this.NewRow()));
+            public NominasRow NewNominasRow() {
+                return ((NominasRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Nominas1Row(builder);
+                return new NominasRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Nominas1Row);
+                return typeof(NominasRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Nominas1RowChanged != null)) {
-                    this.Nominas1RowChanged(this, new Nominas1RowChangeEvent(((Nominas1Row)(e.Row)), e.Action));
+                if ((this.NominasRowChanged != null)) {
+                    this.NominasRowChanged(this, new NominasRowChangeEvent(((NominasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3178,8 +3178,8 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Nominas1RowChanging != null)) {
-                    this.Nominas1RowChanging(this, new Nominas1RowChangeEvent(((Nominas1Row)(e.Row)), e.Action));
+                if ((this.NominasRowChanging != null)) {
+                    this.NominasRowChanging(this, new NominasRowChangeEvent(((NominasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3187,8 +3187,8 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Nominas1RowDeleted != null)) {
-                    this.Nominas1RowDeleted(this, new Nominas1RowChangeEvent(((Nominas1Row)(e.Row)), e.Action));
+                if ((this.NominasRowDeleted != null)) {
+                    this.NominasRowDeleted(this, new NominasRowChangeEvent(((NominasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3196,14 +3196,14 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Nominas1RowDeleting != null)) {
-                    this.Nominas1RowDeleting(this, new Nominas1RowChangeEvent(((Nominas1Row)(e.Row)), e.Action));
+                if ((this.NominasRowDeleting != null)) {
+                    this.NominasRowDeleting(this, new NominasRowChangeEvent(((NominasRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveNominas1Row(Nominas1Row row) {
+            public void RemoveNominasRow(NominasRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3230,7 +3230,7 @@ namespace GestorCentroComercial {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Nominas1DataTable";
+                attribute2.FixedValue = "NominasDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3924,12 +3924,12 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1Row[] GetNominas1Rows() {
+            public NominasRow[] GetNominasRows() {
                 if ((this.Table.ChildRelations["FK_Nominas_ToTable1"] == null)) {
-                    return new Nominas1Row[0];
+                    return new NominasRow[0];
                 }
                 else {
-                    return ((Nominas1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Nominas_ToTable1"])));
+                    return ((NominasRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Nominas_ToTable1"])));
                 }
             }
         }
@@ -4237,25 +4237,25 @@ namespace GestorCentroComercial {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Nominas1Row : global::System.Data.DataRow {
+        public partial class NominasRow : global::System.Data.DataRow {
             
-            private Nominas1DataTable tableNominas1;
+            private NominasDataTable tableNominas;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Nominas1Row(global::System.Data.DataRowBuilder rb) : 
+            internal NominasRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableNominas1 = ((Nominas1DataTable)(this.Table));
+                this.tableNominas = ((NominasDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int DniEmpleado {
                 get {
-                    return ((int)(this[this.tableNominas1.DniEmpleadoColumn]));
+                    return ((int)(this[this.tableNominas.DniEmpleadoColumn]));
                 }
                 set {
-                    this[this.tableNominas1.DniEmpleadoColumn] = value;
+                    this[this.tableNominas.DniEmpleadoColumn] = value;
                 }
             }
             
@@ -4263,10 +4263,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableNominas1.NombreColumn]));
+                    return ((string)(this[this.tableNominas.NombreColumn]));
                 }
                 set {
-                    this[this.tableNominas1.NombreColumn] = value;
+                    this[this.tableNominas.NombreColumn] = value;
                 }
             }
             
@@ -4274,10 +4274,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string apellidos {
                 get {
-                    return ((string)(this[this.tableNominas1.apellidosColumn]));
+                    return ((string)(this[this.tableNominas.apellidosColumn]));
                 }
                 set {
-                    this[this.tableNominas1.apellidosColumn] = value;
+                    this[this.tableNominas.apellidosColumn] = value;
                 }
             }
             
@@ -4285,10 +4285,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double sueldoBruto {
                 get {
-                    return ((double)(this[this.tableNominas1.sueldoBrutoColumn]));
+                    return ((double)(this[this.tableNominas.sueldoBrutoColumn]));
                 }
                 set {
-                    this[this.tableNominas1.sueldoBrutoColumn] = value;
+                    this[this.tableNominas.sueldoBrutoColumn] = value;
                 }
             }
             
@@ -4296,10 +4296,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double descuentoSeguridad {
                 get {
-                    return ((double)(this[this.tableNominas1.descuentoSeguridadColumn]));
+                    return ((double)(this[this.tableNominas.descuentoSeguridadColumn]));
                 }
                 set {
-                    this[this.tableNominas1.descuentoSeguridadColumn] = value;
+                    this[this.tableNominas.descuentoSeguridadColumn] = value;
                 }
             }
             
@@ -4307,10 +4307,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double totalDinero {
                 get {
-                    return ((double)(this[this.tableNominas1.totalDineroColumn]));
+                    return ((double)(this[this.tableNominas.totalDineroColumn]));
                 }
                 set {
-                    this[this.tableNominas1.totalDineroColumn] = value;
+                    this[this.tableNominas.totalDineroColumn] = value;
                 }
             }
             
@@ -4318,10 +4318,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double descuentoIRPF {
                 get {
-                    return ((double)(this[this.tableNominas1.descuentoIRPFColumn]));
+                    return ((double)(this[this.tableNominas.descuentoIRPFColumn]));
                 }
                 set {
-                    this[this.tableNominas1.descuentoIRPFColumn] = value;
+                    this[this.tableNominas.descuentoIRPFColumn] = value;
                 }
             }
             
@@ -4329,10 +4329,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double plustrienios {
                 get {
-                    return ((double)(this[this.tableNominas1.plustrieniosColumn]));
+                    return ((double)(this[this.tableNominas.plustrieniosColumn]));
                 }
                 set {
-                    this[this.tableNominas1.plustrieniosColumn] = value;
+                    this[this.tableNominas.plustrieniosColumn] = value;
                 }
             }
             
@@ -4340,10 +4340,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double plusproductividad {
                 get {
-                    return ((double)(this[this.tableNominas1.plusproductividadColumn]));
+                    return ((double)(this[this.tableNominas.plusproductividadColumn]));
                 }
                 set {
-                    this[this.tableNominas1.plusproductividadColumn] = value;
+                    this[this.tableNominas.plusproductividadColumn] = value;
                 }
             }
             
@@ -4352,14 +4352,14 @@ namespace GestorCentroComercial {
             public int horasTrabajadas {
                 get {
                     try {
-                        return ((int)(this[this.tableNominas1.horasTrabajadasColumn]));
+                        return ((int)(this[this.tableNominas.horasTrabajadasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'horasTrabajadas\' in table \'Nominas1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'horasTrabajadas\' in table \'Nominas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNominas1.horasTrabajadasColumn] = value;
+                    this[this.tableNominas.horasTrabajadasColumn] = value;
                 }
             }
             
@@ -4368,14 +4368,14 @@ namespace GestorCentroComercial {
             public int horasMes {
                 get {
                     try {
-                        return ((int)(this[this.tableNominas1.horasMesColumn]));
+                        return ((int)(this[this.tableNominas.horasMesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'horasMes\' in table \'Nominas1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'horasMes\' in table \'Nominas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNominas1.horasMesColumn] = value;
+                    this[this.tableNominas.horasMesColumn] = value;
                 }
             }
             
@@ -4383,10 +4383,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime fechaNomina {
                 get {
-                    return ((global::System.DateTime)(this[this.tableNominas1.fechaNominaColumn]));
+                    return ((global::System.DateTime)(this[this.tableNominas.fechaNominaColumn]));
                 }
                 set {
-                    this[this.tableNominas1.fechaNominaColumn] = value;
+                    this[this.tableNominas.fechaNominaColumn] = value;
                 }
             }
             
@@ -4394,10 +4394,10 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public double periodoNominaMeses {
                 get {
-                    return ((double)(this[this.tableNominas1.periodoNominaMesesColumn]));
+                    return ((double)(this[this.tableNominas.periodoNominaMesesColumn]));
                 }
                 set {
-                    this[this.tableNominas1.periodoNominaMesesColumn] = value;
+                    this[this.tableNominas.periodoNominaMesesColumn] = value;
                 }
             }
             
@@ -4406,14 +4406,14 @@ namespace GestorCentroComercial {
             public int CodigoEmpleado {
                 get {
                     try {
-                        return ((int)(this[this.tableNominas1.CodigoEmpleadoColumn]));
+                        return ((int)(this[this.tableNominas.CodigoEmpleadoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CodigoEmpleado\' in table \'Nominas1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CodigoEmpleado\' in table \'Nominas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableNominas1.CodigoEmpleadoColumn] = value;
+                    this[this.tableNominas.CodigoEmpleadoColumn] = value;
                 }
             }
             
@@ -4431,37 +4431,37 @@ namespace GestorCentroComercial {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IshorasTrabajadasNull() {
-                return this.IsNull(this.tableNominas1.horasTrabajadasColumn);
+                return this.IsNull(this.tableNominas.horasTrabajadasColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SethorasTrabajadasNull() {
-                this[this.tableNominas1.horasTrabajadasColumn] = global::System.Convert.DBNull;
+                this[this.tableNominas.horasTrabajadasColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IshorasMesNull() {
-                return this.IsNull(this.tableNominas1.horasMesColumn);
+                return this.IsNull(this.tableNominas.horasMesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SethorasMesNull() {
-                this[this.tableNominas1.horasMesColumn] = global::System.Convert.DBNull;
+                this[this.tableNominas.horasMesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCodigoEmpleadoNull() {
-                return this.IsNull(this.tableNominas1.CodigoEmpleadoColumn);
+                return this.IsNull(this.tableNominas.CodigoEmpleadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCodigoEmpleadoNull() {
-                this[this.tableNominas1.CodigoEmpleadoColumn] = global::System.Convert.DBNull;
+                this[this.tableNominas.CodigoEmpleadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4673,22 +4673,22 @@ namespace GestorCentroComercial {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class Nominas1RowChangeEvent : global::System.EventArgs {
+        public class NominasRowChangeEvent : global::System.EventArgs {
             
-            private Nominas1Row eventRow;
+            private NominasRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1RowChangeEvent(Nominas1Row row, global::System.Data.DataRowAction action) {
+            public NominasRowChangeEvent(NominasRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Nominas1Row Row {
+            public NominasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7556,7 +7556,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Nominas1TableAdapter : global::System.ComponentModel.Component {
+    public partial class NominasTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7570,7 +7570,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Nominas1TableAdapter() {
+        public NominasTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7667,7 +7667,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Nominas1";
+            tableMapping.DataSetTable = "Nominas";
             tableMapping.ColumnMappings.Add("DniEmpleado", "DniEmpleado");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("apellidos", "apellidos");
@@ -7802,7 +7802,7 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Consultas.Nominas1DataTable dataTable) {
+        public virtual int Fill(Consultas.NominasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7815,9 +7815,9 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Consultas.Nominas1DataTable GetData() {
+        public virtual Consultas.NominasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Consultas.Nominas1DataTable dataTable = new Consultas.Nominas1DataTable();
+            Consultas.NominasDataTable dataTable = new Consultas.NominasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7825,7 +7825,7 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Consultas.Nominas1DataTable dataTable) {
+        public virtual int Update(Consultas.NominasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -7833,7 +7833,7 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(Consultas dataSet) {
-            return this.Adapter.Update(dataSet, "Nominas1");
+            return this.Adapter.Update(dataSet, "Nominas");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8170,7 +8170,7 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         
         private VentasTableAdapter _ventasTableAdapter;
         
-        private Nominas1TableAdapter _nominas1TableAdapter;
+        private NominasTableAdapter _nominasTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -8276,12 +8276,12 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Nominas1TableAdapter Nominas1TableAdapter {
+        public NominasTableAdapter NominasTableAdapter {
             get {
-                return this._nominas1TableAdapter;
+                return this._nominasTableAdapter;
             }
             set {
-                this._nominas1TableAdapter = value;
+                this._nominasTableAdapter = value;
             }
         }
         
@@ -8328,9 +8328,9 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
                             && (this._ventasTableAdapter.Connection != null))) {
                     return this._ventasTableAdapter.Connection;
                 }
-                if (((this._nominas1TableAdapter != null) 
-                            && (this._nominas1TableAdapter.Connection != null))) {
-                    return this._nominas1TableAdapter.Connection;
+                if (((this._nominasTableAdapter != null) 
+                            && (this._nominasTableAdapter.Connection != null))) {
+                    return this._nominasTableAdapter.Connection;
                 }
                 return null;
             }
@@ -8363,7 +8363,7 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
                 if ((this._ventasTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._nominas1TableAdapter != null)) {
+                if ((this._nominasTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8431,12 +8431,12 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._nominas1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Nominas1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._nominasTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Nominas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._nominas1TableAdapter.Update(updatedRows));
+                    result = (result + this._nominasTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -8498,11 +8498,11 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._nominas1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Nominas1.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._nominasTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Nominas.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._nominas1TableAdapter.Update(addedRows));
+                    result = (result + this._nominasTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -8516,11 +8516,11 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(Consultas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._nominas1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Nominas1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._nominasTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Nominas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._nominas1TableAdapter.Update(deletedRows));
+                    result = (result + this._nominasTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -8641,8 +8641,8 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._nominas1TableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._nominas1TableAdapter.Connection) == false))) {
+            if (((this._nominasTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._nominasTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -8732,13 +8732,13 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
                         adaptersWithAcceptChangesDuringUpdate.Add(this._ventasTableAdapter.Adapter);
                     }
                 }
-                if ((this._nominas1TableAdapter != null)) {
-                    revertConnections.Add(this._nominas1TableAdapter, this._nominas1TableAdapter.Connection);
-                    this._nominas1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._nominas1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._nominas1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._nominas1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._nominas1TableAdapter.Adapter);
+                if ((this._nominasTableAdapter != null)) {
+                    revertConnections.Add(this._nominasTableAdapter, this._nominasTableAdapter.Connection);
+                    this._nominasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._nominasTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._nominasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._nominasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._nominasTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -8823,9 +8823,9 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
                     this._ventasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._ventasTableAdapter]));
                     this._ventasTableAdapter.Transaction = null;
                 }
-                if ((this._nominas1TableAdapter != null)) {
-                    this._nominas1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._nominas1TableAdapter]));
-                    this._nominas1TableAdapter.Transaction = null;
+                if ((this._nominasTableAdapter != null)) {
+                    this._nominasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._nominasTableAdapter]));
+                    this._nominasTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
