@@ -9,3 +9,10 @@
         }
     }
 }
+
+namespace GestorCentroComercial.ConsultasTableAdapters {
+    
+    
+    public partial class EmpleadoTableAdapter {
+    }
+}
