@@ -60,7 +60,7 @@
             // tbUser
             // 
             this.tbUser.Location = new System.Drawing.Point(101, 59);
-            this.tbUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUser.Margin = new System.Windows.Forms.Padding(4);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(240, 22);
             this.tbUser.TabIndex = 2;
@@ -68,7 +68,7 @@
             // tbPass
             // 
             this.tbPass.Location = new System.Drawing.Point(96, 155);
-            this.tbPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPass.Margin = new System.Windows.Forms.Padding(4);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(245, 22);
             this.tbPass.TabIndex = 3;
@@ -76,7 +76,7 @@
             // bLogin
             // 
             this.bLogin.Location = new System.Drawing.Point(61, 214);
-            this.bLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bLogin.Margin = new System.Windows.Forms.Padding(4);
             this.bLogin.Name = "bLogin";
             this.bLogin.Size = new System.Drawing.Size(117, 43);
             this.bLogin.TabIndex = 4;
@@ -87,7 +87,7 @@
             // bExit
             // 
             this.bExit.Location = new System.Drawing.Point(264, 214);
-            this.bExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bExit.Margin = new System.Windows.Forms.Padding(4);
             this.bExit.Name = "bExit";
             this.bExit.Size = new System.Drawing.Size(129, 42);
             this.bExit.TabIndex = 5;
@@ -110,7 +110,7 @@
             this.Controls.Add(this.tbUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.login_Load);

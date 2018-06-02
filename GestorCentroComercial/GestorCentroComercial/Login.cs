@@ -67,5 +67,10 @@ namespace GestorCentroComercial
         {
 
         }
+
+        private void bExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
