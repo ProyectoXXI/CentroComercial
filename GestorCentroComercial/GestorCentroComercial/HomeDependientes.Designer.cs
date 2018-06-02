@@ -60,6 +60,7 @@
             this.bSalir.TabIndex = 2;
             this.bSalir.Text = "Salir";
             this.bSalir.UseVisualStyleBackColor = true;
+            this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
             // 
             // bAddVenta
             // 

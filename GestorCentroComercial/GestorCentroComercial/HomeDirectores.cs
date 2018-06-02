@@ -52,5 +52,10 @@ namespace GestorCentroComercial
             Pedidos pedidos = new Pedidos();
             pedidos.Visible = true;
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
