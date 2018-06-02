@@ -30,8 +30,6 @@ namespace GestorCentroComercial
 
                 DataRow empleado = consulta.Rows[0];
 
-                MessageBox.Show(empleado["Rol"].ToString());
-
                 switch (empleado["Rol"].ToString())
                 {
 

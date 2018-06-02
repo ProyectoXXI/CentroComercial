@@ -1,82 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Centro_Comercial_APP
+namespace GestorCentroComercial
 {
-    class Ventas
+    public partial class Ventas : Form
     {
-        #region DECLARACION DE VARIABLES
-        private DateTime fecha_venta;
-        private String codigo_centro;
-        private String codigo_dependiente;
-        private String dni_cliente;
-        private float descuento;
-        private String codigo_venta;
-        private String codigo_articulo;
-        private int unidades;
-        private float precio_final;
-        #endregion
-        #region DECLARACION DE CONSTRUCTORES
-        #region GENERAL
-        public Ventas(DateTime fecha_venta, string codigo_centro, string codigo_dependiente, string dni_cliente, float descuento)
+        public Ventas()
         {
-            this.fecha_venta = fecha_venta;
-            this.codigo_centro = codigo_centro;
-            this.codigo_dependiente = codigo_dependiente;
-            this.dni_cliente = dni_cliente;
-            this.descuento = descuento;
+            InitializeComponent();
         }
-        #endregion
-        #region DETALLADA
-        public Ventas(string codigo_venta, string codigo_articulo, int unidades, float precio_final)
+
+        private void ventasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.codigo_venta = codigo_venta;
-            this.codigo_articulo = codigo_articulo;
-            this.unidades = unidades;
-            this.precio_final = precio_final;
+            this.Validate();
+            this.ventasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.consultas);
+
         }
-        #endregion
-        #endregion
-        #region DECLARACION DE GETTERS
-        public String getcodigo_centro
+
+        private void Ventas_Load(object sender, EventArgs e)
         {
-            get { return codigo_centro; }
+            // TODO: This line of code loads data into the 'consultas.Ventas' table. You can move, or remove it, as needed.
+            this.ventasTableAdapter.Fill(this.consultas.Ventas);
+
         }
-        public String getcodigo_dependiente
-        {
-            get { return codigo_dependiente; }
-        }
-        public String getdni_cliente
-        {
-            get { return dni_cliente; }
-        }
-        public String getcodigo_venta
-        {
-            get { return codigo_venta; }
-        }
-        public String getcodigo_articulo
-        {
-            get { return codigo_articulo; }
-        }
-        public float getdescuento
-        {
-            get { return descuento; }
-        }
-        public float getprecio_final
-        {
-            get { return precio_final; }
-        }
-        public int getunidades
-        {
-            get { return unidades; }
-        }
-        public DateTime getfecha_venta
-        {
-            get { return fecha_venta; }
-        }
-        #endregion
     }
 }

@@ -31,6 +31,7 @@
             this.bMostrarNominas = new System.Windows.Forms.Button();
             this.bMostrarVentas = new System.Windows.Forms.Button();
             this.bSalir = new System.Windows.Forms.Button();
+            this.bAddVenta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bMostrarNominas
@@ -53,18 +54,29 @@
             // 
             // bSalir
             // 
-            this.bSalir.Location = new System.Drawing.Point(139, 148);
+            this.bSalir.Location = new System.Drawing.Point(46, 145);
             this.bSalir.Name = "bSalir";
-            this.bSalir.Size = new System.Drawing.Size(127, 62);
+            this.bSalir.Size = new System.Drawing.Size(114, 62);
             this.bSalir.TabIndex = 2;
             this.bSalir.Text = "Salir";
             this.bSalir.UseVisualStyleBackColor = true;
+            // 
+            // bAddVenta
+            // 
+            this.bAddVenta.Location = new System.Drawing.Point(239, 141);
+            this.bAddVenta.Name = "bAddVenta";
+            this.bAddVenta.Size = new System.Drawing.Size(112, 65);
+            this.bAddVenta.TabIndex = 3;
+            this.bAddVenta.Text = "Añadir Venta";
+            this.bAddVenta.UseVisualStyleBackColor = true;
+            this.bAddVenta.Click += new System.EventHandler(this.bAddVenta_Click);
             // 
             // HomeDependientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 239);
+            this.Controls.Add(this.bAddVenta);
             this.Controls.Add(this.bSalir);
             this.Controls.Add(this.bMostrarVentas);
             this.Controls.Add(this.bMostrarNominas);
@@ -79,5 +91,6 @@
         private System.Windows.Forms.Button bMostrarNominas;
         private System.Windows.Forms.Button bMostrarVentas;
         private System.Windows.Forms.Button bSalir;
+        private System.Windows.Forms.Button bAddVenta;
     }
 }

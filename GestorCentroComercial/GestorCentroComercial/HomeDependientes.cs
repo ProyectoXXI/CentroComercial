@@ -16,5 +16,11 @@ namespace GestorCentroComercial
         {
             InitializeComponent();
         }
+
+        private void bAddVenta_Click(object sender, EventArgs e)
+        {
+            Ventas venta = new Ventas();
+            venta.Visible = true;
+        }
     }
 }

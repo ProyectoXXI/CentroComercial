@@ -16,5 +16,41 @@ namespace GestorCentroComercial
         {
             InitializeComponent();
         }
+
+        private void bEmpleados_Click(object sender, EventArgs e)
+        {
+            Empleados empleados = new Empleados();
+            empleados.Visible = true;
+        }
+
+        private void btnmostrarArtiucloscentro_Click(object sender, EventArgs e)
+        {
+            ArticuloCentro art = new ArticuloCentro();
+            art.Visible = true;
+        }
+
+        private void btnmostrarNominas_Click(object sender, EventArgs e)
+        {
+            Nominas nominas = new Nominas();
+            nominas.Visible = true;
+        }
+
+        private void btnmostrarVentas_Click(object sender, EventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            ventas.Visible = true;
+        }
+
+        private void btnmostrarProveedores_Click(object sender, EventArgs e)
+        {
+            Proveedores pro = new Proveedores();
+            pro.Visible = true;
+        }
+
+        private void btnMostrarPedidos_Click(object sender, EventArgs e)
+        {
+            Pedidos pedidos = new Pedidos();
+            pedidos.Visible = true;
+        }
     }
 }

@@ -1,117 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Centro_Comercial_APP
+namespace GestorCentroComercial
 {
-    class Nominas
+    public partial class Nominas : Form
     {
-        #region DECLARACION DE VARIABLES
-        private float periodoNominaMeses;
-        private DateTime fechaNomina;
-        private String dniEmpleado;
-        private String nombre; 
-        private String apellidos;
-        private float sueldoBruto;
-        private float descuentoSeguridad;
-        private float totalDinero;
-        private float descuentoIRPF;
-        private float plustrienios;
-        private float plusproductividad;
-        private int horasTrabajadas;
-        private int horasMes;
-        #endregion
-        #region DECLARACION DE CONSTRUCTOR
-        #region GENERAL
-        public Nominas(float periodoNominaMeses, DateTime fechaNomina, string dniEmpleado, string nombre, string apellidos, float sueldoBruto, float descuentoSeguridad, float totalDinero, float descuentoIRPF, float plustrienios, float plusproductividad)
+        public Nominas()
         {
-            this.periodoNominaMeses = periodoNominaMeses;
-            this.fechaNomina = fechaNomina;
-            this.dniEmpleado = dniEmpleado;
-            this.nombre = nombre;
-            this.apellidos = apellidos;
-            this.sueldoBruto = sueldoBruto;
-            this.descuentoSeguridad = descuentoSeguridad;
-            this.totalDinero = totalDinero;
-            this.descuentoIRPF = descuentoIRPF;
-            this.plustrienios = plustrienios;
-            this.plusproductividad = plusproductividad;
+            InitializeComponent();
         }
-        #endregion
-        #region HORAS
-        public Nominas(float periodoNominaMeses, DateTime fechaNomina, string dniEmpleado, string nombre, string apellidos, float sueldoBruto, float descuentoSeguridad, float totalDinero, float descuentoIRPF, float plustrienios, float plusproductividad, int horasTrabajadas, int horasMes)
+
+        private void nominasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.periodoNominaMeses = periodoNominaMeses;
-            this.fechaNomina = fechaNomina;
-            this.dniEmpleado = dniEmpleado;
-            this.nombre = nombre;
-            this.apellidos = apellidos;
-            this.sueldoBruto = sueldoBruto;
-            this.descuentoSeguridad = descuentoSeguridad;
-            this.totalDinero = totalDinero;
-            this.descuentoIRPF = descuentoIRPF;
-            this.plustrienios = plustrienios;
-            this.plusproductividad = plusproductividad;
-            this.horasTrabajadas = horasTrabajadas;
-            this.horasMes = horasMes;
+            this.Validate();
+            this.nominasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.consultas);
+
         }
-        #endregion
-        #endregion
-        #region DECLARACION DE GETTERS
-        public DateTime getfechaNomina
+
+        private void Nominas_Load(object sender, EventArgs e)
         {
-            get { return fechaNomina; }
+            // TODO: This line of code loads data into the 'consultas.Nominas' table. You can move, or remove it, as needed.
+            this.nominasTableAdapter.Fill(this.consultas.Nominas);
+
         }
-        public String getdniEmpleado
-        {
-            get { return dniEmpleado; }
-        }
-        public String getnombre
-        {
-            get { return nombre; }
-        }
-        public String getapellidos
-        {
-            get { return apellidos; }
-        }
-        public float getperiodoNominaMeses
-        {
-            get { return periodoNominaMeses; }
-        }
-        public float getsueldoBruto
-        {
-            get { return sueldoBruto; }
-        }
-        public float getdescuentoSeguridad
-        {
-            get { return descuentoSeguridad; }
-        }
-        public float getdescuentoIRPF
-        {
-            get { return descuentoIRPF; }
-        }
-        public float gettotalDinero
-        {
-            get { return totalDinero; }
-        }
-        public float getplustrienios
-        {
-            get { return plustrienios; }
-        }
-        public float getplusproductividad
-        {
-            get { return plusproductividad; }
-        }
-        public int gethorasTrabajadas
-        {
-            get { return horasTrabajadas; }
-        }
-        public int gethorasMes
-        {
-            get { return horasMes; }
-        }
-        #endregion
     }
 }
