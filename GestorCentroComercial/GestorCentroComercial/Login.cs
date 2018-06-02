@@ -22,11 +22,18 @@ namespace GestorCentroComercial
             String usuario = tbUser.Text.ToString();
             int password = int.Parse(tbPass.Text.ToString());
             if(empleadoTableAdapter1.ComprobarPassword(password) != null){
-                MessageBox.Show("Entra");
+                if (empleadoTableAdapter1.ComprobarUsuario(usuario) != null)
+                {
+                    MessageBox.Show("Entra");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no valido");
+                }
             }
             else
             {
-                MessageBox.Show("NO");
+                MessageBox.Show("Contraseña no valida");
             }
         }
     }
