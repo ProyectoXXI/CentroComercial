@@ -16,5 +16,25 @@ namespace GestorCentroComercial
         {
             InitializeComponent();
         }
+
+        private void bLogin_Click(object sender, EventArgs e)
+        {
+            String usuario = tbUser.Text.ToString();
+            int password = int.Parse(tbPass.Text.ToString());
+            if(empleadoTableAdapter1.ComprobarPassword(password) != null){
+                if (empleadoTableAdapter1.ComprobarUsuario(usuario) != null)
+                {
+                    MessageBox.Show("Entra");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no valido");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Contraseña no valida");
+            }
+        }
     }
 }
