@@ -70,6 +70,7 @@ namespace GestorCentroComercial
 
         private void bExit_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Adios, hasta pronto");
             Application.Exit();
         }
     }
