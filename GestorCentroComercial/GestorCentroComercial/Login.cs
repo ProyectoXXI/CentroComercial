@@ -29,9 +29,6 @@ namespace GestorCentroComercial
             if (consulta != null) {
 
                 DataRow empleado = consulta.Rows[0];
-
-                MessageBox.Show(empleado["Rol"].ToString());
-
                 switch (empleado["Rol"].ToString())
                 {
 
@@ -68,6 +65,11 @@ namespace GestorCentroComercial
         private void login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

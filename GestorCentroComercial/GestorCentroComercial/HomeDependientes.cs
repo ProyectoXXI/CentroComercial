@@ -16,5 +16,12 @@ namespace GestorCentroComercial
         {
             InitializeComponent();
         }
+
+        private void bSalir_Click(object sender, EventArgs e)
+        {
+            login l = new login();
+            l.Visible = true;
+            this.Visible = false;
+        }
     }
 }

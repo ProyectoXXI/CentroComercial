@@ -39,7 +39,7 @@
             // btnmostrarVentas
             // 
             this.btnmostrarVentas.Location = new System.Drawing.Point(32, 57);
-            this.btnmostrarVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarVentas.Margin = new System.Windows.Forms.Padding(4);
             this.btnmostrarVentas.Name = "btnmostrarVentas";
             this.btnmostrarVentas.Size = new System.Drawing.Size(184, 43);
             this.btnmostrarVentas.TabIndex = 0;
@@ -49,7 +49,7 @@
             // btnmostrarNominas
             // 
             this.btnmostrarNominas.Location = new System.Drawing.Point(348, 57);
-            this.btnmostrarNominas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarNominas.Margin = new System.Windows.Forms.Padding(4);
             this.btnmostrarNominas.Name = "btnmostrarNominas";
             this.btnmostrarNominas.Size = new System.Drawing.Size(184, 43);
             this.btnmostrarNominas.TabIndex = 1;
@@ -59,7 +59,7 @@
             // btnmostrarProveedores
             // 
             this.btnmostrarProveedores.Location = new System.Drawing.Point(32, 123);
-            this.btnmostrarProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarProveedores.Margin = new System.Windows.Forms.Padding(4);
             this.btnmostrarProveedores.Name = "btnmostrarProveedores";
             this.btnmostrarProveedores.Size = new System.Drawing.Size(184, 43);
             this.btnmostrarProveedores.TabIndex = 2;
@@ -69,7 +69,7 @@
             // btnmostrarArtiucloscentro
             // 
             this.btnmostrarArtiucloscentro.Location = new System.Drawing.Point(348, 123);
-            this.btnmostrarArtiucloscentro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmostrarArtiucloscentro.Margin = new System.Windows.Forms.Padding(4);
             this.btnmostrarArtiucloscentro.Name = "btnmostrarArtiucloscentro";
             this.btnmostrarArtiucloscentro.Size = new System.Drawing.Size(184, 43);
             this.btnmostrarArtiucloscentro.TabIndex = 3;
@@ -79,7 +79,7 @@
             // btnMostrarPedidos
             // 
             this.btnMostrarPedidos.Location = new System.Drawing.Point(32, 185);
-            this.btnMostrarPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMostrarPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btnMostrarPedidos.Name = "btnMostrarPedidos";
             this.btnMostrarPedidos.Size = new System.Drawing.Size(184, 43);
             this.btnMostrarPedidos.TabIndex = 4;
@@ -95,6 +95,7 @@
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // HomeDirectores
             // 
@@ -107,7 +108,7 @@
             this.Controls.Add(this.btnmostrarProveedores);
             this.Controls.Add(this.btnmostrarNominas);
             this.Controls.Add(this.btnmostrarVentas);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeDirectores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeDirectores";
