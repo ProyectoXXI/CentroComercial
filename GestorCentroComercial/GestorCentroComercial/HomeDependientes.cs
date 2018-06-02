@@ -22,5 +22,12 @@ namespace GestorCentroComercial
             Ventas venta = new Ventas();
             venta.Visible = true;
         }
+
+        private void bSalir_Click(object sender, EventArgs e)
+        {
+            login l = new login();
+            l.Visible = true;
+            this.Visible = false;
+        }
     }
 }
