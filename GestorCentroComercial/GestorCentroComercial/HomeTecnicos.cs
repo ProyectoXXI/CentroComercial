@@ -23,5 +23,10 @@ namespace GestorCentroComercial
             l.Visible = true;
             this.Visible = false;
         }
+
+        private void HomeTecnicos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

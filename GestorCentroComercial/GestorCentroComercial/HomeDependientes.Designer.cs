@@ -36,27 +36,30 @@
             // 
             // bMostrarNominas
             // 
-            this.bMostrarNominas.Location = new System.Drawing.Point(46, 30);
+            this.bMostrarNominas.Location = new System.Drawing.Point(61, 37);
+            this.bMostrarNominas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bMostrarNominas.Name = "bMostrarNominas";
-            this.bMostrarNominas.Size = new System.Drawing.Size(114, 79);
+            this.bMostrarNominas.Size = new System.Drawing.Size(152, 97);
             this.bMostrarNominas.TabIndex = 0;
             this.bMostrarNominas.Text = "Mostrar Nóminas";
             this.bMostrarNominas.UseVisualStyleBackColor = true;
             // 
             // bMostrarVentas
             // 
-            this.bMostrarVentas.Location = new System.Drawing.Point(235, 30);
+            this.bMostrarVentas.Location = new System.Drawing.Point(313, 37);
+            this.bMostrarVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bMostrarVentas.Name = "bMostrarVentas";
-            this.bMostrarVentas.Size = new System.Drawing.Size(117, 79);
+            this.bMostrarVentas.Size = new System.Drawing.Size(156, 97);
             this.bMostrarVentas.TabIndex = 1;
             this.bMostrarVentas.Text = "Mostrar Ventas";
             this.bMostrarVentas.UseVisualStyleBackColor = true;
             // 
             // bSalir
             // 
-            this.bSalir.Location = new System.Drawing.Point(46, 145);
+            this.bSalir.Location = new System.Drawing.Point(61, 178);
+            this.bSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bSalir.Name = "bSalir";
-            this.bSalir.Size = new System.Drawing.Size(114, 62);
+            this.bSalir.Size = new System.Drawing.Size(152, 76);
             this.bSalir.TabIndex = 2;
             this.bSalir.Text = "Salir";
             this.bSalir.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@
             // 
             // bAddVenta
             // 
-            this.bAddVenta.Location = new System.Drawing.Point(239, 141);
+            this.bAddVenta.Location = new System.Drawing.Point(319, 174);
+            this.bAddVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bAddVenta.Name = "bAddVenta";
-            this.bAddVenta.Size = new System.Drawing.Size(112, 65);
+            this.bAddVenta.Size = new System.Drawing.Size(149, 80);
             this.bAddVenta.TabIndex = 3;
             this.bAddVenta.Text = "Añadir Venta";
             this.bAddVenta.UseVisualStyleBackColor = true;
@@ -74,13 +78,14 @@
             // 
             // HomeDependientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 239);
+            this.ClientSize = new System.Drawing.Size(580, 294);
             this.Controls.Add(this.bAddVenta);
             this.Controls.Add(this.bSalir);
             this.Controls.Add(this.bMostrarVentas);
             this.Controls.Add(this.bMostrarNominas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeDependientes";
             this.Text = "HomeDependientes";
             this.ResumeLayout(false);
