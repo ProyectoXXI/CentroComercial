@@ -59,5 +59,10 @@ namespace GestorCentroComercial
             l.Visible = true;
             this.Visible = false;
         }
+
+        private void HomeDirectores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7028,7 +7028,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, CodigoV" +
@@ -7039,6 +7039,13 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
             this._commandCollection[1].CommandText = "SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, CodigoV" +
                 "enta, CodigoArticulo, Unidades, PrecioFinal FROM dbo.Ventas";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, CodigoV" +
+                "enta, CodigoArticulo, Unidades, PrecioFinal \r\nFROM dbo.Ventas\r\nwhere CodigoDepen" +
+                "diente = @codigo";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CodigoDependiente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7084,6 +7091,32 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Consultas.VentasDataTable Ventas() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            Consultas.VentasDataTable dataTable = new Consultas.VentasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(Consultas.VentasDataTable dataTable, int codigo) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(codigo));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Consultas.VentasDataTable VentasDependiente(int codigo) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(codigo));
             Consultas.VentasDataTable dataTable = new Consultas.VentasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7547,13 +7580,20 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDine" +
                 "ro, descuentoIRPF, plustrienios, plusproductividad, horasTrabajadas, horasMes, f" +
                 "echaNomina, periodoNominaMeses, CodigoEmpleado FROM dbo.Nominas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDinero, descuentoIRPF, plustrienios, plusproductividad, horasTrabajadas, horasMes, fechaNomina, periodoNominaMeses, CodigoEmpleado 
+FROM dbo.Nominas
+where CodigoEmpleado = @Codigo";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Codigo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CodigoEmpleado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7575,6 +7615,42 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Consultas.NominasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Consultas.NominasDataTable dataTable = new Consultas.NominasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(Consultas.NominasDataTable dataTable, global::System.Nullable<int> Codigo) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Codigo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Codigo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Consultas.NominasDataTable NominasEmpleado(global::System.Nullable<int> Codigo) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Codigo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Codigo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             Consultas.NominasDataTable dataTable = new Consultas.NominasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

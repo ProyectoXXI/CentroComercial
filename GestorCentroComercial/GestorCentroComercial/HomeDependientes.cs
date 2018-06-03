@@ -19,7 +19,7 @@ namespace GestorCentroComercial
 
         private void bAddVenta_Click(object sender, EventArgs e)
         {
-            Ventas venta = new Ventas();
+            VentasDependiente venta = new VentasDependiente();
             venta.Visible = true;
         }
 
@@ -29,5 +29,19 @@ namespace GestorCentroComercial
             l.Visible = true;
             this.Visible = false;
         }
+
+        private void bMostrarNominas_Click(object sender, EventArgs e)
+        {
+            NominasEmpleado nm = new NominasEmpleado();
+            nm.Visible = true;
+        }
+
+
+        private void HomeDependientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
