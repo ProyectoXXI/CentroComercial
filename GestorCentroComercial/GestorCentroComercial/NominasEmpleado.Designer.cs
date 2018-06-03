@@ -45,6 +45,8 @@
             System.Windows.Forms.Label codigoEmpleadoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NominasEmpleado));
             this.nominasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.nominasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultas = new GestorCentroComercial.Consultas();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -55,22 +57,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.nominasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dniEmpleadoTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.apellidosTextBox = new System.Windows.Forms.TextBox();
-            this.sueldoBrutoTextBox = new System.Windows.Forms.TextBox();
-            this.descuentoSeguridadTextBox = new System.Windows.Forms.TextBox();
-            this.totalDineroTextBox = new System.Windows.Forms.TextBox();
-            this.descuentoIRPFTextBox = new System.Windows.Forms.TextBox();
-            this.plustrieniosTextBox = new System.Windows.Forms.TextBox();
-            this.plusproductividadTextBox = new System.Windows.Forms.TextBox();
-            this.horasTrabajadasTextBox = new System.Windows.Forms.TextBox();
-            this.horasMesTextBox = new System.Windows.Forms.TextBox();
-            this.fechaNominaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.periodoNominaMesesTextBox = new System.Windows.Forms.TextBox();
-            this.codigoEmpleadoTextBox = new System.Windows.Forms.TextBox();
-            this.nominasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultas = new GestorCentroComercial.Consultas();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,6 +71,20 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dniEmpleadoTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.apellidosTextBox = new System.Windows.Forms.TextBox();
+            this.sueldoBrutoTextBox = new System.Windows.Forms.TextBox();
+            this.descuentoSeguridadTextBox = new System.Windows.Forms.TextBox();
+            this.totalDineroTextBox = new System.Windows.Forms.TextBox();
+            this.descuentoIRPFTextBox = new System.Windows.Forms.TextBox();
+            this.plustrieniosTextBox = new System.Windows.Forms.TextBox();
+            this.plusproductividadTextBox = new System.Windows.Forms.TextBox();
+            this.horasTrabajadasTextBox = new System.Windows.Forms.TextBox();
+            this.horasMesTextBox = new System.Windows.Forms.TextBox();
+            this.fechaNominaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.periodoNominaMesesTextBox = new System.Windows.Forms.TextBox();
+            this.codigoEmpleadoTextBox = new System.Windows.Forms.TextBox();
             this.nominasTableAdapter = new GestorCentroComercial.ConsultasTableAdapters.NominasTableAdapter();
             this.tableAdapterManager = new GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager();
             dniEmpleadoLabel = new System.Windows.Forms.Label();
@@ -103,9 +103,9 @@
             codigoEmpleadoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nominasBindingNavigator)).BeginInit();
             this.nominasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nominasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nominasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nominasDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dniEmpleadoLabel
@@ -303,6 +303,16 @@
             this.nominasBindingNavigator.TabIndex = 0;
             this.nominasBindingNavigator.Text = "bindingNavigator1";
             // 
+            // nominasBindingSource
+            // 
+            this.nominasBindingSource.DataMember = "Nominas";
+            this.nominasBindingSource.DataSource = this.consultas;
+            // 
+            // consultas
+            // 
+            this.consultas.DataSetName = "Consultas";
+            this.consultas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -394,6 +404,90 @@
             this.nominasDataGridView.Name = "nominasDataGridView";
             this.nominasDataGridView.Size = new System.Drawing.Size(1043, 371);
             this.nominasDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "DniEmpleado";
+            this.dataGridViewTextBoxColumn1.HeaderText = "DniEmpleado";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "apellidos";
+            this.dataGridViewTextBoxColumn3.HeaderText = "apellidos";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "sueldoBruto";
+            this.dataGridViewTextBoxColumn4.HeaderText = "sueldoBruto";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "descuentoSeguridad";
+            this.dataGridViewTextBoxColumn5.HeaderText = "descuentoSeguridad";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "totalDinero";
+            this.dataGridViewTextBoxColumn6.HeaderText = "totalDinero";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "descuentoIRPF";
+            this.dataGridViewTextBoxColumn7.HeaderText = "descuentoIRPF";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "plustrienios";
+            this.dataGridViewTextBoxColumn8.HeaderText = "plustrienios";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "plusproductividad";
+            this.dataGridViewTextBoxColumn9.HeaderText = "plusproductividad";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "horasTrabajadas";
+            this.dataGridViewTextBoxColumn10.HeaderText = "horasTrabajadas";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "horasMes";
+            this.dataGridViewTextBoxColumn11.HeaderText = "horasMes";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "fechaNomina";
+            this.dataGridViewTextBoxColumn12.HeaderText = "fechaNomina";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "periodoNominaMeses";
+            this.dataGridViewTextBoxColumn13.HeaderText = "periodoNominaMeses";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "CodigoEmpleado";
+            this.dataGridViewTextBoxColumn14.HeaderText = "CodigoEmpleado";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // dniEmpleadoTextBox
             // 
@@ -507,100 +601,6 @@
             this.codigoEmpleadoTextBox.Size = new System.Drawing.Size(239, 20);
             this.codigoEmpleadoTextBox.TabIndex = 29;
             // 
-            // nominasBindingSource
-            // 
-            this.nominasBindingSource.DataMember = "Nominas";
-            this.nominasBindingSource.DataSource = this.consultas;
-            // 
-            // consultas
-            // 
-            this.consultas.DataSetName = "Consultas";
-            this.consultas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "DniEmpleado";
-            this.dataGridViewTextBoxColumn1.HeaderText = "DniEmpleado";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "apellidos";
-            this.dataGridViewTextBoxColumn3.HeaderText = "apellidos";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "sueldoBruto";
-            this.dataGridViewTextBoxColumn4.HeaderText = "sueldoBruto";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "descuentoSeguridad";
-            this.dataGridViewTextBoxColumn5.HeaderText = "descuentoSeguridad";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "totalDinero";
-            this.dataGridViewTextBoxColumn6.HeaderText = "totalDinero";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "descuentoIRPF";
-            this.dataGridViewTextBoxColumn7.HeaderText = "descuentoIRPF";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "plustrienios";
-            this.dataGridViewTextBoxColumn8.HeaderText = "plustrienios";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "plusproductividad";
-            this.dataGridViewTextBoxColumn9.HeaderText = "plusproductividad";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "horasTrabajadas";
-            this.dataGridViewTextBoxColumn10.HeaderText = "horasTrabajadas";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "horasMes";
-            this.dataGridViewTextBoxColumn11.HeaderText = "horasMes";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "fechaNomina";
-            this.dataGridViewTextBoxColumn12.HeaderText = "fechaNomina";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "periodoNominaMeses";
-            this.dataGridViewTextBoxColumn13.HeaderText = "periodoNominaMeses";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "CodigoEmpleado";
-            this.dataGridViewTextBoxColumn14.HeaderText = "CodigoEmpleado";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
             // nominasTableAdapter
             // 
             this.nominasTableAdapter.ClearBeforeFill = true;
@@ -621,7 +621,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.a681f2dd84df484fe05ae07cf69fbd5c;
+            this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1067, 653);
             this.Controls.Add(dniEmpleadoLabel);
             this.Controls.Add(this.dniEmpleadoTextBox);
@@ -659,9 +659,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nominasBindingNavigator)).EndInit();
             this.nominasBindingNavigator.ResumeLayout(false);
             this.nominasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nominasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nominasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nominasDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

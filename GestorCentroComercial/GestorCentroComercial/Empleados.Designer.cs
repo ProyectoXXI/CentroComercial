@@ -654,7 +654,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.a681f2dd84df484fe05ae07cf69fbd5c;
+            this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(1067, 653);
             this.Controls.Add(codigoEmpleadoLabel);
             this.Controls.Add(this.codigoEmpleadoTextBox);

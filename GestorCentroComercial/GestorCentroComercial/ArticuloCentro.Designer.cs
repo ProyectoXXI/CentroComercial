@@ -94,81 +94,108 @@
             // codigoCentroLabel
             // 
             codigoCentroLabel.AutoSize = true;
+            codigoCentroLabel.BackColor = System.Drawing.Color.Transparent;
+            codigoCentroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codigoCentroLabel.ForeColor = System.Drawing.Color.White;
             codigoCentroLabel.Location = new System.Drawing.Point(91, 77);
             codigoCentroLabel.Name = "codigoCentroLabel";
-            codigoCentroLabel.Size = new System.Drawing.Size(77, 13);
+            codigoCentroLabel.Size = new System.Drawing.Size(115, 20);
             codigoCentroLabel.TabIndex = 1;
             codigoCentroLabel.Text = "Codigo Centro:";
             // 
             // codigoArticuloLabel
             // 
             codigoArticuloLabel.AutoSize = true;
+            codigoArticuloLabel.BackColor = System.Drawing.Color.Transparent;
+            codigoArticuloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codigoArticuloLabel.ForeColor = System.Drawing.Color.White;
             codigoArticuloLabel.Location = new System.Drawing.Point(91, 103);
             codigoArticuloLabel.Name = "codigoArticuloLabel";
-            codigoArticuloLabel.Size = new System.Drawing.Size(81, 13);
+            codigoArticuloLabel.Size = new System.Drawing.Size(120, 20);
             codigoArticuloLabel.TabIndex = 3;
             codigoArticuloLabel.Text = "Codigo Articulo:";
             // 
             // fechaEntradaLabel
             // 
             fechaEntradaLabel.AutoSize = true;
+            fechaEntradaLabel.BackColor = System.Drawing.Color.Transparent;
+            fechaEntradaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaEntradaLabel.ForeColor = System.Drawing.Color.White;
             fechaEntradaLabel.Location = new System.Drawing.Point(91, 130);
             fechaEntradaLabel.Name = "fechaEntradaLabel";
-            fechaEntradaLabel.Size = new System.Drawing.Size(80, 13);
+            fechaEntradaLabel.Size = new System.Drawing.Size(119, 20);
             fechaEntradaLabel.TabIndex = 5;
             fechaEntradaLabel.Text = "Fecha Entrada:";
             // 
             // nombreArticuloLabel
             // 
             nombreArticuloLabel.AutoSize = true;
+            nombreArticuloLabel.BackColor = System.Drawing.Color.Transparent;
+            nombreArticuloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreArticuloLabel.ForeColor = System.Drawing.Color.White;
             nombreArticuloLabel.Location = new System.Drawing.Point(91, 155);
             nombreArticuloLabel.Name = "nombreArticuloLabel";
-            nombreArticuloLabel.Size = new System.Drawing.Size(85, 13);
+            nombreArticuloLabel.Size = new System.Drawing.Size(126, 20);
             nombreArticuloLabel.TabIndex = 7;
             nombreArticuloLabel.Text = "Nombre Articulo:";
             // 
             // modeloLabel
             // 
             modeloLabel.AutoSize = true;
+            modeloLabel.BackColor = System.Drawing.Color.Transparent;
+            modeloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            modeloLabel.ForeColor = System.Drawing.Color.White;
             modeloLabel.Location = new System.Drawing.Point(530, 54);
             modeloLabel.Name = "modeloLabel";
-            modeloLabel.Size = new System.Drawing.Size(45, 13);
+            modeloLabel.Size = new System.Drawing.Size(65, 20);
             modeloLabel.TabIndex = 9;
             modeloLabel.Text = "Modelo:";
             // 
             // caracteristicasLabel
             // 
             caracteristicasLabel.AutoSize = true;
+            caracteristicasLabel.BackColor = System.Drawing.Color.Transparent;
+            caracteristicasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            caracteristicasLabel.ForeColor = System.Drawing.Color.White;
             caracteristicasLabel.Location = new System.Drawing.Point(530, 80);
             caracteristicasLabel.Name = "caracteristicasLabel";
-            caracteristicasLabel.Size = new System.Drawing.Size(79, 13);
+            caracteristicasLabel.Size = new System.Drawing.Size(118, 20);
             caracteristicasLabel.TabIndex = 11;
             caracteristicasLabel.Text = "Caracteristicas:";
             // 
             // unidadesStockLabel
             // 
             unidadesStockLabel.AutoSize = true;
+            unidadesStockLabel.BackColor = System.Drawing.Color.Transparent;
+            unidadesStockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            unidadesStockLabel.ForeColor = System.Drawing.Color.White;
             unidadesStockLabel.Location = new System.Drawing.Point(530, 106);
             unidadesStockLabel.Name = "unidadesStockLabel";
-            unidadesStockLabel.Size = new System.Drawing.Size(86, 13);
+            unidadesStockLabel.Size = new System.Drawing.Size(126, 20);
             unidadesStockLabel.TabIndex = 13;
             unidadesStockLabel.Text = "Unidades Stock:";
             // 
             // precioCosteLabel
             // 
             precioCosteLabel.AutoSize = true;
+            precioCosteLabel.BackColor = System.Drawing.Color.Transparent;
+            precioCosteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precioCosteLabel.ForeColor = System.Drawing.Color.White;
             precioCosteLabel.Location = new System.Drawing.Point(530, 132);
             precioCosteLabel.Name = "precioCosteLabel";
-            precioCosteLabel.Size = new System.Drawing.Size(70, 13);
+            precioCosteLabel.Size = new System.Drawing.Size(103, 20);
             precioCosteLabel.TabIndex = 15;
             precioCosteLabel.Text = "Precio Coste:";
             // 
             // beneficiosLabel
             // 
             beneficiosLabel.AutoSize = true;
+            beneficiosLabel.BackColor = System.Drawing.Color.Transparent;
+            beneficiosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            beneficiosLabel.ForeColor = System.Drawing.Color.White;
             beneficiosLabel.Location = new System.Drawing.Point(530, 158);
             beneficiosLabel.Name = "beneficiosLabel";
-            beneficiosLabel.Size = new System.Drawing.Size(59, 13);
+            beneficiosLabel.Size = new System.Drawing.Size(87, 20);
             beneficiosLabel.TabIndex = 17;
             beneficiosLabel.Text = "Beneficios:";
             // 
@@ -325,7 +352,7 @@
             // codigoCentroTextBox
             // 
             this.codigoCentroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "CodigoCentro", true));
-            this.codigoCentroTextBox.Location = new System.Drawing.Point(183, 74);
+            this.codigoCentroTextBox.Location = new System.Drawing.Point(221, 77);
             this.codigoCentroTextBox.Name = "codigoCentroTextBox";
             this.codigoCentroTextBox.Size = new System.Drawing.Size(252, 20);
             this.codigoCentroTextBox.TabIndex = 2;
@@ -333,7 +360,7 @@
             // codigoArticuloTextBox
             // 
             this.codigoArticuloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "CodigoArticulo", true));
-            this.codigoArticuloTextBox.Location = new System.Drawing.Point(183, 100);
+            this.codigoArticuloTextBox.Location = new System.Drawing.Point(221, 103);
             this.codigoArticuloTextBox.Name = "codigoArticuloTextBox";
             this.codigoArticuloTextBox.Size = new System.Drawing.Size(252, 20);
             this.codigoArticuloTextBox.TabIndex = 4;
@@ -341,7 +368,7 @@
             // fechaEntradaDateTimePicker
             // 
             this.fechaEntradaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.articulosCentroComercialBindingSource, "FechaEntrada", true));
-            this.fechaEntradaDateTimePicker.Location = new System.Drawing.Point(183, 126);
+            this.fechaEntradaDateTimePicker.Location = new System.Drawing.Point(221, 129);
             this.fechaEntradaDateTimePicker.Name = "fechaEntradaDateTimePicker";
             this.fechaEntradaDateTimePicker.Size = new System.Drawing.Size(252, 20);
             this.fechaEntradaDateTimePicker.TabIndex = 6;
@@ -349,7 +376,7 @@
             // nombreArticuloTextBox
             // 
             this.nombreArticuloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "NombreArticulo", true));
-            this.nombreArticuloTextBox.Location = new System.Drawing.Point(183, 152);
+            this.nombreArticuloTextBox.Location = new System.Drawing.Point(221, 155);
             this.nombreArticuloTextBox.Name = "nombreArticuloTextBox";
             this.nombreArticuloTextBox.Size = new System.Drawing.Size(252, 20);
             this.nombreArticuloTextBox.TabIndex = 8;
@@ -357,7 +384,7 @@
             // modeloTextBox
             // 
             this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "Modelo", true));
-            this.modeloTextBox.Location = new System.Drawing.Point(622, 51);
+            this.modeloTextBox.Location = new System.Drawing.Point(670, 56);
             this.modeloTextBox.Name = "modeloTextBox";
             this.modeloTextBox.Size = new System.Drawing.Size(253, 20);
             this.modeloTextBox.TabIndex = 10;
@@ -365,7 +392,7 @@
             // caracteristicasTextBox
             // 
             this.caracteristicasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "Caracteristicas", true));
-            this.caracteristicasTextBox.Location = new System.Drawing.Point(622, 77);
+            this.caracteristicasTextBox.Location = new System.Drawing.Point(670, 82);
             this.caracteristicasTextBox.Name = "caracteristicasTextBox";
             this.caracteristicasTextBox.Size = new System.Drawing.Size(253, 20);
             this.caracteristicasTextBox.TabIndex = 12;
@@ -373,7 +400,7 @@
             // unidadesStockTextBox
             // 
             this.unidadesStockTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "UnidadesStock", true));
-            this.unidadesStockTextBox.Location = new System.Drawing.Point(622, 103);
+            this.unidadesStockTextBox.Location = new System.Drawing.Point(670, 108);
             this.unidadesStockTextBox.Name = "unidadesStockTextBox";
             this.unidadesStockTextBox.Size = new System.Drawing.Size(253, 20);
             this.unidadesStockTextBox.TabIndex = 14;
@@ -381,7 +408,7 @@
             // precioCosteTextBox
             // 
             this.precioCosteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "PrecioCoste", true));
-            this.precioCosteTextBox.Location = new System.Drawing.Point(622, 129);
+            this.precioCosteTextBox.Location = new System.Drawing.Point(670, 134);
             this.precioCosteTextBox.Name = "precioCosteTextBox";
             this.precioCosteTextBox.Size = new System.Drawing.Size(253, 20);
             this.precioCosteTextBox.TabIndex = 16;
@@ -389,7 +416,7 @@
             // beneficiosTextBox
             // 
             this.beneficiosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.articulosCentroComercialBindingSource, "Beneficios", true));
-            this.beneficiosTextBox.Location = new System.Drawing.Point(622, 155);
+            this.beneficiosTextBox.Location = new System.Drawing.Point(670, 160);
             this.beneficiosTextBox.Name = "beneficiosTextBox";
             this.beneficiosTextBox.Size = new System.Drawing.Size(253, 20);
             this.beneficiosTextBox.TabIndex = 18;
@@ -473,6 +500,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(974, 509);
             this.Controls.Add(this.articulosCentroComercialDataGridView);
             this.Controls.Add(codigoCentroLabel);
