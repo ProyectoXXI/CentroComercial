@@ -19,10 +19,19 @@ namespace GestorCentroComercial
 
         private void ventasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.ventasBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.consultas);
-
+            int unidades = int.Parse(unidadesTextBox.Text);
+            int ccentro = int.Parse(codigCentroTextBox.Text);
+            int cArticulo = int.Parse(codigoArticuloTextBox.Text);
+            if (unidades<=articulosCentroComercialTableAdapter1.ObtenerUnidadesStock(ccentro,cArticulo))
+            {
+                this.Validate();
+                this.ventasBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.consultas);
+            }
+            else
+            {
+                MessageBox.Show("Unidades no validas\nUnidades en stock: "+articulosCentroComercialTableAdapter1.ObtenerUnidadesStock(ccentro,cArticulo));
+            }
         }
 
         private void Ventas_Load(object sender, EventArgs e)

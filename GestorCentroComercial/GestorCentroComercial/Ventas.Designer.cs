@@ -39,10 +39,6 @@
             System.Windows.Forms.Label unidadesLabel;
             System.Windows.Forms.Label precioFinalLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
-            this.consultas = new GestorCentroComercial.Consultas();
-            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ventasTableAdapter = new GestorCentroComercial.ConsultasTableAdapters.VentasTableAdapter();
-            this.tableAdapterManager = new GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager();
             this.ventasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -75,6 +71,11 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultas = new GestorCentroComercial.Consultas();
+            this.ventasTableAdapter = new GestorCentroComercial.ConsultasTableAdapters.VentasTableAdapter();
+            this.tableAdapterManager = new GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager();
+            this.articulosCentroComercialTableAdapter1 = new GestorCentroComercial.ConsultasTableAdapters.ArticulosCentroComercialTableAdapter();
             fechaVentaLabel = new System.Windows.Forms.Label();
             codigCentroLabel = new System.Windows.Forms.Label();
             codigoDependienteLabel = new System.Windows.Forms.Label();
@@ -84,119 +85,102 @@
             codigoArticuloLabel = new System.Windows.Forms.Label();
             unidadesLabel = new System.Windows.Forms.Label();
             precioFinalLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.consultas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingNavigator)).BeginInit();
             this.ventasBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultas)).BeginInit();
             this.SuspendLayout();
             // 
             // fechaVentaLabel
             // 
             fechaVentaLabel.AutoSize = true;
-            fechaVentaLabel.Location = new System.Drawing.Point(92, 64);
+            fechaVentaLabel.Location = new System.Drawing.Point(123, 79);
+            fechaVentaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaVentaLabel.Name = "fechaVentaLabel";
-            fechaVentaLabel.Size = new System.Drawing.Size(71, 13);
+            fechaVentaLabel.Size = new System.Drawing.Size(92, 17);
             fechaVentaLabel.TabIndex = 1;
             fechaVentaLabel.Text = "Fecha Venta:";
             // 
             // codigCentroLabel
             // 
             codigCentroLabel.AutoSize = true;
-            codigCentroLabel.Location = new System.Drawing.Point(92, 89);
+            codigCentroLabel.Location = new System.Drawing.Point(123, 110);
+            codigCentroLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigCentroLabel.Name = "codigCentroLabel";
-            codigCentroLabel.Size = new System.Drawing.Size(71, 13);
+            codigCentroLabel.Size = new System.Drawing.Size(94, 17);
             codigCentroLabel.TabIndex = 3;
             codigCentroLabel.Text = "Codig Centro:";
             // 
             // codigoDependienteLabel
             // 
             codigoDependienteLabel.AutoSize = true;
-            codigoDependienteLabel.Location = new System.Drawing.Point(92, 115);
+            codigoDependienteLabel.Location = new System.Drawing.Point(123, 142);
+            codigoDependienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoDependienteLabel.Name = "codigoDependienteLabel";
-            codigoDependienteLabel.Size = new System.Drawing.Size(107, 13);
+            codigoDependienteLabel.Size = new System.Drawing.Size(141, 17);
             codigoDependienteLabel.TabIndex = 5;
             codigoDependienteLabel.Text = "Codigo Dependiente:";
             // 
             // dniClienteLabel
             // 
             dniClienteLabel.AutoSize = true;
-            dniClienteLabel.Location = new System.Drawing.Point(92, 141);
+            dniClienteLabel.Location = new System.Drawing.Point(123, 174);
+            dniClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dniClienteLabel.Name = "dniClienteLabel";
-            dniClienteLabel.Size = new System.Drawing.Size(61, 13);
+            dniClienteLabel.Size = new System.Drawing.Size(80, 17);
             dniClienteLabel.TabIndex = 7;
             dniClienteLabel.Text = "Dni Cliente:";
             // 
             // descuentoLabel
             // 
             descuentoLabel.AutoSize = true;
-            descuentoLabel.Location = new System.Drawing.Point(92, 167);
+            descuentoLabel.Location = new System.Drawing.Point(123, 206);
+            descuentoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descuentoLabel.Name = "descuentoLabel";
-            descuentoLabel.Size = new System.Drawing.Size(62, 13);
+            descuentoLabel.Size = new System.Drawing.Size(80, 17);
             descuentoLabel.TabIndex = 9;
             descuentoLabel.Text = "Descuento:";
             // 
             // codigoVentaLabel
             // 
             codigoVentaLabel.AutoSize = true;
-            codigoVentaLabel.Location = new System.Drawing.Point(92, 193);
+            codigoVentaLabel.Location = new System.Drawing.Point(123, 238);
+            codigoVentaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoVentaLabel.Name = "codigoVentaLabel";
-            codigoVentaLabel.Size = new System.Drawing.Size(74, 13);
+            codigoVentaLabel.Size = new System.Drawing.Size(97, 17);
             codigoVentaLabel.TabIndex = 11;
             codigoVentaLabel.Text = "Codigo Venta:";
             // 
             // codigoArticuloLabel
             // 
             codigoArticuloLabel.AutoSize = true;
-            codigoArticuloLabel.Location = new System.Drawing.Point(92, 219);
+            codigoArticuloLabel.Location = new System.Drawing.Point(123, 270);
+            codigoArticuloLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoArticuloLabel.Name = "codigoArticuloLabel";
-            codigoArticuloLabel.Size = new System.Drawing.Size(81, 13);
+            codigoArticuloLabel.Size = new System.Drawing.Size(107, 17);
             codigoArticuloLabel.TabIndex = 13;
             codigoArticuloLabel.Text = "Codigo Articulo:";
             // 
             // unidadesLabel
             // 
             unidadesLabel.AutoSize = true;
-            unidadesLabel.Location = new System.Drawing.Point(92, 245);
+            unidadesLabel.Location = new System.Drawing.Point(123, 302);
+            unidadesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             unidadesLabel.Name = "unidadesLabel";
-            unidadesLabel.Size = new System.Drawing.Size(55, 13);
+            unidadesLabel.Size = new System.Drawing.Size(72, 17);
             unidadesLabel.TabIndex = 15;
             unidadesLabel.Text = "Unidades:";
             // 
             // precioFinalLabel
             // 
             precioFinalLabel.AutoSize = true;
-            precioFinalLabel.Location = new System.Drawing.Point(92, 271);
+            precioFinalLabel.Location = new System.Drawing.Point(123, 334);
+            precioFinalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioFinalLabel.Name = "precioFinalLabel";
-            precioFinalLabel.Size = new System.Drawing.Size(65, 13);
+            precioFinalLabel.Size = new System.Drawing.Size(86, 17);
             precioFinalLabel.TabIndex = 17;
             precioFinalLabel.Text = "Precio Final:";
-            // 
-            // consultas
-            // 
-            this.consultas.DataSetName = "Consultas";
-            this.consultas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ventasBindingSource
-            // 
-            this.ventasBindingSource.DataMember = "Ventas";
-            this.ventasBindingSource.DataSource = this.consultas;
-            // 
-            // ventasTableAdapter
-            // 
-            this.ventasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ArticulosCentroComercialTableAdapter = null;
-            this.tableAdapterManager.ArticulosProveedoresTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CurriculumTableAdapter = null;
-            this.tableAdapterManager.EmpleadoTableAdapter = null;
-            this.tableAdapterManager.NominasTableAdapter = null;
-            this.tableAdapterManager.ProveedoresTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VentasTableAdapter = this.ventasTableAdapter;
             // 
             // ventasBindingNavigator
             // 
@@ -204,6 +188,7 @@
             this.ventasBindingNavigator.BindingSource = this.ventasBindingSource;
             this.ventasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.ventasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.ventasBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ventasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -224,7 +209,7 @@
             this.ventasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ventasBindingNavigator.Name = "ventasBindingNavigator";
             this.ventasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ventasBindingNavigator.Size = new System.Drawing.Size(976, 25);
+            this.ventasBindingNavigator.Size = new System.Drawing.Size(1301, 27);
             this.ventasBindingNavigator.TabIndex = 0;
             this.ventasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -234,14 +219,14 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -250,7 +235,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -259,7 +244,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -268,27 +253,27 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -296,7 +281,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -305,93 +290,102 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // ventasBindingNavigatorSaveItem
             // 
             this.ventasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ventasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ventasBindingNavigatorSaveItem.Image")));
             this.ventasBindingNavigatorSaveItem.Name = "ventasBindingNavigatorSaveItem";
-            this.ventasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.ventasBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.ventasBindingNavigatorSaveItem.Text = "Save Data";
             this.ventasBindingNavigatorSaveItem.Click += new System.EventHandler(this.ventasBindingNavigatorSaveItem_Click);
             // 
             // fechaVentaDateTimePicker
             // 
             this.fechaVentaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.ventasBindingSource, "FechaVenta", true));
-            this.fechaVentaDateTimePicker.Location = new System.Drawing.Point(205, 60);
+            this.fechaVentaDateTimePicker.Location = new System.Drawing.Point(273, 74);
+            this.fechaVentaDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fechaVentaDateTimePicker.Name = "fechaVentaDateTimePicker";
-            this.fechaVentaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaVentaDateTimePicker.Size = new System.Drawing.Size(265, 22);
             this.fechaVentaDateTimePicker.TabIndex = 2;
             // 
             // codigCentroTextBox
             // 
             this.codigCentroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigCentro", true));
-            this.codigCentroTextBox.Location = new System.Drawing.Point(205, 86);
+            this.codigCentroTextBox.Location = new System.Drawing.Point(273, 106);
+            this.codigCentroTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigCentroTextBox.Name = "codigCentroTextBox";
-            this.codigCentroTextBox.Size = new System.Drawing.Size(200, 20);
+            this.codigCentroTextBox.Size = new System.Drawing.Size(265, 22);
             this.codigCentroTextBox.TabIndex = 4;
             // 
             // codigoDependienteTextBox
             // 
             this.codigoDependienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoDependiente", true));
-            this.codigoDependienteTextBox.Location = new System.Drawing.Point(205, 112);
+            this.codigoDependienteTextBox.Location = new System.Drawing.Point(273, 138);
+            this.codigoDependienteTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigoDependienteTextBox.Name = "codigoDependienteTextBox";
-            this.codigoDependienteTextBox.Size = new System.Drawing.Size(200, 20);
+            this.codigoDependienteTextBox.Size = new System.Drawing.Size(265, 22);
             this.codigoDependienteTextBox.TabIndex = 6;
             // 
             // dniClienteTextBox
             // 
             this.dniClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "DniCliente", true));
-            this.dniClienteTextBox.Location = new System.Drawing.Point(205, 138);
+            this.dniClienteTextBox.Location = new System.Drawing.Point(273, 170);
+            this.dniClienteTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dniClienteTextBox.Name = "dniClienteTextBox";
-            this.dniClienteTextBox.Size = new System.Drawing.Size(200, 20);
+            this.dniClienteTextBox.Size = new System.Drawing.Size(265, 22);
             this.dniClienteTextBox.TabIndex = 8;
             // 
             // descuentoTextBox
             // 
             this.descuentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "Descuento", true));
-            this.descuentoTextBox.Location = new System.Drawing.Point(205, 164);
+            this.descuentoTextBox.Location = new System.Drawing.Point(273, 202);
+            this.descuentoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.descuentoTextBox.Name = "descuentoTextBox";
-            this.descuentoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.descuentoTextBox.Size = new System.Drawing.Size(265, 22);
             this.descuentoTextBox.TabIndex = 10;
             // 
             // codigoVentaTextBox
             // 
             this.codigoVentaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoVenta", true));
-            this.codigoVentaTextBox.Location = new System.Drawing.Point(205, 190);
+            this.codigoVentaTextBox.Location = new System.Drawing.Point(273, 234);
+            this.codigoVentaTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigoVentaTextBox.Name = "codigoVentaTextBox";
-            this.codigoVentaTextBox.Size = new System.Drawing.Size(200, 20);
+            this.codigoVentaTextBox.Size = new System.Drawing.Size(265, 22);
             this.codigoVentaTextBox.TabIndex = 12;
             // 
             // codigoArticuloTextBox
             // 
             this.codigoArticuloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoArticulo", true));
-            this.codigoArticuloTextBox.Location = new System.Drawing.Point(205, 216);
+            this.codigoArticuloTextBox.Location = new System.Drawing.Point(273, 266);
+            this.codigoArticuloTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigoArticuloTextBox.Name = "codigoArticuloTextBox";
-            this.codigoArticuloTextBox.Size = new System.Drawing.Size(200, 20);
+            this.codigoArticuloTextBox.Size = new System.Drawing.Size(265, 22);
             this.codigoArticuloTextBox.TabIndex = 14;
             // 
             // unidadesTextBox
             // 
             this.unidadesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "Unidades", true));
-            this.unidadesTextBox.Location = new System.Drawing.Point(205, 242);
+            this.unidadesTextBox.Location = new System.Drawing.Point(273, 298);
+            this.unidadesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.unidadesTextBox.Name = "unidadesTextBox";
-            this.unidadesTextBox.Size = new System.Drawing.Size(200, 20);
+            this.unidadesTextBox.Size = new System.Drawing.Size(265, 22);
             this.unidadesTextBox.TabIndex = 16;
             // 
             // precioFinalTextBox
             // 
             this.precioFinalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "PrecioFinal", true));
-            this.precioFinalTextBox.Location = new System.Drawing.Point(205, 268);
+            this.precioFinalTextBox.Location = new System.Drawing.Point(273, 330);
+            this.precioFinalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.precioFinalTextBox.Name = "precioFinalTextBox";
-            this.precioFinalTextBox.Size = new System.Drawing.Size(200, 20);
+            this.precioFinalTextBox.Size = new System.Drawing.Size(265, 22);
             this.precioFinalTextBox.TabIndex = 18;
             // 
             // ventasDataGridView
@@ -409,9 +403,10 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.ventasDataGridView.DataSource = this.ventasBindingSource;
-            this.ventasDataGridView.Location = new System.Drawing.Point(12, 415);
+            this.ventasDataGridView.Location = new System.Drawing.Point(16, 511);
+            this.ventasDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ventasDataGridView.Name = "ventasDataGridView";
-            this.ventasDataGridView.Size = new System.Drawing.Size(946, 220);
+            this.ventasDataGridView.Size = new System.Drawing.Size(1261, 271);
             this.ventasDataGridView.TabIndex = 19;
             // 
             // dataGridViewTextBoxColumn1
@@ -468,11 +463,41 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "PrecioFinal";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // ventasBindingSource
+            // 
+            this.ventasBindingSource.DataMember = "Ventas";
+            this.ventasBindingSource.DataSource = this.consultas;
+            // 
+            // consultas
+            // 
+            this.consultas.DataSetName = "Consultas";
+            this.consultas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ventasTableAdapter
+            // 
+            this.ventasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ArticulosCentroComercialTableAdapter = null;
+            this.tableAdapterManager.ArticulosProveedoresTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CurriculumTableAdapter = null;
+            this.tableAdapterManager.EmpleadoTableAdapter = null;
+            this.tableAdapterManager.NominasTableAdapter = null;
+            this.tableAdapterManager.ProveedoresTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VentasTableAdapter = this.ventasTableAdapter;
+            // 
+            // articulosCentroComercialTableAdapter1
+            // 
+            this.articulosCentroComercialTableAdapter1.ClearBeforeFill = true;
+            // 
             // Ventas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 655);
+            this.ClientSize = new System.Drawing.Size(1301, 806);
             this.Controls.Add(this.ventasDataGridView);
             this.Controls.Add(fechaVentaLabel);
             this.Controls.Add(this.fechaVentaDateTimePicker);
@@ -493,15 +518,16 @@
             this.Controls.Add(precioFinalLabel);
             this.Controls.Add(this.precioFinalTextBox);
             this.Controls.Add(this.ventasBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Ventas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.Ventas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.consultas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingNavigator)).EndInit();
             this.ventasBindingNavigator.ResumeLayout(false);
             this.ventasBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,5 +571,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private ConsultasTableAdapters.ArticulosCentroComercialTableAdapter articulosCentroComercialTableAdapter1;
     }
 }
