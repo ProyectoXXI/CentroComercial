@@ -24,45 +24,52 @@ namespace GestorCentroComercial
         private void bLogin_Click(object sender, EventArgs e)
         {
             usuario = tbUser.Text.ToString();
+            if (int.TryParse(tbPass.Text,out int num))
+            {
+                password = int.Parse(tbPass.Text.ToString());
+                DataTable consulta = empleadoTableAdapter1.ComprobarLogin(password, usuario);
 
-            password = int.Parse(tbPass.Text.ToString());
-
-            DataTable consulta = empleadoTableAdapter1.ComprobarLogin(password, usuario);
-
-            if (consulta != null) {
-
-                DataRow empleado = consulta.Rows[0];
-
-                switch (empleado["Rol"].ToString())
+                if (consulta != null)
                 {
 
-                    case "dependiente":
-                        HomeDependientes dependiente = new HomeDependientes();
-                        dependiente.Visible = true;
-                        this.Visible = false;
+                    DataRow empleado = consulta.Rows[0];
 
-                        break;
-                    case "director":
-                        HomeDirectores director = new HomeDirectores();
-                        director.Visible = true;
-                        this.Visible = false;
+                    switch (empleado["Rol"].ToString())
+                    {
 
-                        break;
-                    case "gerente":
-                        HomeFinanzas tecnico = new HomeFinanzas();
-                        tecnico.Visible = true;
-                        this.Visible = false;
+                        case "dependiente":
+                            HomeDependientes dependiente = new HomeDependientes();
+                            dependiente.Visible = true;
+                            this.Visible = false;
 
-                        break;
+                            break;
+                        case "director":
+                            HomeDirectores director = new HomeDirectores();
+                            director.Visible = true;
+                            this.Visible = false;
+
+                            break;
+                        case "gerente":
+                            HomeFinanzas tecnico = new HomeFinanzas();
+                            tecnico.Visible = true;
+                            this.Visible = false;
+
+                            break;
+                    }
+
+
                 }
-
+                else
+                {
+                    MessageBox.Show("Error en el login.");
+                }
 
             }
             else
             {
-                MessageBox.Show("Error en el login.");
+                MessageBox.Show("Password no valida, no puede contener caracteres");
             }
-        
+                    
 
         }
 
