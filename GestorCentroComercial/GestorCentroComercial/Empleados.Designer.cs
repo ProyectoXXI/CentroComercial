@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             System.Windows.Forms.Label codigoEmpleadoLabel;
             System.Windows.Forms.Label rolLabel;
             System.Windows.Forms.Label dniLabel;
@@ -44,22 +43,23 @@
             System.Windows.Forms.Label centroLabel;
             System.Windows.Forms.Label tipoContratoLabel;
             System.Windows.Forms.Label precioHoraLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
             this.consultas = new GestorCentroComercial.Consultas();
             this.empleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empleadoTableAdapter = new GestorCentroComercial.ConsultasTableAdapters.EmpleadoTableAdapter();
             this.tableAdapterManager = new GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager();
             this.empleadoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.empleadoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.empleadoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,6 +110,174 @@
             this.empleadoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empleadoDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // codigoEmpleadoLabel
+            // 
+            codigoEmpleadoLabel.AutoSize = true;
+            codigoEmpleadoLabel.BackColor = System.Drawing.Color.Transparent;
+            codigoEmpleadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codigoEmpleadoLabel.ForeColor = System.Drawing.Color.White;
+            codigoEmpleadoLabel.Location = new System.Drawing.Point(70, 58);
+            codigoEmpleadoLabel.Name = "codigoEmpleadoLabel";
+            codigoEmpleadoLabel.Size = new System.Drawing.Size(139, 20);
+            codigoEmpleadoLabel.TabIndex = 2;
+            codigoEmpleadoLabel.Text = "Codigo Empleado:";
+            // 
+            // rolLabel
+            // 
+            rolLabel.AutoSize = true;
+            rolLabel.BackColor = System.Drawing.Color.Transparent;
+            rolLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            rolLabel.ForeColor = System.Drawing.Color.White;
+            rolLabel.Location = new System.Drawing.Point(70, 84);
+            rolLabel.Name = "rolLabel";
+            rolLabel.Size = new System.Drawing.Size(37, 20);
+            rolLabel.TabIndex = 4;
+            rolLabel.Text = "Rol:";
+            // 
+            // dniLabel
+            // 
+            dniLabel.AutoSize = true;
+            dniLabel.BackColor = System.Drawing.Color.Transparent;
+            dniLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dniLabel.ForeColor = System.Drawing.Color.White;
+            dniLabel.Location = new System.Drawing.Point(70, 110);
+            dniLabel.Name = "dniLabel";
+            dniLabel.Size = new System.Drawing.Size(37, 20);
+            dniLabel.TabIndex = 6;
+            dniLabel.Text = "Dni:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.BackColor = System.Drawing.Color.Transparent;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.ForeColor = System.Drawing.Color.White;
+            nombreLabel.Location = new System.Drawing.Point(70, 136);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(69, 20);
+            nombreLabel.TabIndex = 8;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // apellidosLabel
+            // 
+            apellidosLabel.AutoSize = true;
+            apellidosLabel.BackColor = System.Drawing.Color.Transparent;
+            apellidosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidosLabel.ForeColor = System.Drawing.Color.White;
+            apellidosLabel.Location = new System.Drawing.Point(70, 162);
+            apellidosLabel.Name = "apellidosLabel";
+            apellidosLabel.Size = new System.Drawing.Size(77, 20);
+            apellidosLabel.TabIndex = 10;
+            apellidosLabel.Text = "Apellidos:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.BackColor = System.Drawing.Color.Transparent;
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.ForeColor = System.Drawing.Color.White;
+            direccionLabel.Location = new System.Drawing.Point(70, 188);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(79, 20);
+            direccionLabel.TabIndex = 12;
+            direccionLabel.Text = "Direccion:";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.BackColor = System.Drawing.Color.Transparent;
+            telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telefonoLabel.ForeColor = System.Drawing.Color.White;
+            telefonoLabel.Location = new System.Drawing.Point(70, 214);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(75, 20);
+            telefonoLabel.TabIndex = 14;
+            telefonoLabel.Text = "Telefono:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.BackColor = System.Drawing.Color.Transparent;
+            emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emailLabel.ForeColor = System.Drawing.Color.White;
+            emailLabel.Location = new System.Drawing.Point(593, 58);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(52, 20);
+            emailLabel.TabIndex = 16;
+            emailLabel.Text = "Email:";
+            // 
+            // ingresoLabel
+            // 
+            ingresoLabel.AutoSize = true;
+            ingresoLabel.BackColor = System.Drawing.Color.Transparent;
+            ingresoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ingresoLabel.ForeColor = System.Drawing.Color.White;
+            ingresoLabel.Location = new System.Drawing.Point(593, 85);
+            ingresoLabel.Name = "ingresoLabel";
+            ingresoLabel.Size = new System.Drawing.Size(67, 20);
+            ingresoLabel.TabIndex = 18;
+            ingresoLabel.Text = "Ingreso:";
+            // 
+            // nacimientoLabel
+            // 
+            nacimientoLabel.AutoSize = true;
+            nacimientoLabel.BackColor = System.Drawing.Color.Transparent;
+            nacimientoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nacimientoLabel.ForeColor = System.Drawing.Color.White;
+            nacimientoLabel.Location = new System.Drawing.Point(593, 111);
+            nacimientoLabel.Name = "nacimientoLabel";
+            nacimientoLabel.Size = new System.Drawing.Size(92, 20);
+            nacimientoLabel.TabIndex = 20;
+            nacimientoLabel.Text = "Nacimiento:";
+            // 
+            // departamentoLabel
+            // 
+            departamentoLabel.AutoSize = true;
+            departamentoLabel.BackColor = System.Drawing.Color.Transparent;
+            departamentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            departamentoLabel.ForeColor = System.Drawing.Color.White;
+            departamentoLabel.Location = new System.Drawing.Point(593, 136);
+            departamentoLabel.Name = "departamentoLabel";
+            departamentoLabel.Size = new System.Drawing.Size(116, 20);
+            departamentoLabel.TabIndex = 22;
+            departamentoLabel.Text = "Departamento:";
+            // 
+            // centroLabel
+            // 
+            centroLabel.AutoSize = true;
+            centroLabel.BackColor = System.Drawing.Color.Transparent;
+            centroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            centroLabel.ForeColor = System.Drawing.Color.White;
+            centroLabel.Location = new System.Drawing.Point(593, 162);
+            centroLabel.Name = "centroLabel";
+            centroLabel.Size = new System.Drawing.Size(61, 20);
+            centroLabel.TabIndex = 24;
+            centroLabel.Text = "Centro:";
+            // 
+            // tipoContratoLabel
+            // 
+            tipoContratoLabel.AutoSize = true;
+            tipoContratoLabel.BackColor = System.Drawing.Color.Transparent;
+            tipoContratoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tipoContratoLabel.ForeColor = System.Drawing.Color.White;
+            tipoContratoLabel.Location = new System.Drawing.Point(593, 188);
+            tipoContratoLabel.Name = "tipoContratoLabel";
+            tipoContratoLabel.Size = new System.Drawing.Size(109, 20);
+            tipoContratoLabel.TabIndex = 26;
+            tipoContratoLabel.Text = "Tipo Contrato:";
+            // 
+            // precioHoraLabel
+            // 
+            precioHoraLabel.AutoSize = true;
+            precioHoraLabel.BackColor = System.Drawing.Color.Transparent;
+            precioHoraLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precioHoraLabel.ForeColor = System.Drawing.Color.White;
+            precioHoraLabel.Location = new System.Drawing.Point(593, 214);
+            precioHoraLabel.Name = "precioHoraLabel";
+            precioHoraLabel.Size = new System.Drawing.Size(96, 20);
+            precioHoraLabel.TabIndex = 28;
+            precioHoraLabel.Text = "Precio Hora:";
             // 
             // consultas
             // 
@@ -167,6 +335,31 @@
             this.empleadoBindingNavigator.TabIndex = 0;
             this.empleadoBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -199,17 +392,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -217,7 +403,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -226,38 +412,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // empleadoBindingNavigatorSaveItem
             // 
             this.empleadoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.empleadoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("empleadoBindingNavigatorSaveItem.Image")));
             this.empleadoBindingNavigatorSaveItem.Name = "empleadoBindingNavigatorSaveItem";
-            this.empleadoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.empleadoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.empleadoBindingNavigatorSaveItem.Text = "Save Data";
             this.empleadoBindingNavigatorSaveItem.Click += new System.EventHandler(this.empleadoBindingNavigatorSaveItem_Click);
             // 
@@ -281,9 +449,9 @@
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
             this.empleadoDataGridView.DataSource = this.empleadoBindingSource;
-            this.empleadoDataGridView.Location = new System.Drawing.Point(12, 453);
+            this.empleadoDataGridView.Location = new System.Drawing.Point(12, 280);
             this.empleadoDataGridView.Name = "empleadoDataGridView";
-            this.empleadoDataGridView.Size = new System.Drawing.Size(1033, 189);
+            this.empleadoDataGridView.Size = new System.Drawing.Size(1043, 345);
             this.empleadoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -370,249 +538,124 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "PrecioHora";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // codigoEmpleadoLabel
-            // 
-            codigoEmpleadoLabel.AutoSize = true;
-            codigoEmpleadoLabel.Location = new System.Drawing.Point(27, 58);
-            codigoEmpleadoLabel.Name = "codigoEmpleadoLabel";
-            codigoEmpleadoLabel.Size = new System.Drawing.Size(93, 13);
-            codigoEmpleadoLabel.TabIndex = 2;
-            codigoEmpleadoLabel.Text = "Codigo Empleado:";
-            // 
             // codigoEmpleadoTextBox
             // 
             this.codigoEmpleadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "CodigoEmpleado", true));
-            this.codigoEmpleadoTextBox.Location = new System.Drawing.Point(126, 55);
+            this.codigoEmpleadoTextBox.Location = new System.Drawing.Point(229, 58);
             this.codigoEmpleadoTextBox.Name = "codigoEmpleadoTextBox";
-            this.codigoEmpleadoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.codigoEmpleadoTextBox.Size = new System.Drawing.Size(275, 20);
             this.codigoEmpleadoTextBox.TabIndex = 3;
-            // 
-            // rolLabel
-            // 
-            rolLabel.AutoSize = true;
-            rolLabel.Location = new System.Drawing.Point(27, 84);
-            rolLabel.Name = "rolLabel";
-            rolLabel.Size = new System.Drawing.Size(26, 13);
-            rolLabel.TabIndex = 4;
-            rolLabel.Text = "Rol:";
             // 
             // rolTextBox
             // 
             this.rolTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Rol", true));
-            this.rolTextBox.Location = new System.Drawing.Point(126, 81);
+            this.rolTextBox.Location = new System.Drawing.Point(229, 84);
             this.rolTextBox.Name = "rolTextBox";
-            this.rolTextBox.Size = new System.Drawing.Size(200, 20);
+            this.rolTextBox.Size = new System.Drawing.Size(275, 20);
             this.rolTextBox.TabIndex = 5;
-            // 
-            // dniLabel
-            // 
-            dniLabel.AutoSize = true;
-            dniLabel.Location = new System.Drawing.Point(27, 110);
-            dniLabel.Name = "dniLabel";
-            dniLabel.Size = new System.Drawing.Size(26, 13);
-            dniLabel.TabIndex = 6;
-            dniLabel.Text = "Dni:";
             // 
             // dniTextBox
             // 
             this.dniTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Dni", true));
-            this.dniTextBox.Location = new System.Drawing.Point(126, 107);
+            this.dniTextBox.Location = new System.Drawing.Point(229, 110);
             this.dniTextBox.Name = "dniTextBox";
-            this.dniTextBox.Size = new System.Drawing.Size(200, 20);
+            this.dniTextBox.Size = new System.Drawing.Size(275, 20);
             this.dniTextBox.TabIndex = 7;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(27, 136);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
-            nombreLabel.TabIndex = 8;
-            nombreLabel.Text = "Nombre:";
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(126, 133);
+            this.nombreTextBox.Location = new System.Drawing.Point(229, 136);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(200, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(275, 20);
             this.nombreTextBox.TabIndex = 9;
-            // 
-            // apellidosLabel
-            // 
-            apellidosLabel.AutoSize = true;
-            apellidosLabel.Location = new System.Drawing.Point(27, 162);
-            apellidosLabel.Name = "apellidosLabel";
-            apellidosLabel.Size = new System.Drawing.Size(52, 13);
-            apellidosLabel.TabIndex = 10;
-            apellidosLabel.Text = "Apellidos:";
             // 
             // apellidosTextBox
             // 
             this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Apellidos", true));
-            this.apellidosTextBox.Location = new System.Drawing.Point(126, 159);
+            this.apellidosTextBox.Location = new System.Drawing.Point(229, 162);
             this.apellidosTextBox.Name = "apellidosTextBox";
-            this.apellidosTextBox.Size = new System.Drawing.Size(200, 20);
+            this.apellidosTextBox.Size = new System.Drawing.Size(275, 20);
             this.apellidosTextBox.TabIndex = 11;
-            // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(27, 188);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
-            direccionLabel.TabIndex = 12;
-            direccionLabel.Text = "Direccion:";
             // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(126, 185);
+            this.direccionTextBox.Location = new System.Drawing.Point(229, 188);
             this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.direccionTextBox.Size = new System.Drawing.Size(275, 20);
             this.direccionTextBox.TabIndex = 13;
-            // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(27, 214);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(52, 13);
-            telefonoLabel.TabIndex = 14;
-            telefonoLabel.Text = "Telefono:";
             // 
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(126, 211);
+            this.telefonoTextBox.Location = new System.Drawing.Point(229, 214);
             this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.telefonoTextBox.Size = new System.Drawing.Size(275, 20);
             this.telefonoTextBox.TabIndex = 15;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(27, 240);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(35, 13);
-            emailLabel.TabIndex = 16;
-            emailLabel.Text = "Email:";
             // 
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(126, 237);
+            this.emailTextBox.Location = new System.Drawing.Point(740, 58);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(200, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(270, 20);
             this.emailTextBox.TabIndex = 17;
-            // 
-            // ingresoLabel
-            // 
-            ingresoLabel.AutoSize = true;
-            ingresoLabel.Location = new System.Drawing.Point(27, 267);
-            ingresoLabel.Name = "ingresoLabel";
-            ingresoLabel.Size = new System.Drawing.Size(45, 13);
-            ingresoLabel.TabIndex = 18;
-            ingresoLabel.Text = "Ingreso:";
             // 
             // ingresoDateTimePicker
             // 
             this.ingresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empleadoBindingSource, "Ingreso", true));
-            this.ingresoDateTimePicker.Location = new System.Drawing.Point(126, 263);
+            this.ingresoDateTimePicker.Location = new System.Drawing.Point(740, 84);
             this.ingresoDateTimePicker.Name = "ingresoDateTimePicker";
-            this.ingresoDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.ingresoDateTimePicker.Size = new System.Drawing.Size(270, 20);
             this.ingresoDateTimePicker.TabIndex = 19;
-            // 
-            // nacimientoLabel
-            // 
-            nacimientoLabel.AutoSize = true;
-            nacimientoLabel.Location = new System.Drawing.Point(27, 293);
-            nacimientoLabel.Name = "nacimientoLabel";
-            nacimientoLabel.Size = new System.Drawing.Size(63, 13);
-            nacimientoLabel.TabIndex = 20;
-            nacimientoLabel.Text = "Nacimiento:";
             // 
             // nacimientoDateTimePicker
             // 
             this.nacimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empleadoBindingSource, "Nacimiento", true));
-            this.nacimientoDateTimePicker.Location = new System.Drawing.Point(126, 289);
+            this.nacimientoDateTimePicker.Location = new System.Drawing.Point(740, 110);
             this.nacimientoDateTimePicker.Name = "nacimientoDateTimePicker";
-            this.nacimientoDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.nacimientoDateTimePicker.Size = new System.Drawing.Size(270, 20);
             this.nacimientoDateTimePicker.TabIndex = 21;
-            // 
-            // departamentoLabel
-            // 
-            departamentoLabel.AutoSize = true;
-            departamentoLabel.Location = new System.Drawing.Point(27, 318);
-            departamentoLabel.Name = "departamentoLabel";
-            departamentoLabel.Size = new System.Drawing.Size(77, 13);
-            departamentoLabel.TabIndex = 22;
-            departamentoLabel.Text = "Departamento:";
             // 
             // departamentoTextBox
             // 
             this.departamentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Departamento", true));
-            this.departamentoTextBox.Location = new System.Drawing.Point(126, 315);
+            this.departamentoTextBox.Location = new System.Drawing.Point(740, 136);
             this.departamentoTextBox.Name = "departamentoTextBox";
-            this.departamentoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.departamentoTextBox.Size = new System.Drawing.Size(270, 20);
             this.departamentoTextBox.TabIndex = 23;
-            // 
-            // centroLabel
-            // 
-            centroLabel.AutoSize = true;
-            centroLabel.Location = new System.Drawing.Point(27, 344);
-            centroLabel.Name = "centroLabel";
-            centroLabel.Size = new System.Drawing.Size(41, 13);
-            centroLabel.TabIndex = 24;
-            centroLabel.Text = "Centro:";
             // 
             // centroTextBox
             // 
             this.centroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "Centro", true));
-            this.centroTextBox.Location = new System.Drawing.Point(126, 341);
+            this.centroTextBox.Location = new System.Drawing.Point(740, 162);
             this.centroTextBox.Name = "centroTextBox";
-            this.centroTextBox.Size = new System.Drawing.Size(200, 20);
+            this.centroTextBox.Size = new System.Drawing.Size(270, 20);
             this.centroTextBox.TabIndex = 25;
-            // 
-            // tipoContratoLabel
-            // 
-            tipoContratoLabel.AutoSize = true;
-            tipoContratoLabel.Location = new System.Drawing.Point(27, 370);
-            tipoContratoLabel.Name = "tipoContratoLabel";
-            tipoContratoLabel.Size = new System.Drawing.Size(74, 13);
-            tipoContratoLabel.TabIndex = 26;
-            tipoContratoLabel.Text = "Tipo Contrato:";
             // 
             // tipoContratoTextBox
             // 
             this.tipoContratoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "TipoContrato", true));
-            this.tipoContratoTextBox.Location = new System.Drawing.Point(126, 367);
+            this.tipoContratoTextBox.Location = new System.Drawing.Point(740, 188);
             this.tipoContratoTextBox.Name = "tipoContratoTextBox";
-            this.tipoContratoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.tipoContratoTextBox.Size = new System.Drawing.Size(270, 20);
             this.tipoContratoTextBox.TabIndex = 27;
-            // 
-            // precioHoraLabel
-            // 
-            precioHoraLabel.AutoSize = true;
-            precioHoraLabel.Location = new System.Drawing.Point(27, 396);
-            precioHoraLabel.Name = "precioHoraLabel";
-            precioHoraLabel.Size = new System.Drawing.Size(66, 13);
-            precioHoraLabel.TabIndex = 28;
-            precioHoraLabel.Text = "Precio Hora:";
             // 
             // precioHoraTextBox
             // 
             this.precioHoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadoBindingSource, "PrecioHora", true));
-            this.precioHoraTextBox.Location = new System.Drawing.Point(126, 393);
+            this.precioHoraTextBox.Location = new System.Drawing.Point(740, 214);
             this.precioHoraTextBox.Name = "precioHoraTextBox";
-            this.precioHoraTextBox.Size = new System.Drawing.Size(200, 20);
+            this.precioHoraTextBox.Size = new System.Drawing.Size(270, 20);
             this.precioHoraTextBox.TabIndex = 29;
             // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 662);
+            this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.a681f2dd84df484fe05ae07cf69fbd5c;
+            this.ClientSize = new System.Drawing.Size(1067, 653);
             this.Controls.Add(codigoEmpleadoLabel);
             this.Controls.Add(this.codigoEmpleadoTextBox);
             this.Controls.Add(rolLabel);

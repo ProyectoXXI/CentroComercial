@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbUser = new System.Windows.Forms.TextBox();
@@ -40,59 +41,65 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MistyRose;
+            this.label1.Location = new System.Drawing.Point(88, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(172, 122);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MistyRose;
+            this.label2.Location = new System.Drawing.Point(79, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña";
             // 
             // tbUser
             // 
-            this.tbUser.Location = new System.Drawing.Point(101, 59);
-            this.tbUser.Margin = new System.Windows.Forms.Padding(4);
+            this.tbUser.Location = new System.Drawing.Point(30, 60);
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(240, 22);
+            this.tbUser.Size = new System.Drawing.Size(185, 20);
             this.tbUser.TabIndex = 2;
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(96, 155);
-            this.tbPass.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPass.Location = new System.Drawing.Point(30, 154);
             this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(245, 22);
+            this.tbPass.Size = new System.Drawing.Size(185, 20);
             this.tbPass.TabIndex = 3;
             // 
             // bLogin
             // 
-            this.bLogin.Location = new System.Drawing.Point(61, 214);
-            this.bLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.bLogin.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bLogin.Location = new System.Drawing.Point(258, 19);
             this.bLogin.Name = "bLogin";
-            this.bLogin.Size = new System.Drawing.Size(117, 43);
+            this.bLogin.Size = new System.Drawing.Size(138, 80);
             this.bLogin.TabIndex = 4;
             this.bLogin.Text = "Login";
-            this.bLogin.UseVisualStyleBackColor = true;
+            this.bLogin.UseVisualStyleBackColor = false;
             this.bLogin.Click += new System.EventHandler(this.bLogin_Click);
             // 
             // bExit
             // 
-            this.bExit.Location = new System.Drawing.Point(264, 214);
-            this.bExit.Margin = new System.Windows.Forms.Padding(4);
+            this.bExit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bExit.Location = new System.Drawing.Point(258, 123);
             this.bExit.Name = "bExit";
-            this.bExit.Size = new System.Drawing.Size(129, 42);
+            this.bExit.Size = new System.Drawing.Size(138, 80);
             this.bExit.TabIndex = 5;
             this.bExit.Text = "Salir";
-            this.bExit.UseVisualStyleBackColor = true;
+            this.bExit.UseVisualStyleBackColor = false;
             this.bExit.Click += new System.EventHandler(this.bExit_Click);
             // 
             // empleadoTableAdapter1
@@ -101,16 +108,16 @@
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 284);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(424, 215);
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.bLogin);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.tbUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.login_Load);
