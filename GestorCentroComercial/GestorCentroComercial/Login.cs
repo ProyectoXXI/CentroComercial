@@ -11,8 +11,11 @@ using System.Windows.Forms;
 
 namespace GestorCentroComercial
 {
+    
     public partial class login : Form
     {
+        static public String usuario;
+        static public int password;
         public login()
         {
             InitializeComponent();
@@ -20,9 +23,9 @@ namespace GestorCentroComercial
 
         private void bLogin_Click(object sender, EventArgs e)
         {
-            String usuario = tbUser.Text.ToString();
+            usuario = tbUser.Text.ToString();
 
-            int password = int.Parse(tbPass.Text.ToString());
+            password = int.Parse(tbPass.Text.ToString());
 
             DataTable consulta = empleadoTableAdapter1.ComprobarLogin(password, usuario);
 
@@ -46,7 +49,7 @@ namespace GestorCentroComercial
 
                         break;
                     case "gerente":
-                        HomeTecnicos tecnico = new HomeTecnicos();
+                        HomeFinanzas tecnico = new HomeFinanzas();
                         tecnico.Visible = true;
                         this.Visible = false;
 
