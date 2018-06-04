@@ -358,6 +358,7 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "CodigoPedido";
             this.dataGridViewTextBoxColumn4.HeaderText = "CodigoPedido";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -455,6 +456,7 @@
             this.Controls.Add(this.precioCosteTextBox);
             this.Controls.Add(this.articulosProveedoresDataGridView);
             this.Controls.Add(this.articulosProveedoresBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pedidos";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Pedidos_Load);

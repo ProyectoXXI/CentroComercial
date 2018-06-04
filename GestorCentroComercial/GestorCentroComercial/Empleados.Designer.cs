@@ -459,6 +459,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "CodigoEmpleado";
             this.dataGridViewTextBoxColumn1.HeaderText = "CodigoEmpleado";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -686,6 +687,7 @@
             this.Controls.Add(this.precioHoraTextBox);
             this.Controls.Add(this.empleadoDataGridView);
             this.Controls.Add(this.empleadoBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Empleados";
             this.Text = "Empleados";
             this.Load += new System.EventHandler(this.Empleados_Load);

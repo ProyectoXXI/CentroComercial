@@ -488,6 +488,7 @@
             this.dataGridViewTextBoxColumn14.DataPropertyName = "CodigoEmpleado";
             this.dataGridViewTextBoxColumn14.HeaderText = "CodigoEmpleado";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
             // dniEmpleadoTextBox
             // 
@@ -653,8 +654,9 @@
             this.Controls.Add(this.codigoEmpleadoTextBox);
             this.Controls.Add(this.nominasDataGridView);
             this.Controls.Add(this.nominasBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NominasEmpleado";
-            this.Text = "NominasEmpleado";
+            this.Text = "Nominas Empleado";
             this.Load += new System.EventHandler(this.NominasEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nominasBindingNavigator)).EndInit();
             this.nominasBindingNavigator.ResumeLayout(false);

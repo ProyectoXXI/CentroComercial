@@ -588,6 +588,7 @@
             this.Controls.Add(this.codigoProveedorTextBox);
             this.Controls.Add(this.proveedoresDataGridView);
             this.Controls.Add(this.proveedoresBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Proveedores";
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.Proveedores_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeDependientes));
             this.bMostrarNominas = new System.Windows.Forms.Button();
             this.bSalir = new System.Windows.Forms.Button();
             this.bAddVenta = new System.Windows.Forms.Button();
@@ -81,9 +82,10 @@
             this.Controls.Add(this.bAddVenta);
             this.Controls.Add(this.bSalir);
             this.Controls.Add(this.bMostrarNominas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomeDependientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "HomeDependientes";
+            this.Text = "Home Dependientes";
             this.Load += new System.EventHandler(this.HomeDependientes_Load);
             this.ResumeLayout(false);
 

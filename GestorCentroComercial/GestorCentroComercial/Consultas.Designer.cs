@@ -750,6 +750,7 @@ namespace GestorCentroComercial {
                 this.columnCodigoPedido.AutoIncrementSeed = -1;
                 this.columnCodigoPedido.AutoIncrementStep = -1;
                 this.columnCodigoPedido.AllowDBNull = false;
+                this.columnCodigoPedido.ReadOnly = true;
                 this.columnCodigoPedido.Unique = true;
                 this.columnCodigoArticulo.AllowDBNull = false;
                 this.columnUnidades.AllowDBNull = false;
@@ -1493,6 +1494,7 @@ namespace GestorCentroComercial {
                 this.columnCodigoEmpleado.AutoIncrementSeed = -1;
                 this.columnCodigoEmpleado.AutoIncrementStep = -1;
                 this.columnCodigoEmpleado.AllowDBNull = false;
+                this.columnCodigoEmpleado.ReadOnly = true;
                 this.columnCodigoEmpleado.Unique = true;
                 this.columnRol.AllowDBNull = false;
                 this.columnRol.MaxLength = 50;
@@ -2319,6 +2321,7 @@ namespace GestorCentroComercial {
                 this.columnCodigoVenta.AutoIncrementSeed = -1;
                 this.columnCodigoVenta.AutoIncrementStep = -1;
                 this.columnCodigoVenta.AllowDBNull = false;
+                this.columnCodigoVenta.ReadOnly = true;
                 this.columnCodigoVenta.Unique = true;
                 this.columnCodigoArticulo.AllowDBNull = false;
                 this.columnUnidades.AllowDBNull = false;
@@ -2778,6 +2781,7 @@ namespace GestorCentroComercial {
                 this.columnplusproductividad.AllowDBNull = false;
                 this.columnfechaNomina.AllowDBNull = false;
                 this.columnperiodoNominaMeses.AllowDBNull = false;
+                this.columnCodigoEmpleado.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8310,7 +8314,7 @@ SELECT CodigoCentro, CodigoArticulo, FechaEntrada, NombreArticulo, Modelo, Carac
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> ObtenerUnidadesStock(int codigoCentro, int codeArticulo) {
+        public virtual object ObtenerUnidadesStock(int codigoCentro, int codeArticulo) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((int)(codigoCentro));
             command.Parameters[1].Value = ((int)(codeArticulo));
@@ -8330,10 +8334,10 @@ SELECT CodigoCentro, CodigoArticulo, FechaEntrada, NombreArticulo, Modelo, Carac
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
         }
     }

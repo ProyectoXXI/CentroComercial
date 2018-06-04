@@ -12,6 +12,10 @@
 
 namespace GestorCentroComercial.ConsultasTableAdapters
 {
+    partial class ArticulosCentroComercialTableAdapter
+    {
+    }
+
     partial class NominasTableAdapter
     {
     }
