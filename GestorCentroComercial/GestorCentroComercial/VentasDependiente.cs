@@ -37,7 +37,7 @@ namespace GestorCentroComercial
         {
             // TODO: This line of code loads data into the 'consultas.Ventas' table. You can move, or remove it, as needed.
             this.ventasTableAdapter.FillBy1(this.consultas.Ventas,login.password);
-
+            codigoDependienteTextBox.Text = empleadoTableAdapter1.obtenerCodigoDependiente(login.usuario).ToString();
         }
     }
 }

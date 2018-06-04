@@ -76,6 +76,7 @@
             this.codigoArticuloTextBox = new System.Windows.Forms.TextBox();
             this.unidadesTextBox = new System.Windows.Forms.TextBox();
             this.precioFinalTextBox = new System.Windows.Forms.TextBox();
+            this.empleadoTableAdapter1 = new GestorCentroComercial.ConsultasTableAdapters.EmpleadoTableAdapter();
             fechaVentaLabel = new System.Windows.Forms.Label();
             codigCentroLabel = new System.Windows.Forms.Label();
             codigoDependienteLabel = new System.Windows.Forms.Label();
@@ -98,9 +99,10 @@
             fechaVentaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaVentaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaVentaLabel.ForeColor = System.Drawing.Color.White;
-            fechaVentaLabel.Location = new System.Drawing.Point(12, 80);
+            fechaVentaLabel.Location = new System.Drawing.Point(16, 98);
+            fechaVentaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaVentaLabel.Name = "fechaVentaLabel";
-            fechaVentaLabel.Size = new System.Drawing.Size(105, 20);
+            fechaVentaLabel.Size = new System.Drawing.Size(130, 25);
             fechaVentaLabel.TabIndex = 2;
             fechaVentaLabel.Text = "Fecha Venta:";
             // 
@@ -110,9 +112,10 @@
             codigCentroLabel.BackColor = System.Drawing.Color.Transparent;
             codigCentroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigCentroLabel.ForeColor = System.Drawing.Color.White;
-            codigCentroLabel.Location = new System.Drawing.Point(12, 105);
+            codigCentroLabel.Location = new System.Drawing.Point(16, 129);
+            codigCentroLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigCentroLabel.Name = "codigCentroLabel";
-            codigCentroLabel.Size = new System.Drawing.Size(106, 20);
+            codigCentroLabel.Size = new System.Drawing.Size(134, 25);
             codigCentroLabel.TabIndex = 4;
             codigCentroLabel.Text = "Codig Centro:";
             // 
@@ -122,9 +125,10 @@
             codigoDependienteLabel.BackColor = System.Drawing.Color.Transparent;
             codigoDependienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoDependienteLabel.ForeColor = System.Drawing.Color.White;
-            codigoDependienteLabel.Location = new System.Drawing.Point(12, 131);
+            codigoDependienteLabel.Location = new System.Drawing.Point(16, 161);
+            codigoDependienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoDependienteLabel.Name = "codigoDependienteLabel";
-            codigoDependienteLabel.Size = new System.Drawing.Size(159, 20);
+            codigoDependienteLabel.Size = new System.Drawing.Size(197, 25);
             codigoDependienteLabel.TabIndex = 6;
             codigoDependienteLabel.Text = "Codigo Dependiente:";
             // 
@@ -134,9 +138,10 @@
             dniClienteLabel.BackColor = System.Drawing.Color.Transparent;
             dniClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dniClienteLabel.ForeColor = System.Drawing.Color.White;
-            dniClienteLabel.Location = new System.Drawing.Point(12, 157);
+            dniClienteLabel.Location = new System.Drawing.Point(16, 193);
+            dniClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dniClienteLabel.Name = "dniClienteLabel";
-            dniClienteLabel.Size = new System.Drawing.Size(90, 20);
+            dniClienteLabel.Size = new System.Drawing.Size(113, 25);
             dniClienteLabel.TabIndex = 8;
             dniClienteLabel.Text = "Dni Cliente:";
             // 
@@ -146,9 +151,10 @@
             descuentoLabel.BackColor = System.Drawing.Color.Transparent;
             descuentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descuentoLabel.ForeColor = System.Drawing.Color.White;
-            descuentoLabel.Location = new System.Drawing.Point(532, 58);
+            descuentoLabel.Location = new System.Drawing.Point(709, 71);
+            descuentoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descuentoLabel.Name = "descuentoLabel";
-            descuentoLabel.Size = new System.Drawing.Size(91, 20);
+            descuentoLabel.Size = new System.Drawing.Size(112, 25);
             descuentoLabel.TabIndex = 10;
             descuentoLabel.Text = "Descuento:";
             // 
@@ -158,9 +164,10 @@
             codigoVentaLabel.BackColor = System.Drawing.Color.Transparent;
             codigoVentaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoVentaLabel.ForeColor = System.Drawing.Color.White;
-            codigoVentaLabel.Location = new System.Drawing.Point(532, 84);
+            codigoVentaLabel.Location = new System.Drawing.Point(709, 103);
+            codigoVentaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoVentaLabel.Name = "codigoVentaLabel";
-            codigoVentaLabel.Size = new System.Drawing.Size(110, 20);
+            codigoVentaLabel.Size = new System.Drawing.Size(138, 25);
             codigoVentaLabel.TabIndex = 12;
             codigoVentaLabel.Text = "Codigo Venta:";
             // 
@@ -170,9 +177,10 @@
             codigoArticuloLabel.BackColor = System.Drawing.Color.Transparent;
             codigoArticuloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoArticuloLabel.ForeColor = System.Drawing.Color.White;
-            codigoArticuloLabel.Location = new System.Drawing.Point(532, 110);
+            codigoArticuloLabel.Location = new System.Drawing.Point(709, 135);
+            codigoArticuloLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoArticuloLabel.Name = "codigoArticuloLabel";
-            codigoArticuloLabel.Size = new System.Drawing.Size(120, 20);
+            codigoArticuloLabel.Size = new System.Drawing.Size(151, 25);
             codigoArticuloLabel.TabIndex = 14;
             codigoArticuloLabel.Text = "Codigo Articulo:";
             // 
@@ -182,9 +190,10 @@
             unidadesLabel.BackColor = System.Drawing.Color.Transparent;
             unidadesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             unidadesLabel.ForeColor = System.Drawing.Color.White;
-            unidadesLabel.Location = new System.Drawing.Point(532, 136);
+            unidadesLabel.Location = new System.Drawing.Point(709, 167);
+            unidadesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             unidadesLabel.Name = "unidadesLabel";
-            unidadesLabel.Size = new System.Drawing.Size(81, 20);
+            unidadesLabel.Size = new System.Drawing.Size(101, 25);
             unidadesLabel.TabIndex = 16;
             unidadesLabel.Text = "Unidades:";
             // 
@@ -194,9 +203,10 @@
             precioFinalLabel.BackColor = System.Drawing.Color.Transparent;
             precioFinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             precioFinalLabel.ForeColor = System.Drawing.Color.White;
-            precioFinalLabel.Location = new System.Drawing.Point(532, 162);
+            precioFinalLabel.Location = new System.Drawing.Point(709, 199);
+            precioFinalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioFinalLabel.Name = "precioFinalLabel";
-            precioFinalLabel.Size = new System.Drawing.Size(95, 20);
+            precioFinalLabel.Size = new System.Drawing.Size(120, 25);
             precioFinalLabel.TabIndex = 18;
             precioFinalLabel.Text = "Precio Final:";
             // 
@@ -232,6 +242,7 @@
             this.ventasBindingNavigator.BindingSource = this.ventasBindingSource;
             this.ventasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.ventasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.ventasBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ventasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -252,7 +263,7 @@
             this.ventasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ventasBindingNavigator.Name = "ventasBindingNavigator";
             this.ventasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ventasBindingNavigator.Size = new System.Drawing.Size(976, 25);
+            this.ventasBindingNavigator.Size = new System.Drawing.Size(1301, 27);
             this.ventasBindingNavigator.TabIndex = 0;
             this.ventasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -262,14 +273,14 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -278,7 +289,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -287,7 +298,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -296,27 +307,27 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -324,7 +335,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -333,20 +344,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // ventasBindingNavigatorSaveItem
             // 
             this.ventasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ventasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ventasBindingNavigatorSaveItem.Image")));
             this.ventasBindingNavigatorSaveItem.Name = "ventasBindingNavigatorSaveItem";
-            this.ventasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.ventasBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.ventasBindingNavigatorSaveItem.Text = "Save Data";
             this.ventasBindingNavigatorSaveItem.Click += new System.EventHandler(this.ventasBindingNavigatorSaveItem_Click);
             // 
@@ -365,9 +376,10 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.ventasDataGridView.DataSource = this.ventasBindingSource;
-            this.ventasDataGridView.Location = new System.Drawing.Point(12, 232);
+            this.ventasDataGridView.Location = new System.Drawing.Point(16, 286);
+            this.ventasDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.ventasDataGridView.Name = "ventasDataGridView";
-            this.ventasDataGridView.Size = new System.Drawing.Size(944, 304);
+            this.ventasDataGridView.Size = new System.Drawing.Size(1259, 374);
             this.ventasDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -431,81 +443,95 @@
             // fechaVentaDateTimePicker
             // 
             this.fechaVentaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.ventasBindingSource, "FechaVenta", true));
-            this.fechaVentaDateTimePicker.Location = new System.Drawing.Point(171, 80);
+            this.fechaVentaDateTimePicker.Location = new System.Drawing.Point(228, 98);
+            this.fechaVentaDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.fechaVentaDateTimePicker.Name = "fechaVentaDateTimePicker";
-            this.fechaVentaDateTimePicker.Size = new System.Drawing.Size(292, 20);
+            this.fechaVentaDateTimePicker.Size = new System.Drawing.Size(388, 22);
             this.fechaVentaDateTimePicker.TabIndex = 3;
             // 
             // codigCentroTextBox
             // 
             this.codigCentroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigCentro", true));
-            this.codigCentroTextBox.Location = new System.Drawing.Point(171, 106);
+            this.codigCentroTextBox.Location = new System.Drawing.Point(228, 130);
+            this.codigCentroTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.codigCentroTextBox.Name = "codigCentroTextBox";
-            this.codigCentroTextBox.Size = new System.Drawing.Size(292, 20);
+            this.codigCentroTextBox.Size = new System.Drawing.Size(388, 22);
             this.codigCentroTextBox.TabIndex = 5;
             // 
             // codigoDependienteTextBox
             // 
             this.codigoDependienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoDependiente", true));
-            this.codigoDependienteTextBox.Location = new System.Drawing.Point(171, 132);
+            this.codigoDependienteTextBox.Enabled = false;
+            this.codigoDependienteTextBox.Location = new System.Drawing.Point(228, 162);
+            this.codigoDependienteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.codigoDependienteTextBox.Name = "codigoDependienteTextBox";
-            this.codigoDependienteTextBox.Size = new System.Drawing.Size(292, 20);
+            this.codigoDependienteTextBox.Size = new System.Drawing.Size(388, 22);
             this.codigoDependienteTextBox.TabIndex = 7;
             // 
             // dniClienteTextBox
             // 
             this.dniClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "DniCliente", true));
-            this.dniClienteTextBox.Location = new System.Drawing.Point(171, 158);
+            this.dniClienteTextBox.Location = new System.Drawing.Point(228, 194);
+            this.dniClienteTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dniClienteTextBox.Name = "dniClienteTextBox";
-            this.dniClienteTextBox.Size = new System.Drawing.Size(292, 20);
+            this.dniClienteTextBox.Size = new System.Drawing.Size(388, 22);
             this.dniClienteTextBox.TabIndex = 9;
             // 
             // descuentoTextBox
             // 
             this.descuentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "Descuento", true));
-            this.descuentoTextBox.Location = new System.Drawing.Point(664, 60);
+            this.descuentoTextBox.Location = new System.Drawing.Point(885, 74);
+            this.descuentoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descuentoTextBox.Name = "descuentoTextBox";
-            this.descuentoTextBox.Size = new System.Drawing.Size(292, 20);
+            this.descuentoTextBox.Size = new System.Drawing.Size(388, 22);
             this.descuentoTextBox.TabIndex = 11;
             // 
             // codigoVentaTextBox
             // 
             this.codigoVentaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoVenta", true));
-            this.codigoVentaTextBox.Location = new System.Drawing.Point(664, 86);
+            this.codigoVentaTextBox.Location = new System.Drawing.Point(885, 106);
+            this.codigoVentaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.codigoVentaTextBox.Name = "codigoVentaTextBox";
-            this.codigoVentaTextBox.Size = new System.Drawing.Size(292, 20);
+            this.codigoVentaTextBox.Size = new System.Drawing.Size(388, 22);
             this.codigoVentaTextBox.TabIndex = 13;
             // 
             // codigoArticuloTextBox
             // 
             this.codigoArticuloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoArticulo", true));
-            this.codigoArticuloTextBox.Location = new System.Drawing.Point(664, 112);
+            this.codigoArticuloTextBox.Location = new System.Drawing.Point(885, 138);
+            this.codigoArticuloTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.codigoArticuloTextBox.Name = "codigoArticuloTextBox";
-            this.codigoArticuloTextBox.Size = new System.Drawing.Size(292, 20);
+            this.codigoArticuloTextBox.Size = new System.Drawing.Size(388, 22);
             this.codigoArticuloTextBox.TabIndex = 15;
             // 
             // unidadesTextBox
             // 
             this.unidadesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "Unidades", true));
-            this.unidadesTextBox.Location = new System.Drawing.Point(664, 138);
+            this.unidadesTextBox.Location = new System.Drawing.Point(885, 170);
+            this.unidadesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.unidadesTextBox.Name = "unidadesTextBox";
-            this.unidadesTextBox.Size = new System.Drawing.Size(292, 20);
+            this.unidadesTextBox.Size = new System.Drawing.Size(388, 22);
             this.unidadesTextBox.TabIndex = 17;
             // 
             // precioFinalTextBox
             // 
             this.precioFinalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "PrecioFinal", true));
-            this.precioFinalTextBox.Location = new System.Drawing.Point(664, 164);
+            this.precioFinalTextBox.Location = new System.Drawing.Point(885, 202);
+            this.precioFinalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.precioFinalTextBox.Name = "precioFinalTextBox";
-            this.precioFinalTextBox.Size = new System.Drawing.Size(292, 20);
+            this.precioFinalTextBox.Size = new System.Drawing.Size(388, 22);
             this.precioFinalTextBox.TabIndex = 19;
+            // 
+            // empleadoTableAdapter1
+            // 
+            this.empleadoTableAdapter1.ClearBeforeFill = true;
             // 
             // VentasDependiente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.Fondo;
-            this.ClientSize = new System.Drawing.Size(976, 548);
+            this.ClientSize = new System.Drawing.Size(1301, 674);
             this.Controls.Add(fechaVentaLabel);
             this.Controls.Add(this.fechaVentaDateTimePicker);
             this.Controls.Add(codigCentroLabel);
@@ -526,6 +552,7 @@
             this.Controls.Add(this.precioFinalTextBox);
             this.Controls.Add(this.ventasDataGridView);
             this.Controls.Add(this.ventasBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VentasDependiente";
             this.Text = "s";
             this.Load += new System.EventHandler(this.VentasDependiente_Load);
@@ -579,5 +606,6 @@
         private System.Windows.Forms.TextBox codigoArticuloTextBox;
         private System.Windows.Forms.TextBox unidadesTextBox;
         private System.Windows.Forms.TextBox precioFinalTextBox;
+        private ConsultasTableAdapters.EmpleadoTableAdapter empleadoTableAdapter1;
     }
 }
