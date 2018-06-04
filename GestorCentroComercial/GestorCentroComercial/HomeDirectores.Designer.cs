@@ -48,6 +48,7 @@
             this.bEmpleados.TabIndex = 20;
             this.bEmpleados.Text = "Mostrar Empleados";
             this.bEmpleados.UseVisualStyleBackColor = false;
+            this.bEmpleados.Click += new System.EventHandler(this.bEmpleados_Click_1);
             // 
             // btnSalir
             // 
@@ -60,6 +61,7 @@
             this.btnSalir.TabIndex = 19;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // btnMostrarPedidos
             // 
@@ -72,6 +74,7 @@
             this.btnMostrarPedidos.TabIndex = 18;
             this.btnMostrarPedidos.Text = "Mostar Pedidos";
             this.btnMostrarPedidos.UseVisualStyleBackColor = false;
+            this.btnMostrarPedidos.Click += new System.EventHandler(this.btnMostrarPedidos_Click_1);
             // 
             // btnmostrarArtiucloscentro
             // 
@@ -84,6 +87,7 @@
             this.btnmostrarArtiucloscentro.TabIndex = 17;
             this.btnmostrarArtiucloscentro.Text = "Mostrar Artiuclos del centro";
             this.btnmostrarArtiucloscentro.UseVisualStyleBackColor = false;
+            this.btnmostrarArtiucloscentro.Click += new System.EventHandler(this.btnmostrarArtiucloscentro_Click_1);
             // 
             // btnmostrarProveedores
             // 
@@ -96,6 +100,7 @@
             this.btnmostrarProveedores.TabIndex = 16;
             this.btnmostrarProveedores.Text = "Mostrar Proveedores";
             this.btnmostrarProveedores.UseVisualStyleBackColor = false;
+            this.btnmostrarProveedores.Click += new System.EventHandler(this.btnmostrarProveedores_Click_1);
             // 
             // btnmostrarNominas
             // 
@@ -108,6 +113,7 @@
             this.btnmostrarNominas.TabIndex = 15;
             this.btnmostrarNominas.Text = "Mostrar Nominas";
             this.btnmostrarNominas.UseVisualStyleBackColor = false;
+            this.btnmostrarNominas.Click += new System.EventHandler(this.btnmostrarNominas_Click_1);
             // 
             // btnmostrarVentas
             // 
@@ -120,6 +126,7 @@
             this.btnmostrarVentas.TabIndex = 14;
             this.btnmostrarVentas.Text = "Mostar ventas";
             this.btnmostrarVentas.UseVisualStyleBackColor = false;
+            this.btnmostrarVentas.Click += new System.EventHandler(this.btnmostrarVentas_Click_1);
             // 
             // HomeDirectores
             // 
