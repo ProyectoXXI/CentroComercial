@@ -22,7 +22,7 @@ namespace GestorCentroComercial
             int unidades = int.Parse(unidadesTextBox.Text);
             int ccentro = int.Parse(codigCentroTextBox.Text);
             int cArticulo = int.Parse(codigoArticuloTextBox.Text);
-            if (unidades<=articulosCentroComercialTableAdapter1.ObtenerUnidadesStock(ccentro,cArticulo))
+            if (unidades< (int)articulosCentroComercialTableAdapter1.ObtenerUnidadesStock(ccentro,cArticulo))
             {
                 this.Validate();
                 this.ventasBindingSource.EndEdit();
@@ -43,7 +43,18 @@ namespace GestorCentroComercial
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            codigoDependienteTextBox.Text = empleadoTableAdapter1.obtenerCodigoDependiente(login.usuario).ToString();
+            int unidades = int.Parse(unidadesTextBox.Text);
+            int ccentro = int.Parse(codigCentroTextBox.Text);
+            int cArticulo = int.Parse(codigoArticuloTextBox.Text);
+            if (unidades < (int)articulosCentroComercialTableAdapter1.ObtenerUnidadesStock(ccentro, cArticulo))
+            {
+                codigoDependienteTextBox.Text = empleadoTableAdapter1.obtenerCodigoDependiente(login.usuario).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Unidades no validas\nUnidades en stock: " + articulosCentroComercialTableAdapter1.ObtenerUnidadesStock(ccentro, cArticulo));
+
+            }
         }
     }
 }
