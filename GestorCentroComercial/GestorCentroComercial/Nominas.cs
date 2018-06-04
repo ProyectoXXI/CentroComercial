@@ -31,5 +31,10 @@ namespace GestorCentroComercial
             this.nominasTableAdapter.Fill(this.consultas.Nominas);
 
         }
+
+        private void apellidosLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -114,7 +114,7 @@
             dniEmpleadoLabel.BackColor = System.Drawing.Color.Transparent;
             dniEmpleadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dniEmpleadoLabel.ForeColor = System.Drawing.Color.White;
-            dniEmpleadoLabel.Location = new System.Drawing.Point(59, 40);
+            dniEmpleadoLabel.Location = new System.Drawing.Point(60, 57);
             dniEmpleadoLabel.Name = "dniEmpleadoLabel";
             dniEmpleadoLabel.Size = new System.Drawing.Size(113, 20);
             dniEmpleadoLabel.TabIndex = 2;
@@ -126,7 +126,7 @@
             nombreLabel.BackColor = System.Drawing.Color.Transparent;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombreLabel.ForeColor = System.Drawing.Color.White;
-            nombreLabel.Location = new System.Drawing.Point(59, 66);
+            nombreLabel.Location = new System.Drawing.Point(60, 83);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(69, 20);
             nombreLabel.TabIndex = 4;
@@ -138,7 +138,7 @@
             apellidosLabel.BackColor = System.Drawing.Color.Transparent;
             apellidosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             apellidosLabel.ForeColor = System.Drawing.Color.White;
-            apellidosLabel.Location = new System.Drawing.Point(59, 92);
+            apellidosLabel.Location = new System.Drawing.Point(60, 109);
             apellidosLabel.Name = "apellidosLabel";
             apellidosLabel.Size = new System.Drawing.Size(75, 20);
             apellidosLabel.TabIndex = 6;
@@ -150,7 +150,7 @@
             sueldoBrutoLabel.BackColor = System.Drawing.Color.Transparent;
             sueldoBrutoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             sueldoBrutoLabel.ForeColor = System.Drawing.Color.White;
-            sueldoBrutoLabel.Location = new System.Drawing.Point(59, 118);
+            sueldoBrutoLabel.Location = new System.Drawing.Point(60, 135);
             sueldoBrutoLabel.Name = "sueldoBrutoLabel";
             sueldoBrutoLabel.Size = new System.Drawing.Size(103, 20);
             sueldoBrutoLabel.TabIndex = 8;
@@ -162,7 +162,7 @@
             descuentoSeguridadLabel.BackColor = System.Drawing.Color.Transparent;
             descuentoSeguridadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descuentoSeguridadLabel.ForeColor = System.Drawing.Color.White;
-            descuentoSeguridadLabel.Location = new System.Drawing.Point(59, 144);
+            descuentoSeguridadLabel.Location = new System.Drawing.Point(60, 161);
             descuentoSeguridadLabel.Name = "descuentoSeguridadLabel";
             descuentoSeguridadLabel.Size = new System.Drawing.Size(165, 20);
             descuentoSeguridadLabel.TabIndex = 10;
@@ -174,7 +174,7 @@
             totalDineroLabel.BackColor = System.Drawing.Color.Transparent;
             totalDineroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             totalDineroLabel.ForeColor = System.Drawing.Color.White;
-            totalDineroLabel.Location = new System.Drawing.Point(59, 170);
+            totalDineroLabel.Location = new System.Drawing.Point(60, 187);
             totalDineroLabel.Name = "totalDineroLabel";
             totalDineroLabel.Size = new System.Drawing.Size(95, 20);
             totalDineroLabel.TabIndex = 12;
@@ -186,7 +186,7 @@
             descuentoIRPFLabel.BackColor = System.Drawing.Color.Transparent;
             descuentoIRPFLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descuentoIRPFLabel.ForeColor = System.Drawing.Color.White;
-            descuentoIRPFLabel.Location = new System.Drawing.Point(59, 196);
+            descuentoIRPFLabel.Location = new System.Drawing.Point(60, 213);
             descuentoIRPFLabel.Name = "descuentoIRPFLabel";
             descuentoIRPFLabel.Size = new System.Drawing.Size(129, 20);
             descuentoIRPFLabel.TabIndex = 14;
@@ -198,7 +198,7 @@
             plustrieniosLabel.BackColor = System.Drawing.Color.Transparent;
             plustrieniosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             plustrieniosLabel.ForeColor = System.Drawing.Color.White;
-            plustrieniosLabel.Location = new System.Drawing.Point(584, 40);
+            plustrieniosLabel.Location = new System.Drawing.Point(585, 57);
             plustrieniosLabel.Name = "plustrieniosLabel";
             plustrieniosLabel.Size = new System.Drawing.Size(93, 20);
             plustrieniosLabel.TabIndex = 16;
@@ -210,7 +210,7 @@
             plusproductividadLabel.BackColor = System.Drawing.Color.Transparent;
             plusproductividadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             plusproductividadLabel.ForeColor = System.Drawing.Color.White;
-            plusproductividadLabel.Location = new System.Drawing.Point(584, 66);
+            plusproductividadLabel.Location = new System.Drawing.Point(585, 83);
             plusproductividadLabel.Name = "plusproductividadLabel";
             plusproductividadLabel.Size = new System.Drawing.Size(136, 20);
             plusproductividadLabel.TabIndex = 18;
@@ -222,7 +222,7 @@
             horasTrabajadasLabel.BackColor = System.Drawing.Color.Transparent;
             horasTrabajadasLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             horasTrabajadasLabel.ForeColor = System.Drawing.Color.White;
-            horasTrabajadasLabel.Location = new System.Drawing.Point(584, 92);
+            horasTrabajadasLabel.Location = new System.Drawing.Point(585, 109);
             horasTrabajadasLabel.Name = "horasTrabajadasLabel";
             horasTrabajadasLabel.Size = new System.Drawing.Size(136, 20);
             horasTrabajadasLabel.TabIndex = 20;
@@ -234,7 +234,7 @@
             horasMesLabel.BackColor = System.Drawing.Color.Transparent;
             horasMesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             horasMesLabel.ForeColor = System.Drawing.Color.White;
-            horasMesLabel.Location = new System.Drawing.Point(584, 118);
+            horasMesLabel.Location = new System.Drawing.Point(585, 135);
             horasMesLabel.Name = "horasMesLabel";
             horasMesLabel.Size = new System.Drawing.Size(87, 20);
             horasMesLabel.TabIndex = 22;
@@ -246,7 +246,7 @@
             fechaNominaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaNominaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaNominaLabel.ForeColor = System.Drawing.Color.White;
-            fechaNominaLabel.Location = new System.Drawing.Point(584, 145);
+            fechaNominaLabel.Location = new System.Drawing.Point(585, 162);
             fechaNominaLabel.Name = "fechaNominaLabel";
             fechaNominaLabel.Size = new System.Drawing.Size(111, 20);
             fechaNominaLabel.TabIndex = 24;
@@ -258,7 +258,7 @@
             periodoNominaMesesLabel.BackColor = System.Drawing.Color.Transparent;
             periodoNominaMesesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             periodoNominaMesesLabel.ForeColor = System.Drawing.Color.White;
-            periodoNominaMesesLabel.Location = new System.Drawing.Point(584, 170);
+            periodoNominaMesesLabel.Location = new System.Drawing.Point(585, 187);
             periodoNominaMesesLabel.Name = "periodoNominaMesesLabel";
             periodoNominaMesesLabel.Size = new System.Drawing.Size(175, 20);
             periodoNominaMesesLabel.TabIndex = 26;
@@ -270,7 +270,7 @@
             codigoEmpleadoLabel.BackColor = System.Drawing.Color.Transparent;
             codigoEmpleadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoEmpleadoLabel.ForeColor = System.Drawing.Color.White;
-            codigoEmpleadoLabel.Location = new System.Drawing.Point(584, 196);
+            codigoEmpleadoLabel.Location = new System.Drawing.Point(585, 213);
             codigoEmpleadoLabel.Name = "codigoEmpleadoLabel";
             codigoEmpleadoLabel.Size = new System.Drawing.Size(139, 20);
             codigoEmpleadoLabel.TabIndex = 28;
@@ -492,7 +492,7 @@
             // dniEmpleadoTextBox
             // 
             this.dniEmpleadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "DniEmpleado", true));
-            this.dniEmpleadoTextBox.Location = new System.Drawing.Point(236, 37);
+            this.dniEmpleadoTextBox.Location = new System.Drawing.Point(237, 54);
             this.dniEmpleadoTextBox.Name = "dniEmpleadoTextBox";
             this.dniEmpleadoTextBox.Size = new System.Drawing.Size(235, 20);
             this.dniEmpleadoTextBox.TabIndex = 3;
@@ -500,7 +500,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(236, 63);
+            this.nombreTextBox.Location = new System.Drawing.Point(237, 80);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(235, 20);
             this.nombreTextBox.TabIndex = 5;
@@ -508,7 +508,7 @@
             // apellidosTextBox
             // 
             this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "apellidos", true));
-            this.apellidosTextBox.Location = new System.Drawing.Point(236, 89);
+            this.apellidosTextBox.Location = new System.Drawing.Point(237, 106);
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(235, 20);
             this.apellidosTextBox.TabIndex = 7;
@@ -516,7 +516,7 @@
             // sueldoBrutoTextBox
             // 
             this.sueldoBrutoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "sueldoBruto", true));
-            this.sueldoBrutoTextBox.Location = new System.Drawing.Point(236, 115);
+            this.sueldoBrutoTextBox.Location = new System.Drawing.Point(237, 132);
             this.sueldoBrutoTextBox.Name = "sueldoBrutoTextBox";
             this.sueldoBrutoTextBox.Size = new System.Drawing.Size(235, 20);
             this.sueldoBrutoTextBox.TabIndex = 9;
@@ -524,7 +524,7 @@
             // descuentoSeguridadTextBox
             // 
             this.descuentoSeguridadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "descuentoSeguridad", true));
-            this.descuentoSeguridadTextBox.Location = new System.Drawing.Point(236, 141);
+            this.descuentoSeguridadTextBox.Location = new System.Drawing.Point(237, 158);
             this.descuentoSeguridadTextBox.Name = "descuentoSeguridadTextBox";
             this.descuentoSeguridadTextBox.Size = new System.Drawing.Size(235, 20);
             this.descuentoSeguridadTextBox.TabIndex = 11;
@@ -532,7 +532,7 @@
             // totalDineroTextBox
             // 
             this.totalDineroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "totalDinero", true));
-            this.totalDineroTextBox.Location = new System.Drawing.Point(236, 167);
+            this.totalDineroTextBox.Location = new System.Drawing.Point(237, 184);
             this.totalDineroTextBox.Name = "totalDineroTextBox";
             this.totalDineroTextBox.Size = new System.Drawing.Size(235, 20);
             this.totalDineroTextBox.TabIndex = 13;
@@ -540,7 +540,7 @@
             // descuentoIRPFTextBox
             // 
             this.descuentoIRPFTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "descuentoIRPF", true));
-            this.descuentoIRPFTextBox.Location = new System.Drawing.Point(236, 193);
+            this.descuentoIRPFTextBox.Location = new System.Drawing.Point(237, 210);
             this.descuentoIRPFTextBox.Name = "descuentoIRPFTextBox";
             this.descuentoIRPFTextBox.Size = new System.Drawing.Size(235, 20);
             this.descuentoIRPFTextBox.TabIndex = 15;
@@ -548,7 +548,7 @@
             // plustrieniosTextBox
             // 
             this.plustrieniosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "plustrienios", true));
-            this.plustrieniosTextBox.Location = new System.Drawing.Point(768, 42);
+            this.plustrieniosTextBox.Location = new System.Drawing.Point(769, 59);
             this.plustrieniosTextBox.Name = "plustrieniosTextBox";
             this.plustrieniosTextBox.Size = new System.Drawing.Size(239, 20);
             this.plustrieniosTextBox.TabIndex = 17;
@@ -556,7 +556,7 @@
             // plusproductividadTextBox
             // 
             this.plusproductividadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "plusproductividad", true));
-            this.plusproductividadTextBox.Location = new System.Drawing.Point(768, 68);
+            this.plusproductividadTextBox.Location = new System.Drawing.Point(769, 85);
             this.plusproductividadTextBox.Name = "plusproductividadTextBox";
             this.plusproductividadTextBox.Size = new System.Drawing.Size(239, 20);
             this.plusproductividadTextBox.TabIndex = 19;
@@ -564,7 +564,7 @@
             // horasTrabajadasTextBox
             // 
             this.horasTrabajadasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "horasTrabajadas", true));
-            this.horasTrabajadasTextBox.Location = new System.Drawing.Point(768, 94);
+            this.horasTrabajadasTextBox.Location = new System.Drawing.Point(769, 111);
             this.horasTrabajadasTextBox.Name = "horasTrabajadasTextBox";
             this.horasTrabajadasTextBox.Size = new System.Drawing.Size(239, 20);
             this.horasTrabajadasTextBox.TabIndex = 21;
@@ -572,7 +572,7 @@
             // horasMesTextBox
             // 
             this.horasMesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "horasMes", true));
-            this.horasMesTextBox.Location = new System.Drawing.Point(768, 120);
+            this.horasMesTextBox.Location = new System.Drawing.Point(769, 137);
             this.horasMesTextBox.Name = "horasMesTextBox";
             this.horasMesTextBox.Size = new System.Drawing.Size(239, 20);
             this.horasMesTextBox.TabIndex = 23;
@@ -580,7 +580,7 @@
             // fechaNominaDateTimePicker
             // 
             this.fechaNominaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.nominasBindingSource, "fechaNomina", true));
-            this.fechaNominaDateTimePicker.Location = new System.Drawing.Point(768, 146);
+            this.fechaNominaDateTimePicker.Location = new System.Drawing.Point(769, 163);
             this.fechaNominaDateTimePicker.Name = "fechaNominaDateTimePicker";
             this.fechaNominaDateTimePicker.Size = new System.Drawing.Size(239, 20);
             this.fechaNominaDateTimePicker.TabIndex = 25;
@@ -588,7 +588,7 @@
             // periodoNominaMesesTextBox
             // 
             this.periodoNominaMesesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "periodoNominaMeses", true));
-            this.periodoNominaMesesTextBox.Location = new System.Drawing.Point(768, 172);
+            this.periodoNominaMesesTextBox.Location = new System.Drawing.Point(769, 189);
             this.periodoNominaMesesTextBox.Name = "periodoNominaMesesTextBox";
             this.periodoNominaMesesTextBox.Size = new System.Drawing.Size(239, 20);
             this.periodoNominaMesesTextBox.TabIndex = 27;
@@ -596,7 +596,7 @@
             // codigoEmpleadoTextBox
             // 
             this.codigoEmpleadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nominasBindingSource, "CodigoEmpleado", true));
-            this.codigoEmpleadoTextBox.Location = new System.Drawing.Point(768, 198);
+            this.codigoEmpleadoTextBox.Location = new System.Drawing.Point(769, 215);
             this.codigoEmpleadoTextBox.Name = "codigoEmpleadoTextBox";
             this.codigoEmpleadoTextBox.Size = new System.Drawing.Size(239, 20);
             this.codigoEmpleadoTextBox.TabIndex = 29;
