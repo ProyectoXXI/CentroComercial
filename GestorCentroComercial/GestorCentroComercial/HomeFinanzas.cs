@@ -53,18 +53,18 @@ namespace GestorCentroComercial
             pedidos.Visible = true;
         }
 
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-            login l = new login();
-            l.Visible = true;
-            this.Visible = false;
-        }
+
 
         private void HomeFinanzas_Load(object sender, EventArgs e)
         {
 
         }
 
-       
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            login l = new login();
+            l.Visible = true;
+            this.Visible = false;
+        }
     }
 }

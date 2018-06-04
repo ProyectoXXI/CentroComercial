@@ -44,11 +44,11 @@ namespace GestorCentroComercial {
         
         private global::System.Data.DataRelation relationFK_Ventas_dependiente;
         
-        private global::System.Data.DataRelation relationFK_Nominas_ToTable1;
-        
         private global::System.Data.DataRelation relationFK_ArticulosProveedores_codigoArticulo;
         
         private global::System.Data.DataRelation relationFK_Ventas_articulo;
+        
+        private global::System.Data.DataRelation relationFK_Nominas_ToTable1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -353,9 +353,9 @@ namespace GestorCentroComercial {
             this.relationFK_Curriculum_ToTable = this.Relations["FK_Curriculum_ToTable"];
             this.relationFK_ArticulosProveedores_codigoProveedor = this.Relations["FK_ArticulosProveedores_codigoProveedor"];
             this.relationFK_Ventas_dependiente = this.Relations["FK_Ventas_dependiente"];
-            this.relationFK_Nominas_ToTable1 = this.Relations["FK_Nominas_ToTable1"];
             this.relationFK_ArticulosProveedores_codigoArticulo = this.Relations["FK_ArticulosProveedores_codigoArticulo"];
             this.relationFK_Ventas_articulo = this.Relations["FK_Ventas_articulo"];
+            this.relationFK_Nominas_ToTable1 = this.Relations["FK_Nominas_ToTable1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -392,10 +392,6 @@ namespace GestorCentroComercial {
                         this.tableEmpleado.CodigoEmpleadoColumn}, new global::System.Data.DataColumn[] {
                         this.tableVentas.CodigoDependienteColumn}, false);
             this.Relations.Add(this.relationFK_Ventas_dependiente);
-            this.relationFK_Nominas_ToTable1 = new global::System.Data.DataRelation("FK_Nominas_ToTable1", new global::System.Data.DataColumn[] {
-                        this.tableEmpleado.CodigoEmpleadoColumn}, new global::System.Data.DataColumn[] {
-                        this.tableNominas.CodigoEmpleadoColumn}, false);
-            this.Relations.Add(this.relationFK_Nominas_ToTable1);
             this.relationFK_ArticulosProveedores_codigoArticulo = new global::System.Data.DataRelation("FK_ArticulosProveedores_codigoArticulo", new global::System.Data.DataColumn[] {
                         this.tableArticulosCentroComercial.CodigoArticuloColumn}, new global::System.Data.DataColumn[] {
                         this.tableArticulosProveedores.CodigoArticuloColumn}, false);
@@ -404,6 +400,10 @@ namespace GestorCentroComercial {
                         this.tableArticulosCentroComercial.CodigoArticuloColumn}, new global::System.Data.DataColumn[] {
                         this.tableVentas.CodigoArticuloColumn}, false);
             this.Relations.Add(this.relationFK_Ventas_articulo);
+            this.relationFK_Nominas_ToTable1 = new global::System.Data.DataRelation("FK_Nominas_ToTable1", new global::System.Data.DataColumn[] {
+                        this.tableEmpleado.CodigoEmpleadoColumn}, new global::System.Data.DataColumn[] {
+                        this.tableNominas.CodigoEmpleadoColumn}, false);
+            this.Relations.Add(this.relationFK_Nominas_ToTable1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2659,7 +2659,7 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NominasRow AddNominasRow(int DniEmpleado, string Nombre, string apellidos, double sueldoBruto, double descuentoSeguridad, double totalDinero, double descuentoIRPF, double plustrienios, double plusproductividad, int horasTrabajadas, int horasMes, System.DateTime fechaNomina, double periodoNominaMeses, EmpleadoRow parentEmpleadoRowByFK_Nominas_ToTable1) {
+            public NominasRow AddNominasRow(string DniEmpleado, string Nombre, string apellidos, double sueldoBruto, double descuentoSeguridad, double totalDinero, double descuentoIRPF, double plustrienios, double plusproductividad, int horasTrabajadas, int horasMes, System.DateTime fechaNomina, double periodoNominaMeses, EmpleadoRow parentEmpleadoRowByFK_Nominas_ToTable1) {
                 NominasRow rowNominasRow = ((NominasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DniEmpleado,
@@ -2686,7 +2686,7 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NominasRow FindByDniEmpleado(int DniEmpleado) {
+            public NominasRow FindByDniEmpleado(string DniEmpleado) {
                 return ((NominasRow)(this.Rows.Find(new object[] {
                             DniEmpleado})));
             }
@@ -2727,7 +2727,7 @@ namespace GestorCentroComercial {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnDniEmpleado = new global::System.Data.DataColumn("DniEmpleado", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnDniEmpleado = new global::System.Data.DataColumn("DniEmpleado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDniEmpleado);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
@@ -4001,9 +4001,9 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int DniEmpleado {
+            public string DniEmpleado {
                 get {
-                    return ((int)(this[this.tableNominas.DniEmpleadoColumn]));
+                    return ((string)(this[this.tableNominas.DniEmpleadoColumn]));
                 }
                 set {
                     this[this.tableNominas.DniEmpleadoColumn] = value;
@@ -7302,7 +7302,7 @@ SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDin
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDine" +
@@ -7316,6 +7316,12 @@ FROM dbo.Nominas
 where CodigoEmpleado = @Codigo";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Codigo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CodigoEmpleado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT DniEmpleado, Nombre, apellidos, sueldoBruto, descuentoSeguridad, totalDine" +
+                "ro, descuentoIRPF, plustrienios, plusproductividad, horasTrabajadas, horasMes, f" +
+                "echaNomina, periodoNominaMeses, CodigoEmpleado FROM dbo.Nominas";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7373,6 +7379,30 @@ where CodigoEmpleado = @Codigo";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
+            Consultas.NominasDataTable dataTable = new Consultas.NominasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(Consultas.NominasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Consultas.NominasDataTable Nominas() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             Consultas.NominasDataTable dataTable = new Consultas.NominasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
