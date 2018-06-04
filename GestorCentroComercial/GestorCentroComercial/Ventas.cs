@@ -43,9 +43,9 @@ namespace GestorCentroComercial
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            int unidades = int.Parse(unidadesTextBox.Text);
-            int ccentro = int.Parse(codigCentroTextBox.Text);
-            int cArticulo = int.Parse(codigoArticuloTextBox.Text);
+            int unidades = int.Parse(unidadesTextBox.Text.ToString());
+            int ccentro = int.Parse(codigCentroTextBox.Text.ToString());
+            int cArticulo = int.Parse(codigoArticuloTextBox.Text.ToString());
             if (unidades < (int)articulosCentroComercialTableAdapter1.ObtenerUnidadesStock(ccentro, cArticulo))
             {
                 codigoDependienteTextBox.Text = empleadoTableAdapter1.obtenerCodigoDependiente(login.usuario).ToString();

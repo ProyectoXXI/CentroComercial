@@ -59,24 +59,24 @@
             this.codigoDependienteTextBox = new System.Windows.Forms.TextBox();
             this.dniClienteTextBox = new System.Windows.Forms.TextBox();
             this.descuentoTextBox = new System.Windows.Forms.TextBox();
-            this.codigoVentaTextBox = new System.Windows.Forms.TextBox();
             this.codigoArticuloTextBox = new System.Windows.Forms.TextBox();
             this.unidadesTextBox = new System.Windows.Forms.TextBox();
             this.precioFinalTextBox = new System.Windows.Forms.TextBox();
-            this.ventasDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventasTableAdapter = new GestorCentroComercial.ConsultasTableAdapters.VentasTableAdapter();
             this.tableAdapterManager = new GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager();
             this.articulosCentroComercialTableAdapter1 = new GestorCentroComercial.ConsultasTableAdapters.ArticulosCentroComercialTableAdapter();
             this.empleadoTableAdapter1 = new GestorCentroComercial.ConsultasTableAdapters.EmpleadoTableAdapter();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventasDataGridView = new System.Windows.Forms.DataGridView();
+            this.codigoVentaTextBox = new System.Windows.Forms.TextBox();
             fechaVentaLabel = new System.Windows.Forms.Label();
             codigCentroLabel = new System.Windows.Forms.Label();
             codigoDependienteLabel = new System.Windows.Forms.Label();
@@ -99,9 +99,10 @@
             fechaVentaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaVentaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaVentaLabel.ForeColor = System.Drawing.Color.White;
-            fechaVentaLabel.Location = new System.Drawing.Point(48, 75);
+            fechaVentaLabel.Location = new System.Drawing.Point(64, 92);
+            fechaVentaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fechaVentaLabel.Name = "fechaVentaLabel";
-            fechaVentaLabel.Size = new System.Drawing.Size(105, 20);
+            fechaVentaLabel.Size = new System.Drawing.Size(130, 25);
             fechaVentaLabel.TabIndex = 1;
             fechaVentaLabel.Text = "Fecha Venta:";
             // 
@@ -111,9 +112,10 @@
             codigCentroLabel.BackColor = System.Drawing.Color.Transparent;
             codigCentroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigCentroLabel.ForeColor = System.Drawing.Color.White;
-            codigCentroLabel.Location = new System.Drawing.Point(48, 100);
+            codigCentroLabel.Location = new System.Drawing.Point(64, 123);
+            codigCentroLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigCentroLabel.Name = "codigCentroLabel";
-            codigCentroLabel.Size = new System.Drawing.Size(106, 20);
+            codigCentroLabel.Size = new System.Drawing.Size(134, 25);
             codigCentroLabel.TabIndex = 3;
             codigCentroLabel.Text = "Codig Centro:";
             // 
@@ -123,9 +125,10 @@
             codigoDependienteLabel.BackColor = System.Drawing.Color.Transparent;
             codigoDependienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoDependienteLabel.ForeColor = System.Drawing.Color.White;
-            codigoDependienteLabel.Location = new System.Drawing.Point(48, 126);
+            codigoDependienteLabel.Location = new System.Drawing.Point(64, 155);
+            codigoDependienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoDependienteLabel.Name = "codigoDependienteLabel";
-            codigoDependienteLabel.Size = new System.Drawing.Size(159, 20);
+            codigoDependienteLabel.Size = new System.Drawing.Size(197, 25);
             codigoDependienteLabel.TabIndex = 5;
             codigoDependienteLabel.Text = "Codigo Dependiente:";
             // 
@@ -135,9 +138,10 @@
             dniClienteLabel.BackColor = System.Drawing.Color.Transparent;
             dniClienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dniClienteLabel.ForeColor = System.Drawing.Color.White;
-            dniClienteLabel.Location = new System.Drawing.Point(48, 152);
+            dniClienteLabel.Location = new System.Drawing.Point(64, 187);
+            dniClienteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dniClienteLabel.Name = "dniClienteLabel";
-            dniClienteLabel.Size = new System.Drawing.Size(90, 20);
+            dniClienteLabel.Size = new System.Drawing.Size(113, 25);
             dniClienteLabel.TabIndex = 7;
             dniClienteLabel.Text = "Dni Cliente:";
             // 
@@ -147,9 +151,10 @@
             descuentoLabel.BackColor = System.Drawing.Color.Transparent;
             descuentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             descuentoLabel.ForeColor = System.Drawing.Color.White;
-            descuentoLabel.Location = new System.Drawing.Point(545, 58);
+            descuentoLabel.Location = new System.Drawing.Point(727, 71);
+            descuentoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             descuentoLabel.Name = "descuentoLabel";
-            descuentoLabel.Size = new System.Drawing.Size(91, 20);
+            descuentoLabel.Size = new System.Drawing.Size(112, 25);
             descuentoLabel.TabIndex = 9;
             descuentoLabel.Text = "Descuento:";
             // 
@@ -159,9 +164,10 @@
             codigoVentaLabel.BackColor = System.Drawing.Color.Transparent;
             codigoVentaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoVentaLabel.ForeColor = System.Drawing.Color.White;
-            codigoVentaLabel.Location = new System.Drawing.Point(545, 84);
+            codigoVentaLabel.Location = new System.Drawing.Point(727, 103);
+            codigoVentaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoVentaLabel.Name = "codigoVentaLabel";
-            codigoVentaLabel.Size = new System.Drawing.Size(110, 20);
+            codigoVentaLabel.Size = new System.Drawing.Size(138, 25);
             codigoVentaLabel.TabIndex = 11;
             codigoVentaLabel.Text = "Codigo Venta:";
             // 
@@ -171,9 +177,10 @@
             codigoArticuloLabel.BackColor = System.Drawing.Color.Transparent;
             codigoArticuloLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codigoArticuloLabel.ForeColor = System.Drawing.Color.White;
-            codigoArticuloLabel.Location = new System.Drawing.Point(545, 110);
+            codigoArticuloLabel.Location = new System.Drawing.Point(727, 135);
+            codigoArticuloLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             codigoArticuloLabel.Name = "codigoArticuloLabel";
-            codigoArticuloLabel.Size = new System.Drawing.Size(120, 20);
+            codigoArticuloLabel.Size = new System.Drawing.Size(151, 25);
             codigoArticuloLabel.TabIndex = 13;
             codigoArticuloLabel.Text = "Codigo Articulo:";
             // 
@@ -183,9 +190,10 @@
             unidadesLabel.BackColor = System.Drawing.Color.Transparent;
             unidadesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             unidadesLabel.ForeColor = System.Drawing.Color.White;
-            unidadesLabel.Location = new System.Drawing.Point(545, 136);
+            unidadesLabel.Location = new System.Drawing.Point(727, 167);
+            unidadesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             unidadesLabel.Name = "unidadesLabel";
-            unidadesLabel.Size = new System.Drawing.Size(81, 20);
+            unidadesLabel.Size = new System.Drawing.Size(101, 25);
             unidadesLabel.TabIndex = 15;
             unidadesLabel.Text = "Unidades:";
             // 
@@ -195,9 +203,10 @@
             precioFinalLabel.BackColor = System.Drawing.Color.Transparent;
             precioFinalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             precioFinalLabel.ForeColor = System.Drawing.Color.White;
-            precioFinalLabel.Location = new System.Drawing.Point(545, 162);
+            precioFinalLabel.Location = new System.Drawing.Point(727, 199);
+            precioFinalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             precioFinalLabel.Name = "precioFinalLabel";
-            precioFinalLabel.Size = new System.Drawing.Size(95, 20);
+            precioFinalLabel.Size = new System.Drawing.Size(120, 25);
             precioFinalLabel.TabIndex = 17;
             precioFinalLabel.Text = "Precio Final:";
             // 
@@ -228,7 +237,7 @@
             this.ventasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ventasBindingNavigator.Name = "ventasBindingNavigator";
             this.ventasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ventasBindingNavigator.Size = new System.Drawing.Size(976, 27);
+            this.ventasBindingNavigator.Size = new System.Drawing.Size(1301, 27);
             this.ventasBindingNavigator.TabIndex = 0;
             this.ventasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -255,8 +264,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -296,7 +305,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -340,150 +349,75 @@
             // fechaVentaDateTimePicker
             // 
             this.fechaVentaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.ventasBindingSource, "FechaVenta", true));
-            this.fechaVentaDateTimePicker.Location = new System.Drawing.Point(214, 75);
+            this.fechaVentaDateTimePicker.Location = new System.Drawing.Point(285, 92);
+            this.fechaVentaDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fechaVentaDateTimePicker.Name = "fechaVentaDateTimePicker";
-            this.fechaVentaDateTimePicker.Size = new System.Drawing.Size(253, 20);
+            this.fechaVentaDateTimePicker.Size = new System.Drawing.Size(336, 22);
             this.fechaVentaDateTimePicker.TabIndex = 2;
             // 
             // codigCentroTextBox
             // 
             this.codigCentroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigCentro", true));
-            this.codigCentroTextBox.Location = new System.Drawing.Point(214, 101);
+            this.codigCentroTextBox.Location = new System.Drawing.Point(285, 124);
+            this.codigCentroTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigCentroTextBox.Name = "codigCentroTextBox";
-            this.codigCentroTextBox.Size = new System.Drawing.Size(253, 20);
+            this.codigCentroTextBox.Size = new System.Drawing.Size(336, 22);
             this.codigCentroTextBox.TabIndex = 4;
             // 
             // codigoDependienteTextBox
             // 
             this.codigoDependienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoDependiente", true));
             this.codigoDependienteTextBox.Enabled = false;
-            this.codigoDependienteTextBox.Location = new System.Drawing.Point(214, 127);
+            this.codigoDependienteTextBox.Location = new System.Drawing.Point(285, 156);
+            this.codigoDependienteTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigoDependienteTextBox.Name = "codigoDependienteTextBox";
-            this.codigoDependienteTextBox.Size = new System.Drawing.Size(253, 20);
+            this.codigoDependienteTextBox.Size = new System.Drawing.Size(336, 22);
             this.codigoDependienteTextBox.TabIndex = 6;
             // 
             // dniClienteTextBox
             // 
             this.dniClienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "DniCliente", true));
-            this.dniClienteTextBox.Location = new System.Drawing.Point(214, 153);
+            this.dniClienteTextBox.Location = new System.Drawing.Point(285, 188);
+            this.dniClienteTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dniClienteTextBox.Name = "dniClienteTextBox";
-            this.dniClienteTextBox.Size = new System.Drawing.Size(253, 20);
+            this.dniClienteTextBox.Size = new System.Drawing.Size(336, 22);
             this.dniClienteTextBox.TabIndex = 8;
             // 
             // descuentoTextBox
             // 
             this.descuentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "Descuento", true));
-            this.descuentoTextBox.Location = new System.Drawing.Point(691, 60);
+            this.descuentoTextBox.Location = new System.Drawing.Point(921, 74);
+            this.descuentoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.descuentoTextBox.Name = "descuentoTextBox";
-            this.descuentoTextBox.Size = new System.Drawing.Size(253, 20);
+            this.descuentoTextBox.Size = new System.Drawing.Size(336, 22);
             this.descuentoTextBox.TabIndex = 10;
-            // 
-            // codigoVentaTextBox
-            // 
-            this.codigoVentaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoVenta", true));
-            this.codigoVentaTextBox.Location = new System.Drawing.Point(691, 86);
-            this.codigoVentaTextBox.Name = "codigoVentaTextBox";
-            this.codigoVentaTextBox.Size = new System.Drawing.Size(253, 20);
-            this.codigoVentaTextBox.TabIndex = 12;
             // 
             // codigoArticuloTextBox
             // 
             this.codigoArticuloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoArticulo", true));
-            this.codigoArticuloTextBox.Location = new System.Drawing.Point(691, 112);
+            this.codigoArticuloTextBox.Location = new System.Drawing.Point(921, 138);
+            this.codigoArticuloTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codigoArticuloTextBox.Name = "codigoArticuloTextBox";
-            this.codigoArticuloTextBox.Size = new System.Drawing.Size(253, 20);
+            this.codigoArticuloTextBox.Size = new System.Drawing.Size(336, 22);
             this.codigoArticuloTextBox.TabIndex = 14;
             // 
             // unidadesTextBox
             // 
             this.unidadesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "Unidades", true));
-            this.unidadesTextBox.Location = new System.Drawing.Point(691, 138);
+            this.unidadesTextBox.Location = new System.Drawing.Point(921, 170);
+            this.unidadesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.unidadesTextBox.Name = "unidadesTextBox";
-            this.unidadesTextBox.Size = new System.Drawing.Size(253, 20);
+            this.unidadesTextBox.Size = new System.Drawing.Size(336, 22);
             this.unidadesTextBox.TabIndex = 16;
             // 
             // precioFinalTextBox
             // 
             this.precioFinalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "PrecioFinal", true));
-            this.precioFinalTextBox.Location = new System.Drawing.Point(691, 164);
+            this.precioFinalTextBox.Location = new System.Drawing.Point(921, 202);
+            this.precioFinalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.precioFinalTextBox.Name = "precioFinalTextBox";
-            this.precioFinalTextBox.Size = new System.Drawing.Size(253, 20);
+            this.precioFinalTextBox.Size = new System.Drawing.Size(336, 22);
             this.precioFinalTextBox.TabIndex = 18;
-            // 
-            // ventasDataGridView
-            // 
-            this.ventasDataGridView.AutoGenerateColumns = false;
-            this.ventasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ventasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.ventasDataGridView.DataSource = this.ventasBindingSource;
-            this.ventasDataGridView.Location = new System.Drawing.Point(12, 217);
-            this.ventasDataGridView.Name = "ventasDataGridView";
-            this.ventasDataGridView.Size = new System.Drawing.Size(946, 418);
-            this.ventasDataGridView.TabIndex = 19;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "FechaVenta";
-            this.dataGridViewTextBoxColumn1.HeaderText = "FechaVenta";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CodigCentro";
-            this.dataGridViewTextBoxColumn2.HeaderText = "CodigCentro";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CodigoDependiente";
-            this.dataGridViewTextBoxColumn3.HeaderText = "CodigoDependiente";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "DniCliente";
-            this.dataGridViewTextBoxColumn4.HeaderText = "DniCliente";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Descuento";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Descuento";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "CodigoVenta";
-            this.dataGridViewTextBoxColumn6.HeaderText = "CodigoVenta";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "CodigoArticulo";
-            this.dataGridViewTextBoxColumn7.HeaderText = "CodigoArticulo";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Unidades";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Unidades";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "PrecioFinal";
-            this.dataGridViewTextBoxColumn9.HeaderText = "PrecioFinal";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // ventasTableAdapter
             // 
@@ -509,12 +443,97 @@
             // 
             this.empleadoTableAdapter1.ClearBeforeFill = true;
             // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "PrecioFinal";
+            this.dataGridViewTextBoxColumn9.HeaderText = "PrecioFinal";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Unidades";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Unidades";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "CodigoArticulo";
+            this.dataGridViewTextBoxColumn7.HeaderText = "CodigoArticulo";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "CodigoVenta";
+            this.dataGridViewTextBoxColumn6.HeaderText = "CodigoVenta";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Descuento";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Descuento";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "DniCliente";
+            this.dataGridViewTextBoxColumn4.HeaderText = "DniCliente";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "CodigoDependiente";
+            this.dataGridViewTextBoxColumn3.HeaderText = "CodigoDependiente";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CodigCentro";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CodigCentro";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "FechaVenta";
+            this.dataGridViewTextBoxColumn1.HeaderText = "FechaVenta";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // ventasDataGridView
+            // 
+            this.ventasDataGridView.AutoGenerateColumns = false;
+            this.ventasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ventasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.ventasDataGridView.DataSource = this.ventasBindingSource;
+            this.ventasDataGridView.Location = new System.Drawing.Point(16, 267);
+            this.ventasDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.ventasDataGridView.Name = "ventasDataGridView";
+            this.ventasDataGridView.Size = new System.Drawing.Size(1261, 514);
+            this.ventasDataGridView.TabIndex = 19;
+            // 
+            // codigoVentaTextBox
+            // 
+            this.codigoVentaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ventasBindingSource, "CodigoVenta", true));
+            this.codigoVentaTextBox.Location = new System.Drawing.Point(921, 106);
+            this.codigoVentaTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.codigoVentaTextBox.Name = "codigoVentaTextBox";
+            this.codigoVentaTextBox.Size = new System.Drawing.Size(336, 22);
+            this.codigoVentaTextBox.TabIndex = 12;
+            // 
             // Ventas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GestorCentroComercial.Properties.Resources.Fondo;
-            this.ClientSize = new System.Drawing.Size(976, 655);
+            this.ClientSize = new System.Drawing.Size(1301, 806);
             this.Controls.Add(this.ventasDataGridView);
             this.Controls.Add(fechaVentaLabel);
             this.Controls.Add(this.fechaVentaDateTimePicker);
@@ -536,6 +555,7 @@
             this.Controls.Add(this.precioFinalTextBox);
             this.Controls.Add(this.ventasBindingNavigator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Ventas";
             this.Text = "Ventas";
             this.Load += new System.EventHandler(this.Ventas_Load);
@@ -574,21 +594,21 @@
         private System.Windows.Forms.TextBox codigoDependienteTextBox;
         private System.Windows.Forms.TextBox dniClienteTextBox;
         private System.Windows.Forms.TextBox descuentoTextBox;
-        private System.Windows.Forms.TextBox codigoVentaTextBox;
         private System.Windows.Forms.TextBox codigoArticuloTextBox;
         private System.Windows.Forms.TextBox unidadesTextBox;
         private System.Windows.Forms.TextBox precioFinalTextBox;
-        private System.Windows.Forms.DataGridView ventasDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private ConsultasTableAdapters.ArticulosCentroComercialTableAdapter articulosCentroComercialTableAdapter1;
         private ConsultasTableAdapters.EmpleadoTableAdapter empleadoTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView ventasDataGridView;
+        private System.Windows.Forms.TextBox codigoVentaTextBox;
     }
 }
