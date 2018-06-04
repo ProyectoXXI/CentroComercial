@@ -39,5 +39,10 @@ namespace GestorCentroComercial
             this.ventasTableAdapter.FillBy1(this.consultas.Ventas,login.password);
             codigoDependienteTextBox.Text = empleadoTableAdapter1.obtenerCodigoDependiente(login.usuario).ToString();
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            codigoDependienteTextBox.Text = empleadoTableAdapter1.obtenerCodigoDependiente(login.usuario).ToString();
+        }
     }
 }
