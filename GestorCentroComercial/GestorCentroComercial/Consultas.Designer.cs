@@ -671,13 +671,13 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ArticulosProveedoresRow AddArticulosProveedoresRow(System.DateTime FechaPedido, ProveedoresRow parentProveedoresRowByFK_ArticulosProveedores_codigoProveedor, double Descuento, int CodigoPedido, ArticulosCentroComercialRow parentArticulosCentroComercialRowByFK_ArticulosProveedores_codigoArticulo, int Unidades, double PrecioCoste) {
+            public ArticulosProveedoresRow AddArticulosProveedoresRow(System.DateTime FechaPedido, ProveedoresRow parentProveedoresRowByFK_ArticulosProveedores_codigoProveedor, double Descuento, ArticulosCentroComercialRow parentArticulosCentroComercialRowByFK_ArticulosProveedores_codigoArticulo, int Unidades, double PrecioCoste) {
                 ArticulosProveedoresRow rowArticulosProveedoresRow = ((ArticulosProveedoresRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FechaPedido,
                         null,
                         Descuento,
-                        CodigoPedido,
+                        null,
                         null,
                         Unidades,
                         PrecioCoste};
@@ -744,9 +744,11 @@ namespace GestorCentroComercial {
                 base.Columns.Add(this.columnPrecioCoste);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCodigoPedido}, true));
-                this.columnFechaPedido.AllowDBNull = false;
                 this.columnCodigoProveedor.AllowDBNull = false;
                 this.columnDescuento.AllowDBNull = false;
+                this.columnCodigoPedido.AutoIncrement = true;
+                this.columnCodigoPedido.AutoIncrementSeed = -1;
+                this.columnCodigoPedido.AutoIncrementStep = -1;
                 this.columnCodigoPedido.AllowDBNull = false;
                 this.columnCodigoPedido.Unique = true;
                 this.columnCodigoArticulo.AllowDBNull = false;
@@ -1392,10 +1394,10 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmpleadoRow AddEmpleadoRow(int CodigoEmpleado, string Rol, string Dni, string Nombre, string Apellidos, string Direccion, string Telefono, string Email, System.DateTime Ingreso, System.DateTime Nacimiento, string Departamento, string Centro, string TipoContrato, int PrecioHora) {
+            public EmpleadoRow AddEmpleadoRow(string Rol, string Dni, string Nombre, string Apellidos, string Direccion, string Telefono, string Email, System.DateTime Ingreso, System.DateTime Nacimiento, string Departamento, string Centro, string TipoContrato, int PrecioHora) {
                 EmpleadoRow rowEmpleadoRow = ((EmpleadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        CodigoEmpleado,
+                        null,
                         Rol,
                         Dni,
                         Nombre,
@@ -1487,6 +1489,9 @@ namespace GestorCentroComercial {
                 base.Columns.Add(this.columnPrecioHora);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCodigoEmpleado}, true));
+                this.columnCodigoEmpleado.AutoIncrement = true;
+                this.columnCodigoEmpleado.AutoIncrementSeed = -1;
+                this.columnCodigoEmpleado.AutoIncrementStep = -1;
                 this.columnCodigoEmpleado.AllowDBNull = false;
                 this.columnCodigoEmpleado.Unique = true;
                 this.columnRol.AllowDBNull = false;
@@ -2224,7 +2229,7 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VentasRow AddVentasRow(System.DateTime FechaVenta, string CodigCentro, EmpleadoRow parentEmpleadoRowByFK_Ventas_dependiente, string DniCliente, double Descuento, int CodigoVenta, ArticulosCentroComercialRow parentArticulosCentroComercialRowByFK_Ventas_articulo, int Unidades, double PrecioFinal) {
+            public VentasRow AddVentasRow(System.DateTime FechaVenta, string CodigCentro, EmpleadoRow parentEmpleadoRowByFK_Ventas_dependiente, string DniCliente, double Descuento, ArticulosCentroComercialRow parentArticulosCentroComercialRowByFK_Ventas_articulo, int Unidades, double PrecioFinal) {
                 VentasRow rowVentasRow = ((VentasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FechaVenta,
@@ -2232,7 +2237,7 @@ namespace GestorCentroComercial {
                         null,
                         DniCliente,
                         Descuento,
-                        CodigoVenta,
+                        null,
                         null,
                         Unidades,
                         PrecioFinal};
@@ -2305,12 +2310,14 @@ namespace GestorCentroComercial {
                 base.Columns.Add(this.columnPrecioFinal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCodigoVenta}, true));
-                this.columnFechaVenta.AllowDBNull = false;
                 this.columnCodigCentro.MaxLength = 50;
                 this.columnCodigoDependiente.AllowDBNull = false;
                 this.columnDniCliente.AllowDBNull = false;
                 this.columnDniCliente.MaxLength = 50;
                 this.columnDescuento.AllowDBNull = false;
+                this.columnCodigoVenta.AutoIncrement = true;
+                this.columnCodigoVenta.AutoIncrementSeed = -1;
+                this.columnCodigoVenta.AutoIncrementStep = -1;
                 this.columnCodigoVenta.AllowDBNull = false;
                 this.columnCodigoVenta.Unique = true;
                 this.columnCodigoArticulo.AllowDBNull = false;
@@ -3300,7 +3307,12 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime FechaPedido {
                 get {
-                    return ((global::System.DateTime)(this[this.tableArticulosProveedores.FechaPedidoColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableArticulosProveedores.FechaPedidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FechaPedido\' in table \'ArticulosProveedores\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableArticulosProveedores.FechaPedidoColumn] = value;
@@ -3393,6 +3405,18 @@ namespace GestorCentroComercial {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_ArticulosProveedores_codigoArticulo"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFechaPedidoNull() {
+                return this.IsNull(this.tableArticulosProveedores.FechaPedidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFechaPedidoNull() {
+                this[this.tableArticulosProveedores.FechaPedidoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3850,7 +3874,12 @@ namespace GestorCentroComercial {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime FechaVenta {
                 get {
-                    return ((global::System.DateTime)(this[this.tableVentas.FechaVentaColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableVentas.FechaVentaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FechaVenta\' in table \'Ventas\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableVentas.FechaVentaColumn] = value;
@@ -3970,6 +3999,18 @@ namespace GestorCentroComercial {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Ventas_articulo"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsFechaVentaNull() {
+                return this.IsNull(this.tableVentas.FechaVentaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetFechaVentaNull() {
+                this[this.tableVentas.FechaVentaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4871,8 +4912,13 @@ SELECT FechaPedido, CodigoProveedor, Descuento, CodigoPedido, CodigoArticulo, Un
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.DateTime Original_FechaPedido, int Original_CodigoProveedor, double Original_Descuento, int Original_CodigoPedido, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioCoste) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_FechaPedido));
+        public virtual int Delete(global::System.Nullable<global::System.DateTime> Original_FechaPedido, int Original_CodigoProveedor, double Original_Descuento, int Original_CodigoPedido, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioCoste) {
+            if ((Original_FechaPedido.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_FechaPedido.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_CodigoProveedor));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Descuento));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_CodigoPedido));
@@ -4899,8 +4945,13 @@ SELECT FechaPedido, CodigoProveedor, Descuento, CodigoPedido, CodigoArticulo, Un
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime FechaPedido, int CodigoProveedor, double Descuento, int CodigoPedido, int CodigoArticulo, int Unidades, double PrecioCoste) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(FechaPedido));
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> FechaPedido, int CodigoProveedor, double Descuento, int CodigoPedido, int CodigoArticulo, int Unidades, double PrecioCoste) {
+            if ((FechaPedido.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(FechaPedido.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(CodigoProveedor));
             this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Descuento));
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(CodigoPedido));
@@ -4927,15 +4978,25 @@ SELECT FechaPedido, CodigoProveedor, Descuento, CodigoPedido, CodigoArticulo, Un
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime FechaPedido, int CodigoProveedor, double Descuento, int CodigoPedido, int CodigoArticulo, int Unidades, double PrecioCoste, System.DateTime Original_FechaPedido, int Original_CodigoProveedor, double Original_Descuento, int Original_CodigoPedido, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioCoste) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(FechaPedido));
+        public virtual int Update(global::System.Nullable<global::System.DateTime> FechaPedido, int CodigoProveedor, double Descuento, int CodigoPedido, int CodigoArticulo, int Unidades, double PrecioCoste, global::System.Nullable<global::System.DateTime> Original_FechaPedido, int Original_CodigoProveedor, double Original_Descuento, int Original_CodigoPedido, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioCoste) {
+            if ((FechaPedido.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(FechaPedido.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(CodigoProveedor));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Descuento));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(CodigoPedido));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(CodigoArticulo));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Unidades));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(PrecioCoste));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_FechaPedido));
+            if ((Original_FechaPedido.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_FechaPedido.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_CodigoProveedor));
             this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_Descuento));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_CodigoPedido));
@@ -4962,7 +5023,7 @@ SELECT FechaPedido, CodigoProveedor, Descuento, CodigoPedido, CodigoArticulo, Un
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime FechaPedido, int CodigoProveedor, double Descuento, int CodigoArticulo, int Unidades, double PrecioCoste, System.DateTime Original_FechaPedido, int Original_CodigoProveedor, double Original_Descuento, int Original_CodigoPedido, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioCoste) {
+        public virtual int Update(global::System.Nullable<global::System.DateTime> FechaPedido, int CodigoProveedor, double Descuento, int CodigoArticulo, int Unidades, double PrecioCoste, global::System.Nullable<global::System.DateTime> Original_FechaPedido, int Original_CodigoProveedor, double Original_Descuento, int Original_CodigoPedido, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioCoste) {
             return this.Update(FechaPedido, CodigoProveedor, Descuento, Original_CodigoPedido, CodigoArticulo, Unidades, PrecioCoste, Original_FechaPedido, Original_CodigoProveedor, Original_Descuento, Original_CodigoPedido, Original_CodigoArticulo, Original_Unidades, Original_PrecioCoste);
         }
     }
@@ -6881,8 +6942,13 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.DateTime Original_FechaVenta, string Original_CodigCentro, int Original_CodigoDependiente, string Original_DniCliente, double Original_Descuento, int Original_CodigoVenta, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioFinal) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_FechaVenta));
+        public virtual int Delete(global::System.Nullable<global::System.DateTime> Original_FechaVenta, string Original_CodigCentro, int Original_CodigoDependiente, string Original_DniCliente, double Original_Descuento, int Original_CodigoVenta, int Original_CodigoArticulo, int Original_Unidades, double Original_PrecioFinal) {
+            if ((Original_FechaVenta.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_FechaVenta.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((Original_CodigCentro == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -6923,8 +6989,13 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime FechaVenta, string CodigCentro, int CodigoDependiente, string DniCliente, double Descuento, int CodigoVenta, int CodigoArticulo, int Unidades, double PrecioFinal) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(FechaVenta));
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> FechaVenta, string CodigCentro, int CodigoDependiente, string DniCliente, double Descuento, int CodigoVenta, int CodigoArticulo, int Unidades, double PrecioFinal) {
+            if ((FechaVenta.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(FechaVenta.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((CodigCentro == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -6964,7 +7035,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    System.DateTime FechaVenta, 
+                    global::System.Nullable<global::System.DateTime> FechaVenta, 
                     string CodigCentro, 
                     int CodigoDependiente, 
                     string DniCliente, 
@@ -6973,7 +7044,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
                     int CodigoArticulo, 
                     int Unidades, 
                     double PrecioFinal, 
-                    System.DateTime Original_FechaVenta, 
+                    global::System.Nullable<global::System.DateTime> Original_FechaVenta, 
                     string Original_CodigCentro, 
                     int Original_CodigoDependiente, 
                     string Original_DniCliente, 
@@ -6982,7 +7053,12 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
                     int Original_CodigoArticulo, 
                     int Original_Unidades, 
                     double Original_PrecioFinal) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(FechaVenta));
+            if ((FechaVenta.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(FechaVenta.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((CodigCentro == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -7001,7 +7077,12 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(CodigoArticulo));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Unidades));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(PrecioFinal));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_FechaVenta));
+            if ((Original_FechaVenta.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_FechaVenta.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
             if ((Original_CodigCentro == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
@@ -7043,7 +7124,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    System.DateTime FechaVenta, 
+                    global::System.Nullable<global::System.DateTime> FechaVenta, 
                     string CodigCentro, 
                     int CodigoDependiente, 
                     string DniCliente, 
@@ -7051,7 +7132,7 @@ SELECT FechaVenta, CodigCentro, CodigoDependiente, DniCliente, Descuento, Codigo
                     int CodigoArticulo, 
                     int Unidades, 
                     double PrecioFinal, 
-                    System.DateTime Original_FechaVenta, 
+                    global::System.Nullable<global::System.DateTime> Original_FechaVenta, 
                     string Original_CodigCentro, 
                     int Original_CodigoDependiente, 
                     string Original_DniCliente, 
