@@ -41,8 +41,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
             this.ventasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consultas = new GestorCentroComercial.Consultas();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -73,6 +71,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consultas = new GestorCentroComercial.Consultas();
             this.ventasTableAdapter = new GestorCentroComercial.ConsultasTableAdapters.VentasTableAdapter();
             this.tableAdapterManager = new GestorCentroComercial.ConsultasTableAdapters.TableAdapterManager();
             this.articulosCentroComercialTableAdapter1 = new GestorCentroComercial.ConsultasTableAdapters.ArticulosCentroComercialTableAdapter();
@@ -88,9 +88,9 @@
             precioFinalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingNavigator)).BeginInit();
             this.ventasBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // fechaVentaLabel
@@ -249,16 +249,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // ventasBindingSource
-            // 
-            this.ventasBindingSource.DataMember = "Ventas";
-            this.ventasBindingSource.DataSource = this.consultas;
-            // 
-            // consultas
-            // 
-            this.consultas.DataSetName = "Consultas";
-            this.consultas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -502,6 +493,16 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "PrecioFinal";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // ventasBindingSource
+            // 
+            this.ventasBindingSource.DataMember = "Ventas";
+            this.ventasBindingSource.DataSource = this.consultas;
+            // 
+            // consultas
+            // 
+            this.consultas.DataSetName = "Consultas";
+            this.consultas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // ventasTableAdapter
             // 
             this.ventasTableAdapter.ClearBeforeFill = true;
@@ -559,9 +560,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingNavigator)).EndInit();
             this.ventasBindingNavigator.ResumeLayout(false);
             this.ventasBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ventasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ventasDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
