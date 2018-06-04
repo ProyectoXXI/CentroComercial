@@ -11,7 +11,7 @@
     <Shape ID="DesignTable:Empleado" ZOrder="4" X="517" Y="470" Height="411" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="306" />
     <Shape ID="DesignTable:Proveedores" ZOrder="11" X="1160" Y="93" Height="305" Width="217" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
     <Shape ID="DesignTable:Ventas" ZOrder="9" X="208" Y="525" Height="267" Width="184" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
-    <Shape ID="DesignTable:Nominas" ZOrder="6" X="834" Y="652" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:Nominas" ZOrder="6" X="834" Y="652" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="24" SplitterPosition="39" />
     <Shape ID="DesignTable:ArticulosCentroComercial" ZOrder="3" X="354" Y="117" Height="267" Width="293" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
   </Shapes>
   <Connectors>

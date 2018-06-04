@@ -2659,7 +2659,7 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NominasRow AddNominasRow(int DniEmpleado, string Nombre, string apellidos, double sueldoBruto, double descuentoSeguridad, double totalDinero, double descuentoIRPF, double plustrienios, double plusproductividad, int horasTrabajadas, int horasMes, System.DateTime fechaNomina, double periodoNominaMeses, EmpleadoRow parentEmpleadoRowByFK_Nominas_ToTable1) {
+            public NominasRow AddNominasRow(string DniEmpleado, string Nombre, string apellidos, double sueldoBruto, double descuentoSeguridad, double totalDinero, double descuentoIRPF, double plustrienios, double plusproductividad, int horasTrabajadas, int horasMes, System.DateTime fechaNomina, double periodoNominaMeses, EmpleadoRow parentEmpleadoRowByFK_Nominas_ToTable1) {
                 NominasRow rowNominasRow = ((NominasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DniEmpleado,
@@ -2686,7 +2686,7 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public NominasRow FindByDniEmpleado(int DniEmpleado) {
+            public NominasRow FindByDniEmpleado(string DniEmpleado) {
                 return ((NominasRow)(this.Rows.Find(new object[] {
                             DniEmpleado})));
             }
@@ -2727,7 +2727,7 @@ namespace GestorCentroComercial {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnDniEmpleado = new global::System.Data.DataColumn("DniEmpleado", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnDniEmpleado = new global::System.Data.DataColumn("DniEmpleado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDniEmpleado);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
@@ -4001,9 +4001,9 @@ namespace GestorCentroComercial {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int DniEmpleado {
+            public string DniEmpleado {
                 get {
-                    return ((int)(this[this.tableNominas.DniEmpleadoColumn]));
+                    return ((string)(this[this.tableNominas.DniEmpleadoColumn]));
                 }
                 set {
                     this[this.tableNominas.DniEmpleadoColumn] = value;
